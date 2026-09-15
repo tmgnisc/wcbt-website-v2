@@ -1,0 +1,527 @@
+{
+ "route": "/careers",
+ "title": "Careers — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Where Our Graduates Go",
+   "heading": "",
+   "paras": [
+    "Career Pathways",
+    "When pursuing employment, entrepreneurship, or further studies, our graduates are prepared to contribute, innovate, and lead in their chosen fields.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Diverse Opportunities",
+   "h1": "",
+   "heading": "Professional Success After Graduation",
+   "paras": [
+    "The programs offered at WhiteHouse College prepare students for a wide range of professional opportunities in technology, education, business, and innovation. Our graduates are equipped with the knowledge, skills, and networks needed to excel in competitive global and local job markets."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "We're Hiring",
+   "h1": "",
+   "heading": "Current Openings",
+   "paras": [
+    "Join our team and help shape the next generation of technology professionals."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Full-time / Part-time",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Full Time / Part Time Lecturer",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Jhapa, Nepal",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Subjects",
+      "stat": "",
+      "text": [],
+      "bullets": [
+       "Educational Psychology",
+       "Technical Instruction & Institutional System Design",
+       "Object-Oriented Programming using Java",
+       "Database Management System",
+       "Advanced Calculus",
+       "Microprocessor and Assembly Language Programming",
+       "Object Oriented Programming",
+       "Management Principles"
+      ],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Qualifications",
+      "stat": "",
+      "text": [
+       "Experience"
+      ],
+      "bullets": [
+       "A Master's degree in the relevant subject area is mandatory",
+       "Minimum a Master's degree in MIT, M.Tech, MSc CSIT, or MCA for IT subjects",
+       "At least 3 to 5 years of experience in higher education"
+      ],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "How to apply",
+      "stat": "",
+      "text": [
+       "Send your CV and application to our HR team. For any queries, reach out using the contact details below.",
+       "9714530056, 9714530057",
+       "Jhapa, Nepal"
+      ],
+      "bullets": [],
+      "links": [
+       {
+        "text": "hr@whitehouseeducation.edu.np",
+        "href": "mailto:hr@whitehouseeducation.edu.np"
+       },
+       {
+        "text": "Apply via Email",
+        "href": "mailto:hr@whitehouseeducation.edu.np?subject=Application: Full Time / Part Time Lecturer"
+       }
+      ],
+      "image": null,
+      "href": "mailto:hr@whitehouseeducation.edu.np"
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Prepared for Every Path",
+   "paras": [
+    "Whether you choose employment, entrepreneurship, or further studies, WCBT provides the foundation for your success."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Career Options",
+   "h1": "",
+   "heading": "Explore Opportunities",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Software Developer",
+      "stat": "",
+      "text": [
+       "Graduates can work with technology companies, startups, financial institutions, and government organizations to create digital solutions that meet real-world needs."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "IT Support & Systems Administrator",
+      "stat": "",
+      "text": [
+       "This role focuses on ensuring the reliability, security, and efficiency of technology systems used by modern organizations to manage computer systems, networks, cloud services, and IT infrastructure."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Ed-Tech Specialist",
+      "stat": "",
+      "text": [
+       "Graduates can help schools, colleges, and training institutions improve teaching and learning through innovative technologies."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "ICT Teacher / Trainer",
+      "stat": "",
+      "text": [
+       "Graduates can also conduct professional development and skills-training programs for various organizations by building the next generation of digital professionals by teaching technology-related subjects in schools, colleges, and training centers."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Data & AI Analyst",
+      "stat": "",
+      "text": [
+       "Graduates may work in business intelligence, research, artificial intelligence, data analytics, and digital transformation projects across multiple sectors by analyzing data, identifying trends, and generating insights that support informed decision-making."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Startup Founder",
+      "stat": "",
+      "text": [
+       "Graduates can launch startups in software development, education technology, digital services, consulting, and other emerging industries, contributing to economic growth and technological advancement and transform innovative ideas into successful ventures."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Key Career Areas",
+   "h1": "",
+   "heading": "Where WCBT Graduates Thrive",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Software Development",
+      "stat": "",
+      "text": [
+       "Creating applications, web platforms, and digital solutions for organizations globally."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "IT Infrastructure",
+      "stat": "",
+      "text": [
+       "Managing systems, networks, and technology infrastructure for modern organizations."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Education Technology",
+      "stat": "",
+      "text": [
+       "Transforming learning through innovative digital tools and instructional design."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Teaching & Training",
+      "stat": "",
+      "text": [
+       "Building the next generation by educating and training technology professionals."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Data & Analytics",
+      "stat": "",
+      "text": [
+       "Turning data into insights for business intelligence and strategic decision-making."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Entrepreneurship",
+      "stat": "",
+      "text": [
+       "Building startups and ventures that drive innovation and economic growth."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Further Studies",
+   "h1": "",
+   "heading": "Pathways to Higher Education",
+   "paras": [
+    "Many graduates pursue advanced degrees at leading universities in Nepal and abroad. Our rigorous undergraduate programs, combined with our KU affiliation, prepare students for successful admission to master's programs, research opportunities, and specialized certifications."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Master's Programs",
+      "stat": "",
+      "text": [
+       "Advanced studies in computer science, IT, data science, business, and education technology."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Research & PhD",
+      "stat": "",
+      "text": [
+       "Foundation for pursuing doctoral research in technology, innovation, and applied sciences."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Professional Certifications",
+      "stat": "",
+      "text": [
+       "Industry-recognized credentials in cloud computing, cybersecurity, data analytics, and more."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Specialized Training",
+      "stat": "",
+      "text": [
+       "Continuing education and professional development programs throughout your career."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Success Stories",
+   "h1": "",
+   "heading": "Our Alumni Network",
+   "paras": [
+    "WCBT graduates work across Nepal and internationally, contributing to innovative projects, leading organizations, and creating positive change through technology and education. They form a strong network that supports current students through mentorship, internships, and career opportunities."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Career Support",
+   "h1": "",
+   "heading": "We Support Your Success",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Career Counseling",
+      "stat": "",
+      "text": [
+       "Personalized guidance on career planning, job search strategies, and professional development."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Job Placements",
+      "stat": "",
+      "text": [
+       "Direct connections with employers and recruitment opportunities through our industry network."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Internship Programs",
+      "stat": "",
+      "text": [
+       "Structured internship experiences that provide practical training and job-ready skills."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Alumni Mentorship",
+      "stat": "",
+      "text": [
+       "Connection with successful graduates who can guide and inspire your career journey."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Ready to Start Your Career Journey?",
+   "paras": [
+    "Explore our programs and discover how WCBT prepares you for success."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "View Programs",
+     "href": null
+    },
+    {
+     "text": "Schedule Campus Visit",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

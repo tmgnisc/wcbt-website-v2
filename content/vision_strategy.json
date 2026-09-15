@@ -1,0 +1,134 @@
+{
+ "route": "/vision/strategy",
+ "title": "Strategy — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "A focused plan for institutional growth",
+   "heading": "",
+   "paras": [
+    "Strategy",
+    "WCBT is growing through academic quality, stronger industry links, applied research, student support, and measurable outcomes.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Priorities",
+   "h1": "",
+   "heading": "Where we are investing effort",
+   "paras": [
+    "Our strategy keeps the institution practical, accountable, and aligned with the future of work and education."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Academic Quality",
+      "stat": "",
+      "text": [
+       "Strengthen curriculum delivery, assessment, mentoring, and faculty development."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Industry Exposure",
+      "stat": "",
+      "text": [
+       "Expand internships, guest lectures, visits, projects, and employer engagement."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Applied Research",
+      "stat": "",
+      "text": [
+       "Build student and faculty capacity in AI, IoT, ed-tech, and local problem solving."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Student Success",
+      "stat": "",
+      "text": [
+       "Improve advising, wellbeing, career support, and inclusive learning experiences."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Measurable Progress",
+      "stat": "",
+      "text": [
+       "Track outcomes through admissions, retention, placements, partnerships, and feedback."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Learn how strategy becomes action",
+   "paras": [
+    "Explore our research, industry exposure, and student support initiatives."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Industry Exposure",
+     "href": null
+    },
+    {
+     "text": "Research",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

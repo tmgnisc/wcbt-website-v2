@@ -1,0 +1,466 @@
+{
+ "route": "/academics/research",
+ "title": "Research — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Research & Innovation Ecosystem",
+   "heading": "",
+   "paras": [
+    "Research & Innovation",
+    "Research is an integral part of the academic culture at WhiteHouse College. Our commitment to research helps create a learning environment where curiosity is encouraged, ideas are tested, and knowledge is continuously expanded.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "From Classroom to Innovation",
+   "h1": "",
+   "heading": "Hands-on labs in AI, Robotics, IoT and applied innovation",
+   "paras": [
+    "Through research projects, collaborations, and academic initiatives, students gain the opportunity to explore real-world challenges and develop practical solutions."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Research facilities",
+   "h1": "",
+   "heading": "Explore our labs",
+   "paras": [
+    "State-of-the-art spaces where students and faculty experiment, prototype, and publish."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "AI / ML",
+      "title": "AI & Machine Learning Lab",
+      "stat": "",
+      "text": [
+       "Experiment with neural networks, computer vision, and natural language processing projects."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Active Projects",
+      "stat": "20+",
+      "text": [
+       "Student and faculty research initiatives running each semester."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "IoT & Robotics",
+      "stat": "",
+      "text": [
+       "Sensors, embedded systems, and autonomous robot prototypes."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Ed-Tech Research",
+      "stat": "",
+      "text": [
+       "Studies on digital learning tools, classroom analytics, and instructional design."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Our approach",
+   "h1": "",
+   "heading": "Research that solves real problems",
+   "paras": [
+    "We prioritize applied research with community and industry relevance. Students don't just read about technology — they build solutions that matter."
+   ],
+   "bullets": [
+    "Faculty mentorship on every major project",
+    "Cross-disciplinary teams from BIT and B.Tech Ed IT",
+    "Partnerships with local industry and schools",
+    "Annual innovation expo showcasing outcomes"
+   ],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Focus areas",
+   "h1": "",
+   "heading": "What we explore",
+   "paras": [
+    "Core research domains aligned with our programs and regional needs."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Artificial Intelligence",
+      "stat": "",
+      "text": [
+       "Machine learning, computer vision, and intelligent systems for local applications."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "IoT & Embedded Systems",
+      "stat": "",
+      "text": [
+       "Connected devices, sensor networks, and automation prototypes."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Ed-Tech Research",
+      "stat": "",
+      "text": [
+       "Digital learning effectiveness, instructional design, and classroom technology."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Innovation & Startups",
+      "stat": "",
+      "text": [
+       "Idea incubation, prototyping support, and entrepreneurship mentoring."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Active projects",
+   "h1": "",
+   "heading": "Student & faculty research",
+   "paras": [
+    "A sample of ongoing and recent projects from our innovation community."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Smart Agriculture IoT",
+      "stat": "",
+      "text": [
+       "Soil moisture sensors and automated irrigation for local farms."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Nepali NLP Toolkit",
+      "stat": "",
+      "text": [
+       "Open-source language tools for Nepali text processing and chatbots."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "VR Classroom Pilot",
+      "stat": "",
+      "text": [
+       "Immersive learning modules for science and IT education."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Cybersecurity Audit",
+      "stat": "",
+      "text": [
+       "Vulnerability assessment framework for small business networks."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Learning Analytics",
+      "stat": "",
+      "text": [
+       "Dashboard tracking student engagement in digital courses."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Green Campus Initiative",
+      "stat": "",
+      "text": [
+       "Energy monitoring and sustainability reporting system."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Industry collaboration",
+   "h1": "",
+   "heading": "Partnering for applied outcomes",
+   "paras": [
+    "We work with technology firms, NGOs, and educational institutions to ensure research addresses genuine needs and creates pathways to deployment."
+   ],
+   "bullets": [
+    "Sponsored capstone projects with partner organizations",
+    "Internship-linked research placements",
+    "Guest researchers and visiting faculty sessions",
+    "Joint workshops and publication support"
+   ],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Publications",
+   "h1": "",
+   "heading": "Sharing what we learn",
+   "paras": [
+    "Selected papers, presentations, and reports from the WCBT research community."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Applied ML in Eastern Nepal",
+      "stat": "2025",
+      "text": [
+       "Conference paper on deploying machine learning solutions for regional agriculture."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Digital Pedagogy Review",
+      "stat": "2024",
+      "text": [
+       "Faculty publication on LMS adoption in Nepali secondary schools."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "IoT for Smart Cities",
+      "stat": "2024",
+      "text": [
+       "Student-led research presented at the National Innovation Summit."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Open Data in Education",
+      "stat": "2023",
+      "text": [
+       "White paper on transparent academic data sharing practices."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "AI LABS",
+   "h1": "",
+   "heading": "Artificial Intelligence Research",
+   "paras": [
+    "The Artificial Intelligence (AI) Labs at WhiteHouse College provide students with hands-on experience in one of the fastest-growing fields of technology. Our labs are equipped with modern computing resources and guided by experienced faculty, where students can explore machine learning, data analytics, computer vision, natural language processing, and intelligent systems."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "IOT LABS",
+   "h1": "",
+   "heading": "Internet of Things Innovation",
+   "paras": [
+    "The Internet of Things (IoT) Labs are designed to give students practical exposure to connected technologies and smart systems. Through hands-on learning, students work with sensors, microcontrollers, networking technologies, and embedded systems to develop innovative solutions for real-world applications. These labs support experimentation, project-based learning, project development, research, theoretical application and development of various other skills."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "INNOVATION CENTERS",
+   "h1": "",
+   "heading": "Centers for Creativity & Entrepreneurship",
+   "paras": [
+    "By bringing together students, faculty members, industry professionals, and researchers, the centers create opportunities for collaboration, innovation, and interdisciplinary learning. The goal is to nurture a mindset of continuous improvement, leadership, and problem-solving while supporting the development of future innovators and entrepreneurs. The Innovation Centers at WhiteHouse College serve as hubs for creativity, entrepreneurship, and technological development. Students are encouraged to transform ideas into practical projects, prototypes, and solutions that address real-world needs."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Join our research community",
+   "paras": [
+    "Whether you're a prospective student or industry partner, we'd love to explore collaboration opportunities."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Contact Research Office",
+     "href": null
+    },
+    {
+     "text": "View Programs",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

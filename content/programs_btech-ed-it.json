@@ -1,0 +1,275 @@
+{
+ "route": "/programs/btech-ed-it",
+ "title": "B.Tech Ed IT — Technology in Education | WCBT",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "B.Tech Ed IT — Technology in Education",
+   "heading": "",
+   "paras": [
+    "B.Tech Ed IT Program",
+    "A four-year KU-partnered program blending information technology with pedagogy — preparing future educators to lead digital transformation in classrooms and training centers."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "B.Tech Ed IT — Technology in Education",
+   "h1": "",
+   "heading": "B.Tech Ed IT — Technology in Education",
+   "paras": [
+    "Designed for future educators and training professionals, this program blends information technology with pedagogy. Graduates lead digital transformation in classrooms, training centers, and educational institutions.",
+    "4 Years · 8 Semesters",
+    "136 Credit Hours"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Key highlights",
+      "stat": "",
+      "text": [],
+      "bullets": [
+       "Instructional design and learning management systems",
+       "Educational multimedia, content authoring, and e-learning",
+       "Classroom technology integration and digital assessment",
+       "Teaching practicum in partner schools and institutions",
+       "Research projects in ed-tech innovation"
+      ],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Career pathways",
+      "stat": "",
+      "text": [],
+      "bullets": [
+       "ICT teacher in schools and colleges",
+       "Ed-tech content developer or instructional designer",
+       "Training coordinator at NGOs and corporate L&D teams",
+       "Learning platform administrator",
+       "Education technology consultant"
+      ],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "B.Tech Ed overview",
+   "h1": "",
+   "heading": "B.Tech Ed — Bachelor of Technical Education in Information Technology",
+   "paras": [
+    "A Kathmandu University program preparing instructors, trainers, and ed-tech specialists with vocational pedagogical skills, occupational IT specialization, and educational research experience."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Program structure",
+      "stat": "136",
+      "text": [
+       "Total credits",
+       "Core courses",
+       "18 credits",
+       "Vocational pedagogy",
+       "20 credits",
+       "Occupational specialization",
+       "80 credits",
+       "Internship / research",
+       "18 credits",
+       "Program summary"
+      ],
+      "bullets": [
+       "Degree offering institution: Kathmandu University",
+       "Program title: Bachelor of Technical Education in Information Technology",
+       "Specialization: Information Technology",
+       "Degree: Bachelor of Technical Education (Information Technology)",
+       "Program duration: 4 years",
+       "Credits: 136",
+       "Intake size: 30 students",
+       "Implementation: Partnership with relevant institutions across the country"
+      ],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Eligibility & entry requirements",
+      "stat": "",
+      "text": [
+       "Applicants must have completed Level 5 education under NVQF or a minimum 10+2 / equivalent degree with a CGPA of at least 1.6 or an average of 40% in any discipline."
+      ],
+      "bullets": [
+       "General Educational Knowledge Test: written objective test covering Mathematics, Science, and English at intermediate / 10+2 / diploma levels; 50% required to qualify.",
+       "Oral / Occupational Assessment: aptitude, work experience, career goals, presentation skills, and financial readiness; 50% required to qualify."
+      ],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Program aims and outcomes",
+      "stat": "",
+      "text": [
+       "B.Tech Ed prepares professionals for technical and vocational education careers, equipping them with pedagogical skills, occupational specialization, and the ability to design, implement, and evaluate instructional programs.",
+       "Aims",
+       "Learning outcomes"
+      ],
+      "bullets": [
+       "Demonstrate Level 6 NVQF competencies in technical and vocational education.",
+       "Exhibit meaningful knowledge and skills in technical-vocational occupational specialization.",
+       "Apply occupational specialization knowledge to problem solving.",
+       "Apply vocational pedagogical knowledge and instructional skills.",
+       "Demonstrate foundational knowledge in specialization, general education, and pedagogy.",
+       "Apply vocational pedagogical skills in instructional contexts.",
+       "Analyze curriculum, assessment, and educational research problems.",
+       "Design and evaluate curriculum, pedagogy, assessment, and training approaches."
+      ],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Program rationale",
+      "stat": "",
+      "text": [
+       "B.Tech Ed is built to meet the growing need for competent technical instructors in Nepal's TVET sector. It blends technical and pedagogical training so graduates can support schools, polytechnics, and vocational training centers.",
+       "The program prepares professionals to solve real workplace problems, develop learning materials, and contribute to the expansion of quality technical education across the country."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Skills and career prospects",
+      "stat": "",
+      "text": [
+       "Skills developed",
+       "Career prospects"
+      ],
+      "bullets": [
+       "Curriculum development and instructional design for vocational subjects.",
+       "Implementation of experiential learning and continuous assessment.",
+       "Use of ICT in teaching and training environments.",
+       "Critical thinking, collaboration, communication, and civic skills.",
+       "TVET instructors and educators",
+       "TVET curriculum developers",
+       "Instructional designers and training specialists",
+       "IT professionals in education, training, and development roles",
+       "Master's level study in TVET, education, management, or technology"
+      ],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Assessment and graduation",
+      "stat": "",
+      "text": [
+       "The program uses continuous assessment with a competency-based ethos. Practical work is assessed in labs, workplaces, or through portfolios, while theoretical learning is evaluated in written and oral formats."
+      ],
+      "bullets": [
+       "Theoretical courses: 50% internal, 50% external assessment.",
+       "Courses with major practical components: 75% internal, 25% external assessment.",
+       "Fully practical courses: 100% internal assessment followed by viva voce.",
+       "Graduation requires completion of the full program and a minimum CGPA of 2.00.",
+       "Program completion must not exceed seven years."
+      ],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Curriculum",
+   "h1": "",
+   "heading": "Program syllabus",
+   "paras": [
+    "View the official Kathmandu University curriculum. Click the card to expand the syllabus preview.",
+    "B.Tech Ed IT — Technology in Education (KU)",
+    "Official Kathmandu University syllabus (opens in preview)."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "View",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Ready to start your application?",
+   "paras": [
+    "Join WCBT Jhapa Campus and earn a Kathmandu University partnered B.Tech Ed IT degree."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Apply Now",
+     "href": null
+    },
+    {
+     "text": "Contact Admissions",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

@@ -1,0 +1,250 @@
+{
+ "route": "/community/board-members",
+ "title": "Board Members — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Leadership guiding WCBT",
+   "heading": "",
+   "paras": [
+    "Board Members",
+    "Our board members provide strategic direction, accountability, and long-term guidance for the college.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Governance Role",
+   "h1": "",
+   "heading": "What the board is responsible for",
+   "paras": [
+    "The board helps keep WCBT focused, accountable, and prepared for long-term institutional growth."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Institutional Oversight",
+      "stat": "",
+      "text": [
+       "Provides governance direction and helps ensure the college operates responsibly."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Academic Quality",
+      "stat": "",
+      "text": [
+       "Supports standards, resources, and decisions that strengthen student learning."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Strategic Planning",
+      "stat": "",
+      "text": [
+       "Reviews priorities around programs, facilities, partnerships, and institutional growth."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Student-Centered Decisions",
+      "stat": "",
+      "text": [
+       "Keeps student success, safety, support, and opportunity at the center of planning."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Leadership",
+   "h1": "",
+   "heading": "Meet our board members",
+   "paras": [
+    "Experienced leaders committed to academic quality, institutional growth, and student success."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Yuvraj Sharma",
+      "stat": "",
+      "text": [
+       "President",
+       "Provides strategic leadership for institutional growth and long-term academic vision."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Ranjit Shah",
+      "stat": "",
+      "text": [
+       "Director",
+       "Supports governance, operations, and partnership development across the campus."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Sanjog Kharel",
+      "stat": "",
+      "text": [
+       "Director",
+       "Guides planning, institutional coordination, and student-centered initiatives."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "From the President",
+   "h1": "",
+   "heading": "Message from the President",
+   "paras": [
+    "A note from Yuvraj Sharma on WCBT's mission, values, and commitment to students across Eastern Nepal."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Yuvraj Sharma",
+      "stat": "",
+      "text": [
+       "President"
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "Yuvraj Sharma, President",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "",
+      "stat": "",
+      "text": [
+       "Our mission is to nurture an academic ecosystem where Eastern Nepal's brightest minds engineer the future — with integrity, excellence and global ambition.",
+       "WhiteHouse College of Business & Technology was established with a clear belief: students from this region deserve access to quality, future-focused education without having to leave their community behind. Through our partnership with Kathmandu University, we are building a learning environment that combines academic discipline, practical technology skills, and strong ethical values.",
+       "We are committed to helping every student grow as a confident learner, a capable professional, and a responsible citizen. Our faculty, administration, and board will continue working together to strengthen facilities, expand industry connections, and create opportunities that prepare graduates for meaningful work in Nepal and beyond.",
+       "I invite students, parents, alumni, and partners to join us in this journey of building a stronger academic future for Eastern Nepal."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Board Focus",
+   "h1": "",
+   "heading": "Areas the board helps guide",
+   "paras": [],
+   "bullets": [
+    "Long-term institutional vision and growth priorities.",
+    "Academic quality, program direction, and KU partnership alignment.",
+    "Student services, campus development, and learning resources.",
+    "Industry partnerships, community engagement, and graduate outcomes.",
+    "Financial responsibility, accountability, and transparent management.",
+    "Leadership support for faculty, administration, and student initiatives."
+   ],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Questions for our leadership team?",
+   "paras": [
+    "Contact the administration office for institutional and governance inquiries."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Contact Administration",
+     "href": null
+    },
+    {
+     "text": "About WCBT",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

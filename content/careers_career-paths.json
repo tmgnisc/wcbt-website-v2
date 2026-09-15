@@ -1,0 +1,224 @@
+{
+ "route": "/careers/career-paths",
+ "title": "Career Paths — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Where WCBT graduates can go",
+   "heading": "",
+   "paras": [
+    "Career Paths",
+    "Our programs prepare students for technology, education, analytics, training, and entrepreneurship pathways.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Career Planning",
+   "h1": "",
+   "heading": "Choosing a direction after graduation",
+   "paras": [
+    "A career path is shaped by the student's interests, skills, projects, communication ability, and willingness to keep learning. WCBT helps students understand multiple options instead of preparing for only one job title."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Technical roles",
+      "stat": "",
+      "text": [
+       "Students interested in coding, systems, data, AI, networking, or digital platforms can prepare for technology-focused careers."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Education roles",
+      "stat": "",
+      "text": [
+       "Students who enjoy teaching, training, or learning design can move toward ICT teaching and ed-tech work."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Entrepreneurial roles",
+      "stat": "",
+      "text": [
+       "Students with ideas for products, services, or community solutions can explore startups and self-employment."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Opportunities",
+   "h1": "",
+   "heading": "Career options after graduation",
+   "paras": [
+    "Students build a foundation for multiple professional paths through technical learning, projects, and support."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Software Developer",
+      "stat": "",
+      "text": [
+       "Graduates can work with technology companies, startups, financial institutions, and government organizations to create digital solutions that meet real-world needs."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "IT Support & Systems Administrator",
+      "stat": "",
+      "text": [
+       "This role focuses on ensuring the reliability, security, and efficiency of technology systems used by modern organizations to manage computer systems, networks, cloud services, and IT infrastructure."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Ed-Tech Specialist",
+      "stat": "",
+      "text": [
+       "Graduates can help schools, colleges, and training institutions improve teaching and learning through innovative technologies."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "ICT Teacher / Trainer",
+      "stat": "",
+      "text": [
+       "Graduates can also conduct professional development and skills-training programs for various organizations by building the next generation of digital professionals by teaching technology-related subjects in schools, colleges, and training centers."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Data & AI Analyst",
+      "stat": "",
+      "text": [
+       "Graduates may work in business intelligence, research, artificial intelligence, data analytics, and digital transformation projects across multiple sectors by analyzing data, identifying trends, and generating insights that support informed decision-making."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Startup Founder",
+      "stat": "",
+      "text": [
+       "Graduates can launch startups in software development, education technology, digital services, consulting, and other emerging industries, contributing to economic growth and technological advancement and transform innovative ideas into successful ventures."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Career Readiness",
+   "h1": "",
+   "heading": "Skills that support every path",
+   "paras": [],
+   "bullets": [
+    "Strong fundamentals in programming, systems, digital tools, and problem solving.",
+    "Ability to explain projects clearly through reports, presentations, and interviews.",
+    "Teamwork, communication, time management, and professional responsibility.",
+    "Practical exposure through labs, workshops, internships, and industry interaction.",
+    "A portfolio of academic projects, activities, and technical learning evidence.",
+    "A learning mindset for new technologies, tools, and workplace expectations."
+   ],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Plan your future path",
+   "paras": [
+    "Connect with WCBT to learn how programs align with your career goals."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Explore Programs",
+     "href": null
+    },
+    {
+     "text": "Placements",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

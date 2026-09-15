@@ -1,0 +1,179 @@
+{
+ "route": "/about/ku-affiliation",
+ "title": "KU Affiliation — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Kathmandu University Affiliation",
+   "heading": "",
+   "paras": [
+    "KU Partnership",
+    "WhiteHouse College, Jhapa operates under the academic standards and quality framework of Kathmandu University, ensuring world-class education and recognized qualifications.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Academic Excellence",
+   "h1": "",
+   "heading": "Standards & Quality Framework",
+   "paras": [
+    "Through our partnership with Kathmandu University, we maintain rigorous academic standards that prepare our graduates for success.",
+    "WhiteHouse College operates under the academic standards and quality framework of Kathmandu University. Through this affiliation, students benefit from a curriculum designed to promote critical thinking, practical application, innovation, and professional competence. The academic structure ensures that graduates are equipped with the knowledge and skills required for higher studies, professional careers, and lifelong learning."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Recognized Qualifications",
+   "paras": [
+    "Our degree programs follow Kathmandu University curricula and assessment standards, giving graduates nationally recognized qualifications backed by one of Nepal's leading universities."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Partnership Benefits",
+   "h1": "",
+   "heading": "What KU Affiliation Means for You",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Rigorous Curriculum",
+      "stat": "",
+      "text": [
+       "Programs designed to international standards while addressing local and regional needs in technology and education."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Faculty Excellence",
+      "stat": "",
+      "text": [
+       "Access to Kathmandu University faculty expertise, guest lectures, and collaborative research initiatives."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Industry Recognition",
+      "stat": "",
+      "text": [
+       "Degrees recognized across Nepal and internationally, opening doors for further studies and professional opportunities."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Quality Assurance",
+      "stat": "",
+      "text": [
+       "Regular program reviews and assessments ensuring continuous improvement in teaching methods and learning outcomes."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Academic Mobility",
+      "stat": "",
+      "text": [
+       "Opportunities for student and faculty exchanges, collaborative projects, and joint academic initiatives."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Professional Network",
+      "stat": "",
+      "text": [
+       "Connection to KU's extensive network of alumni, industry partners, and academic institutions globally."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Learn More About Our Programs",
+   "paras": [
+    "Explore BIT and B.Tech Ed IT programs designed under KU affiliation standards."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "View Programs",
+     "href": null
+    },
+    {
+     "text": "Schedule a Visit",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

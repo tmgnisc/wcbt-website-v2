@@ -1,0 +1,222 @@
+{
+ "route": "/about/publications",
+ "title": "Publications & Research — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Research & Publications",
+   "heading": "",
+   "paras": [
+    "Scholarly Excellence",
+    "WhiteHouse College promotes a strong culture of research, innovation, and academic writing that contributes to knowledge creation and professional growth.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Our Commitment",
+   "h1": "",
+   "heading": "Fostering Academic Excellence",
+   "paras": [
+    "WhiteHouse College promotes a strong culture of research, innovation, and academic writing. Faculty members, researchers, and students are encouraged to engage in scholarly activities that contribute to knowledge creation and professional growth. The college supports research publications, conference participation, academic journals, and interdisciplinary studies."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Academic Journals",
+      "stat": "",
+      "text": [
+       "Publication of peer-reviewed research in recognized national and international academic journals."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Conference Presentations",
+      "stat": "",
+      "text": [
+       "Faculty and student presentations at national and international academic conferences and seminars."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Collaborative Research",
+      "stat": "",
+      "text": [
+       "Interdisciplinary studies involving collaboration between faculty members, students, and external researchers."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Innovation Projects",
+      "stat": "",
+      "text": [
+       "Research projects focused on technology innovation, educational advancement, and social impact."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Knowledge Creation Through Research",
+   "paras": [
+    "By supporting scholarly activities, we create opportunities for faculty and students to contribute meaningfully to their fields and advance understanding in technology, education, and innovation."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Research Focus Areas",
+   "h1": "",
+   "heading": "Exploring Critical Domains",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Technology & Innovation",
+      "stat": "",
+      "text": [
+       "Research in artificial intelligence, IoT systems, software engineering, and emerging technologies with real-world applications."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Educational Technology",
+      "stat": "",
+      "text": [
+       "Studies exploring digital learning tools, instructional design, online education, and technology-enhanced pedagogy."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Applied Research",
+      "stat": "",
+      "text": [
+       "Practical research projects addressing specific problems in industry, education, and community development."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Interdisciplinary Studies",
+      "stat": "",
+      "text": [
+       "Collaborative research combining perspectives from technology, education, business, and social sciences."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "For Students & Faculty",
+   "h1": "",
+   "heading": "Getting Involved in Research",
+   "paras": [
+    "Students and faculty are encouraged to participate in research projects, publish findings, and present at conferences. This involvement develops critical thinking, strengthens professional credentials, and contributes to the advancement of knowledge in their respective fields."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Join Our Research Community",
+   "paras": [
+    "Explore opportunities to contribute to innovative research and scholarly work at WCBT."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Learn About Research Programs",
+     "href": null
+    },
+    {
+     "text": "Contact Research Office",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

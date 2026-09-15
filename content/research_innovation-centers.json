@@ -1,0 +1,133 @@
+{
+ "route": "/research/innovation-centers",
+ "title": "Innovation Centers — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Where ideas become working projects",
+   "heading": "",
+   "paras": [
+    "Innovation Centers",
+    "WCBT encourages students to test ideas, build prototypes, collaborate with mentors, and connect learning to local needs."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Innovation Support",
+   "h1": "",
+   "heading": "How the center supports students",
+   "paras": [
+    "Innovation activities bring together faculty guidance, industry input, project work, and entrepreneurial thinking."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Idea Development",
+      "stat": "",
+      "text": [
+       "Students learn how to identify problems, shape ideas, and define useful solutions."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Applied Projects",
+      "stat": "",
+      "text": [
+       "Project work turns classroom knowledge into prototypes, demos, and experiments."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Team Collaboration",
+      "stat": "",
+      "text": [
+       "Students practice communication, planning, and delivery through group innovation work."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Mentor Support",
+      "stat": "",
+      "text": [
+       "Faculty and industry mentors guide students through technical and practical decisions."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Startup Thinking",
+      "stat": "",
+      "text": [
+       "Activities introduce students to entrepreneurship, validation, pitching, and iteration."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Explore student innovation",
+   "paras": [
+    "Learn how WCBT connects research, projects, and industry exposure."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Research",
+     "href": null
+    },
+    {
+     "text": "Industry Exposure",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

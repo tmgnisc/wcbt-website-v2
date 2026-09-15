@@ -1,0 +1,122 @@
+{
+ "route": "/vision",
+ "title": "Vision — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "A future-focused academic ecosystem",
+   "heading": "",
+   "paras": [
+    "Vision",
+    "WCBT is building a regional hub for technology education, applied research, and student-centered opportunity.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Direction",
+   "h1": "",
+   "heading": "What guides our next chapter",
+   "paras": [
+    "These priorities shape how the college grows, evaluates progress, and serves students."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Mission",
+      "stat": "",
+      "text": [
+       "To make high-quality technology, business, and education programs accessible in Eastern Nepal through practical learning and strong academic standards."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": "/vision/mission"
+     },
+     {
+      "eyebrow": "",
+      "title": "Values",
+      "stat": "",
+      "text": [
+       "Integrity, excellence, innovation, inclusiveness, and leadership guide how we teach, support students, and grow as an institution."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": "/vision/values"
+     },
+     {
+      "eyebrow": "",
+      "title": "Strategy",
+      "stat": "",
+      "text": [
+       "WCBT focuses on KU-aligned academic quality, stronger industry exposure, research culture, student support, and community impact."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": "/vision/strategy"
+     },
+     {
+      "eyebrow": "",
+      "title": "Reports",
+      "stat": "",
+      "text": [
+       "Institutional updates and progress reports focus on academic delivery, student outcomes, partnerships, and campus development priorities."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": "/vision/reports"
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Learn how WCBT is growing",
+   "paras": [
+    "Explore our programs, affiliations, and student pathways across technology and education."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Explore Programs",
+     "href": null
+    },
+    {
+     "text": "About WCBT",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

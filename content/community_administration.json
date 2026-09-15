@@ -1,0 +1,198 @@
+{
+ "route": "/community/administration",
+ "title": "Administration — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Campus services that keep students supported",
+   "heading": "",
+   "paras": [
+    "Administration",
+    "The administration team coordinates admissions, records, student services, and daily campus operations.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Campus Operations",
+   "h1": "",
+   "heading": "The office students rely on",
+   "paras": [
+    "Administration connects students, families, faculty, and leadership. The team supports daily campus operations while helping students complete important academic and administrative steps on time."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "For students",
+      "stat": "",
+      "text": [
+       "Help with notices, documents, attendance coordination, fee questions, support requests, and campus information."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "For parents",
+      "stat": "",
+      "text": [
+       "Guidance on admissions, program information, fee procedures, student progress, and campus visits."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "For faculty",
+      "stat": "",
+      "text": [
+       "Coordination for schedules, records, student communication, activities, and academic operations."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Services",
+   "h1": "",
+   "heading": "How administration helps",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Admissions Support",
+      "stat": "",
+      "text": [
+       "Guidance for applications, documents, and enrollment steps."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Records & Coordination",
+      "stat": "",
+      "text": [
+       "Support for academic records, notices, and student coordination."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Student Services",
+      "stat": "",
+      "text": [
+       "Help with routine questions, support requests, and campus guidance."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Campus Operations",
+      "stat": "",
+      "text": [
+       "Daily coordination across departments, faculty, and students."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Common Requests",
+   "h1": "",
+   "heading": "What you can contact administration for",
+   "paras": [],
+   "bullets": [
+    "Admissions process, required documents, and application guidance.",
+    "Program information, class notices, and academic coordination.",
+    "Fee information, payment timelines, and office procedures.",
+    "Campus visit support and general inquiry handling.",
+    "Student support routing for counselling, financial advice, or accessibility needs.",
+    "Certificates, records, notices, and coordination with faculty or program teams."
+   ],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Need administrative help?",
+   "paras": [
+    "Contact the campus office for admissions, records, and general support."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Contact Administration",
+     "href": null
+    },
+    {
+     "text": "Visit Campus",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

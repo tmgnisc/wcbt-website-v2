@@ -1,0 +1,449 @@
+{
+ "route": "/academics/scholarships",
+ "title": "Scholarships — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Making quality education accessible",
+   "heading": "",
+   "paras": [
+    "Scholarships & Financial Aid",
+    "WCBT offers a range of scholarships to recognize talent, support deserving students, and open doors for learners across Eastern Nepal."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Apply for Scholarship",
+     "href": "/academics/scholarships#apply"
+    }
+   ],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "Financial Aid",
+   "h1": "",
+   "heading": "Up to 75% merit-based scholarships",
+   "paras": [
+    "Outstanding students can significantly reduce tuition costs through our merit scholarship program. Need-based and special category awards are also available."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Scholarship types",
+   "h1": "",
+   "heading": "Find the support that fits you",
+   "paras": [
+    "From academic excellence to community impact, multiple pathways exist to help fund your education at WCBT."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "Up to 75%",
+      "title": "Merit Scholarship",
+      "stat": "",
+      "text": [
+       "Up to 75% tuition support for outstanding academic performers in entrance exams and prior studies."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "Support",
+      "title": "Need-Based Aid",
+      "stat": "",
+      "text": [
+       "Financial assistance for students demonstrating genuine economic need with supporting documentation."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Women in Tech",
+      "stat": "30%",
+      "text": [
+       "Encouraging more women to pursue IT and education technology careers."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Sports & Talent",
+      "stat": "",
+      "text": [
+       "Recognition for exceptional achievement in sports, arts, or community leadership."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Rural Access Fund",
+      "stat": "",
+      "text": [
+       "Dedicated support for students from remote and underserved communities in Eastern Nepal."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Merit awards",
+   "h1": "",
+   "heading": "Rewarding academic excellence",
+   "paras": [
+    "High performers in entrance examinations and prior academics may qualify for substantial tuition reductions. We believe talent should never be limited by cost."
+   ],
+   "bullets": [
+    "Based on entrance exam scores and +2 results",
+    "Tiered awards from 25% to 75% tuition coverage",
+    "Renewable each semester with GPA requirements",
+    "Open to both BIT and B.Tech Ed IT applicants"
+   ],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Need-based aid",
+   "h1": "",
+   "heading": "Support for deserving students",
+   "paras": [
+    "Students facing financial hardship can apply for need-based grants. Our committee reviews each case individually with confidentiality and care."
+   ],
+   "bullets": [
+    "Income and family circumstance documentation required",
+    "Partial tuition grants and installment flexibility",
+    "Priority for students from underserved regions",
+    "Combined with merit awards where applicable"
+   ],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "How to apply",
+   "h1": "",
+   "heading": "Scholarship application process",
+   "paras": [
+    "Follow these steps after receiving your admission offer to be considered for financial aid."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Receive admission offer",
+      "stat": "01",
+      "text": [
+       "Scholarship consideration begins after you are offered a place in BIT or B.Tech Ed IT."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Submit scholarship form",
+      "stat": "02",
+      "text": [
+       "Complete the financial aid application with required supporting documents."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Review committee",
+      "stat": "03",
+      "text": [
+       "Applications are evaluated based on merit, need, and scholarship category criteria."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Award notification",
+      "stat": "04",
+      "text": [
+       "Successful applicants receive scholarship details before the enrollment deadline."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Our commitment",
+   "h1": "",
+   "heading": "Investing in student success",
+   "paras": [
+    "Scholarships are part of WhiteHouse Education Foundation's mission to expand access to quality higher education."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Transparent criteria",
+      "stat": "",
+      "text": [
+       "Clear eligibility guidelines published for every scholarship category."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Student-first review",
+      "stat": "",
+      "text": [
+       "Applications evaluated fairly with respect for each student's circumstances."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Renewal support",
+      "stat": "",
+      "text": [
+       "Ongoing guidance to help scholars maintain eligibility and academic progress."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Growing fund",
+      "stat": "",
+      "text": [
+       "Annual expansion of scholarship pools through foundation and partner contributions."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "FAQ",
+   "h1": "",
+   "heading": "Scholarship questions",
+   "paras": [
+    "Answers to the most common financial aid inquiries."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": [
+    {
+     "q": "Can I apply for multiple scholarships?",
+     "a": "Students may be considered for more than one category, but total aid is capped per institutional policy. The committee assigns the most suitable award."
+    },
+    {
+     "q": "Do scholarships cover full tuition?",
+     "a": "Merit scholarships can cover up to 75% of tuition. Partial awards and need-based grants are also available depending on funds."
+    },
+    {
+     "q": "Is the scholarship renewable?",
+     "a": "Most awards require maintaining a minimum GPA each semester and good academic standing to continue receiving support."
+    },
+    {
+     "q": "When should I apply?",
+     "a": "Submit your scholarship application alongside or immediately after accepting your admission offer, before the enrollment deadline."
+    }
+   ]
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Scholarships",
+   "h1": "",
+   "heading": "Apply for a scholarship",
+   "paras": [
+    "Tell us about yourself and our team will help you find the right award and guide your application."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [
+    {
+     "fields": [
+      {
+       "tag": "input",
+       "type": "text",
+       "name": "name",
+       "label": "",
+       "placeholder": "Full name",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "input",
+       "type": "tel",
+       "name": "phone",
+       "label": "",
+       "placeholder": "Phone number",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "input",
+       "type": "email",
+       "name": "email",
+       "label": "",
+       "placeholder": "Email",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "select",
+       "type": "text",
+       "name": "program",
+       "label": "",
+       "placeholder": "",
+       "required": true,
+       "options": [
+        "Program of interest",
+        "BIT — Bachelor of Information Technology",
+        "B.Tech Ed IT — Technology in Education",
+        "Not sure yet"
+       ]
+      },
+      {
+       "tag": "textarea",
+       "type": "text",
+       "name": "message",
+       "label": "",
+       "placeholder": "Anything you'd like us to know? (optional)",
+       "required": false,
+       "options": []
+      }
+     ],
+     "submit": "Submit scholarship inquiry",
+     "notes": [
+      "We respect your privacy. No spam, ever."
+     ]
+    }
+   ],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Explore scholarship options",
+   "paras": [
+    "Contact our admissions office to learn which awards you may qualify for before applying."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Contact Admissions",
+     "href": null
+    },
+    {
+     "text": "View Programs",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

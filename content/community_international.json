@@ -1,0 +1,185 @@
+{
+ "route": "/community/international",
+ "title": "International — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Learning with a global outlook",
+   "heading": "",
+   "paras": [
+    "International",
+    "WCBT encourages global perspectives through KU-aligned standards, digital learning, and future mobility pathways."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Global Outlook",
+   "h1": "",
+   "heading": "What international perspective means at WCBT",
+   "paras": [
+    "International does not only mean studying abroad. It means preparing students to understand global standards, digital work, cross-cultural communication, and the expectations of modern technology and education careers."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Academic preparation",
+      "stat": "",
+      "text": [
+       "KU-aligned academic delivery gives students a structured foundation for graduate study, professional certifications, and future academic mobility. Students are encouraged to build strong portfolios, communication skills, and project experience."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Career readiness",
+      "stat": "",
+      "text": [
+       "Technology and education careers increasingly require global awareness. WCBT supports students through digital learning exposure, English communication practice, presentation work, and practical skills that transfer across workplaces."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Global Readiness",
+   "h1": "",
+   "heading": "International perspectives at WCBT",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Global Perspective",
+      "stat": "",
+      "text": [
+       "Programs connect students with technology trends and global practices."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Academic Standards",
+      "stat": "",
+      "text": [
+       "KU-aligned delivery prepares students for higher study and careers."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Future Study",
+      "stat": "",
+      "text": [
+       "Guidance supports students considering graduate study in Nepal or abroad."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Mobility Pathways",
+      "stat": "",
+      "text": [
+       "The college continues building links that expand student opportunities."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Student Preparation",
+   "h1": "",
+   "heading": "How students can prepare for global pathways",
+   "paras": [],
+   "bullets": [
+    "Build a strong academic record through consistent coursework and assessments.",
+    "Develop project portfolios that show practical technical and problem-solving ability.",
+    "Improve communication, presentation, teamwork, and documentation skills.",
+    "Participate in workshops, seminars, research activities, and industry exposure.",
+    "Discuss graduate study plans early with faculty, advisors, and administration.",
+    "Stay informed about documentation, deadlines, scholarships, and program requirements."
+   ],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Explore future pathways",
+   "paras": [
+    "Talk with WCBT about programs, preparation, and international study goals."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Contact Us",
+     "href": null
+    },
+    {
+     "text": "Programs",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

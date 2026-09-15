@@ -1,0 +1,127 @@
+{
+ "route": "/updates/news",
+ "title": "News — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Campus updates and stories",
+   "heading": "",
+   "paras": [
+    "News",
+    "Follow announcements, workshops, and student achievements from WCBT Jhapa Campus.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "What to Expect",
+   "h1": "",
+   "heading": "The kind of updates we share",
+   "paras": [
+    "Announcements are shared as they happen. Here's what this page will feature as the college posts updates."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Announcements",
+      "stat": "",
+      "text": [
+       "Admissions timelines, campus notices, and institutional updates."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Workshops & Seminars",
+      "stat": "",
+      "text": [
+       "Sessions on technology, business, and academic topics led by faculty and guests."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Student Achievements",
+      "stat": "",
+      "text": [
+       "Recognition of student and alumni accomplishments in academics and projects."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Stay Updated",
+   "h1": "",
+   "heading": "Check back for the latest",
+   "paras": [
+    "There are no updates posted yet. Contact the college directly for the most current announcements, or check back here soon."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Want to learn more?",
+   "paras": [
+    "Contact WCBT for details about academic events, workshops, and student activities."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Contact Us",
+     "href": null
+    },
+    {
+     "text": "Visit Campus",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

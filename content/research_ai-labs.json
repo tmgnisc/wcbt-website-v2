@@ -1,0 +1,133 @@
+{
+ "route": "/research/ai-labs",
+ "title": "AI Labs — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Applied AI learning for real problems",
+   "heading": "",
+   "paras": [
+    "AI Labs",
+    "The AI lab focus introduces students to intelligent systems, data, automation, and practical AI project development."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Learning Areas",
+   "h1": "",
+   "heading": "What students explore in AI",
+   "paras": [
+    "Students learn AI through guided experimentation, project work, and connections to real-world use cases."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "AI Fundamentals",
+      "stat": "",
+      "text": [
+       "Core concepts in machine learning, intelligent systems, model thinking, and responsible use."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Data Practice",
+      "stat": "",
+      "text": [
+       "Cleaning, organizing, analyzing, and interpreting data for practical decisions."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Prototype Building",
+      "stat": "",
+      "text": [
+       "Student projects turn AI ideas into simple working tools, demos, and experiments."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "NLP & Chatbots",
+      "stat": "",
+      "text": [
+       "Language tools, conversational interfaces, and local-language technology exposure."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Automation",
+      "stat": "",
+      "text": [
+       "Using AI to support workflows in education, business, agriculture, and services."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Interested in AI projects?",
+   "paras": [
+    "Explore our programs and research activities to learn how students build practical technology."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Explore Programs",
+     "href": null
+    },
+    {
+     "text": "Research",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

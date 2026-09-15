@@ -1,0 +1,372 @@
+{
+ "route": "/contact",
+ "title": "Contact — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "We'd love to hear from you",
+   "heading": "",
+   "paras": [
+    "Contact Us",
+    "Reach out for admissions guidance, scholarship information, campus tours, or any questions about life at WCBT."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Get in touch",
+     "href": "/contact#form"
+    }
+   ],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "Get in Touch",
+   "h1": "",
+   "heading": "Admissions team ready to help",
+   "paras": [
+    "Phone: 9714530056 · Mobile: 9714530057 · Email: info@whitehouseeducation.edu.np"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Departments",
+   "h1": "",
+   "heading": "Who to contact",
+   "paras": [
+    "Direct your question to the right team for the fastest response."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "Admissions",
+      "title": "Admissions Office",
+      "stat": "",
+      "text": [
+       "Questions about applications, eligibility, entrance exams, and enrollment."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Response Time",
+      "stat": "",
+      "text": [
+       "24h",
+       "We aim to reply to all inquiries within one business day."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Scholarships Desk",
+      "stat": "",
+      "text": [
+       "Financial aid, merit awards, and need-based grant inquiries."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Campus Visits",
+      "stat": "",
+      "text": [
+       "Schedule a guided tour of WCBT facilities in Jhapa."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "General Inquiries",
+      "stat": "",
+      "text": [
+       "Programs, partnerships, media requests, and other questions."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Contact channels",
+   "h1": "",
+   "heading": "Multiple ways to reach us",
+   "paras": [
+    "Choose the channel that works best for you."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Phone",
+      "stat": "",
+      "text": [
+       "9714530056, 9714530057 for admissions and general inquiries during office hours."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Email",
+      "stat": "",
+      "text": [
+       "info@whitehouseeducation.edu.np — we respond within one business day."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Visit us",
+      "stat": "",
+      "text": [
+       "WCBT Jhapa Campus, Jhapa, Nepal. Schedule visits in advance."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Office hours",
+      "stat": "",
+      "text": [
+       "Sun–Fri, 9:00 AM – 5:00 PM NPT. Saturday visits by appointment."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Get in touch",
+   "h1": "",
+   "heading": "We're here to help",
+   "paras": [
+    "Reach out for admissions, scholarships, campus visits, or general inquiries. Our team typically responds within one business day."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Address: Jhapa, Nepal",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Phone: 9714530056",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Mobile: 9714530057",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Email: info@whitehouseeducation.edu.np",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [
+    {
+     "fields": [
+      {
+       "tag": "input",
+       "type": "text",
+       "name": "name",
+       "label": "Full name",
+       "placeholder": "Your name",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "input",
+       "type": "text",
+       "name": "phone",
+       "label": "Phone",
+       "placeholder": "Your phone number",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "input",
+       "type": "email",
+       "name": "email",
+       "label": "Email",
+       "placeholder": "you@email.com",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "input",
+       "type": "text",
+       "name": "subject",
+       "label": "Subject",
+       "placeholder": "Admissions, scholarships, campus visit...",
+       "required": false,
+       "options": []
+      },
+      {
+       "tag": "textarea",
+       "type": "text",
+       "name": "message",
+       "label": "Message",
+       "placeholder": "How can we help you?",
+       "required": true,
+       "options": []
+      }
+     ],
+     "submit": "Send Message",
+     "notes": []
+    }
+   ],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "FAQ",
+   "h1": "",
+   "heading": "Common questions",
+   "paras": [
+    "Quick answers before you reach out."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": [
+    {
+     "q": "What are your office hours?",
+     "a": "Sunday through Friday, 9:00 AM to 5:00 PM NPT. Saturday by appointment for campus visits."
+    },
+    {
+     "q": "How do I schedule a campus visit?",
+     "a": "Call 9714530056 or 9714530057 or email info@whitehouseeducation.edu.np with your preferred date. We recommend visiting on weekdays."
+    },
+    {
+     "q": "Can I contact via WhatsApp?",
+     "a": "Yes. Message us at 9714530056 or 9714530057 for quick admissions and general inquiries during office hours."
+    },
+    {
+     "q": "Where is WCBT located?",
+     "a": "WCBT operates from the SBSS premises in Jhapa, Nepal. Detailed directions are shared when you schedule a visit."
+    }
+   ]
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Take the next step",
+   "paras": [
+    "Apply for the upcoming intake or download our prospectus to learn more about WCBT."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Apply Now",
+     "href": null
+    },
+    {
+     "text": "Download Prospectus",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

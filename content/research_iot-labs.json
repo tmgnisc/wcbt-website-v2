@@ -1,0 +1,133 @@
+{
+ "route": "/research/iot-labs",
+ "title": "IoT Labs — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Connected systems and smart technology",
+   "heading": "",
+   "paras": [
+    "IoT Labs",
+    "IoT lab activities help students understand sensors, devices, data, networks, and automation."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Lab Focus",
+   "h1": "",
+   "heading": "How students learn IoT",
+   "paras": [
+    "Students connect hardware, software, and data to understand how modern smart systems work."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Device Basics",
+      "stat": "",
+      "text": [
+       "Hands-on exposure to microcontrollers, sensors, actuators, and embedded systems."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Connectivity",
+      "stat": "",
+      "text": [
+       "Understand how devices communicate through networks, protocols, and cloud services."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Data Monitoring",
+      "stat": "",
+      "text": [
+       "Collect, visualize, and interpret sensor data for practical decision-making."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Automation",
+      "stat": "",
+      "text": [
+       "Build simple automated responses for classrooms, farms, homes, and workplaces."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Smart Applications",
+      "stat": "",
+      "text": [
+       "Explore IoT applications in agriculture, education, health, and local businesses."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Build practical connected systems",
+   "paras": [
+    "Learn more about technology programs and student project opportunities."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Explore Programs",
+     "href": null
+    },
+    {
+     "text": "Industry Exposure",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

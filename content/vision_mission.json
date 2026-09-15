@@ -1,0 +1,122 @@
+{
+ "route": "/vision/mission",
+ "title": "Mission — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Empowering Eastern Nepal through future-ready education",
+   "heading": "",
+   "paras": [
+    "Mission",
+    "Our mission is to make high-quality technology, business, and education programs accessible through practical learning, strong academic standards, and student-centered support.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "What We Do",
+   "h1": "",
+   "heading": "A mission built around access, quality, and opportunity",
+   "paras": [
+    "WCBT connects classroom learning with projects, industry exposure, research, and personal support so students are prepared for work, further study, and leadership."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Accessible Higher Education",
+      "stat": "",
+      "text": [
+       "Bring KU-aligned academic pathways closer to students across Jhapa and Eastern Nepal."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Academic Quality",
+      "stat": "",
+      "text": [
+       "Maintain rigorous teaching, assessment, and mentoring standards across every program."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Practical Readiness",
+      "stat": "",
+      "text": [
+       "Prepare students through projects, workshops, internships, and professional guidance."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Community Impact",
+      "stat": "",
+      "text": [
+       "Develop graduates who contribute to local industries, schools, startups, and communities."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Start your academic journey",
+   "paras": [
+    "Explore programs designed around practical skills and long-term opportunity."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Explore Programs",
+     "href": null
+    },
+    {
+     "text": "Contact Us",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

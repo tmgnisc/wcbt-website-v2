@@ -1,0 +1,278 @@
+{
+ "route": "/about/legacy",
+ "title": "Our Legacy — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "A Legacy of Excellence",
+   "heading": "",
+   "paras": [
+    "Our Story",
+    "Our legacy is reflected in the achievements of our graduates, the dedication of our faculty, and the confidence placed in us by students, parents, and industry partners.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "What We Stand For",
+   "h1": "",
+   "heading": "Trusted Name in Higher Education",
+   "paras": [
+    "For years, WhiteHouse has been recognized as a trusted name in higher education, dedicated to nurturing generations of students through quality teaching, innovation, and academic excellence. Our legacy is built on the achievements of our graduates, the dedication of our faculty, and the confidence placed in us by students, parents, and industry partners."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Building on Solid Foundations",
+   "paras": [
+    "Our commitment to academic excellence, student success, and community impact has shaped our identity and guided our growth."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Our Journey",
+   "h1": "",
+   "heading": "Milestones That Define Us",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Foundation Established",
+      "stat": "2014",
+      "text": [
+       "WhiteHouse Education Foundation begins its mission to expand quality higher education in Eastern Nepal."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "WCBT Jhapa Campus Opens",
+      "stat": "2018",
+      "text": [
+       "The first campus launches with a focus on technology and business education, serving the Jhapa region."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "KU Partnership Formalized",
+      "stat": "2021",
+      "text": [
+       "Kathmandu University affiliation brings recognized BIT and B.Tech Ed IT programs to our campus."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Regional Impact Recognition",
+      "stat": "2024",
+      "text": [
+       "WCBT becomes recognized as a trusted institution contributing to Eastern Nepal's educational and technological advancement."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Expanding Excellence",
+      "stat": "2026",
+      "text": [
+       "New research labs, expanded facilities, and growing industry partnerships strengthen our academic ecosystem."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Our Achievements",
+   "h1": "",
+   "heading": "Proud Accomplishments",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Student Success",
+      "stat": "500+",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Graduates Placed",
+      "stat": "400+",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Industry Partners",
+      "stat": "50+",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Years of Excellence",
+      "stat": "12+",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Our Values",
+   "h1": "",
+   "heading": "What Drives Our Legacy",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Academic Excellence",
+      "stat": "",
+      "text": [
+       "Rigorous standards, innovative teaching, and continuous improvement in all we do."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Student-Centered Approach",
+      "stat": "",
+      "text": [
+       "Every decision prioritizes student success, growth, and career readiness."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Community Impact",
+      "stat": "",
+      "text": [
+       "Creating positive change through education, research, and community engagement."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Be Part of Our Growing Legacy",
+   "paras": [
+    "Join thousands of students who have chosen WCBT for their academic and professional journey."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Apply Now",
+     "href": null
+    },
+    {
+     "text": "Learn More",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

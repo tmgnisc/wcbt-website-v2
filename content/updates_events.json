@@ -1,0 +1,139 @@
+{
+ "route": "/updates/events",
+ "title": "Events — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Life on campus",
+   "heading": "",
+   "paras": [
+    "Events",
+    "From orientation to guest lectures and student activities, here's the kind of events that take place at WCBT.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Event Types",
+   "h1": "",
+   "heading": "What happens on campus",
+   "paras": [
+    "Specific dates and details are announced through official college notices and the admissions office as events are scheduled."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Orientation Sessions",
+      "stat": "",
+      "text": [
+       "Welcome programs that help new students settle into campus life."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Guest Lectures & Workshops",
+      "stat": "",
+      "text": [
+       "Sessions led by academic and industry speakers on relevant topics."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Bootcamps & Team Activities",
+      "stat": "",
+      "text": [
+       "Hands-on sessions and collaborative projects for students."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Campus & Sports Activities",
+      "stat": "",
+      "text": [
+       "Sports, cultural programs, and community events across the year."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Stay Updated",
+   "h1": "",
+   "heading": "Planning a visit?",
+   "paras": [
+    "Specific event dates aren't listed yet. Contact the campus office for the current schedule, or plan a visit to see campus life firsthand."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Planning a campus visit?",
+   "paras": [
+    "Meet the team, explore facilities, and learn about upcoming events in person."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Visit Campus",
+     "href": null
+    },
+    {
+     "text": "Contact Us",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

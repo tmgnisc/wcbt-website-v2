@@ -1,0 +1,134 @@
+{
+ "route": "/community",
+ "title": "Community — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "The people behind WCBT",
+   "heading": "",
+   "paras": [
+    "Community",
+    "Our board, advisors, faculty, and administration work together to create a supportive academic community for students.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "People & Support",
+   "h1": "",
+   "heading": "A community built around student success",
+   "paras": [
+    "Explore the teams and partners who guide the campus, support learning, and connect students with opportunity."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Board Members",
+      "stat": "",
+      "text": [
+       "Our board provides strategic direction, institutional oversight, and long-term guidance for sustainable academic growth."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": "/community/board-members"
+     },
+     {
+      "eyebrow": "",
+      "title": "Advisors",
+      "stat": "",
+      "text": [
+       "Academic and industry advisors help align programs, projects, and student exposure with real workforce needs."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": "/community/advisors"
+     },
+     {
+      "eyebrow": "",
+      "title": "Faculty",
+      "stat": "",
+      "text": [
+       "Faculty members bring subject expertise, mentoring, and project-based learning into the classroom."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": "/community/faculty"
+     },
+     {
+      "eyebrow": "",
+      "title": "Administration",
+      "stat": "",
+      "text": [
+       "The administration team supports admissions, student services, operations, and daily campus coordination."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": "/community/administration"
+     },
+     {
+      "eyebrow": "",
+      "title": "International",
+      "stat": "",
+      "text": [
+       "WCBT encourages global perspectives through academic standards, collaboration, digital learning, and future mobility pathways."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": "/community/international"
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Connect with our team",
+   "paras": [
+    "Reach out to learn more about campus leadership, academic teams, or student support."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Contact WCBT",
+     "href": null
+    },
+    {
+     "text": "Visit Campus",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

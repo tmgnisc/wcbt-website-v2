@@ -1,0 +1,395 @@
+{
+ "route": "/student-life/student-experience",
+ "title": "Wider Student Experience — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Grow beyond the classroom",
+   "heading": "",
+   "paras": [
+    "Wider Student Experience",
+    "At WCBT, your education extends into clubs, activities, events, and a supportive community that helps you build skills, friendships, and confidence.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "Student Community",
+   "h1": "",
+   "heading": "Learn, build, and belong",
+   "paras": [
+    "Join a vibrant campus where technology enthusiasts and future educators collaborate, compete, and grow together."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Our Colleges",
+   "h1": "",
+   "heading": "A connected learning community",
+   "paras": [
+    "WCBT operates alongside established partner institutions, giving students access to shared facilities, faculty, and a broader academic network in Eastern Nepal."
+   ],
+   "bullets": [
+    "Shared campus facilities and resources",
+    "Cross-institution faculty and mentorship",
+    "Access to a wide student and alumni network",
+    "Collaborative academic and cultural events"
+   ],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Enrichment Activities",
+   "h1": "",
+   "heading": "Opportunities to explore and lead",
+   "paras": [
+    "Develop leadership, creativity, and teamwork through activities designed to complement your degree."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Skill Workshops",
+      "stat": "",
+      "text": [
+       "Regular sessions on emerging tools, soft skills, and career readiness."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Competitions",
+      "stat": "",
+      "text": [
+       "Hackathons, quizzes, and inter-college contests across disciplines."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Volunteering",
+      "stat": "",
+      "text": [
+       "Community service and outreach that create real-world impact."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Cultural Events",
+      "stat": "",
+      "text": [
+       "Music, art, and celebration events that build campus pride."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Clubs & Societies",
+   "h1": "",
+   "heading": "Find your community",
+   "paras": [
+    "Join one or more student organizations to build skills, friendships, and leadership experience."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Coding & Robotics",
+      "stat": "",
+      "text": [
+       "Competitive programming, hackathons, and hands-on robotics projects."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Ed-Tech Circle",
+      "stat": "",
+      "text": [
+       "Explore digital learning tools, LMS platforms, and classroom innovation."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Sports & Recreation",
+      "stat": "",
+      "text": [
+       "Football, cricket, basketball, and inter-college tournaments."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Arts, Music & Media",
+      "stat": "",
+      "text": [
+       "Photography, performance, and content creation for campus channels."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Community Outreach",
+      "stat": "",
+      "text": [
+       "Tech-literacy workshops and volunteering in local schools."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Entrepreneurship Hub",
+      "stat": "",
+      "text": [
+       "Pitch nights, startup mentoring, and innovation challenges."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Welcome & Orientation",
+   "h1": "",
+   "heading": "A confident start to college",
+   "paras": [
+    "New students are welcomed with a structured orientation that makes settling in easy."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Campus Tour",
+      "stat": "",
+      "text": [
+       "Get familiar with facilities, classrooms, and key student services."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Mentor Pairing",
+      "stat": "",
+      "text": [
+       "Connect with senior students who guide you through your first weeks."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Team Building",
+      "stat": "",
+      "text": [
+       "Icebreakers and group activities to help you make friends fast."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Intro Sessions",
+      "stat": "",
+      "text": [
+       "Briefings on academics, expectations, and campus life essentials."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Student Events Calendar",
+   "h1": "",
+   "heading": "Something happening all year",
+   "paras": [
+    "Mark your calendar — WCBT keeps the campus active with events every term."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Welcome & Orientation",
+      "stat": "",
+      "text": [
+       "Jan",
+       "Campus tours, mentor meetups, and team-building for new students."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Enrichment Week",
+      "stat": "",
+      "text": [
+       "Mar",
+       "Workshops, guest talks, and skill sessions beyond the curriculum."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Summer Hackathon",
+      "stat": "",
+      "text": [
+       "Jun",
+       "A 48-hour build sprint with mentors, prizes, and recruiter networking."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "WCBT Annual Fest",
+      "stat": "",
+      "text": [
+       "Oct",
+       "Culture, tech expo, sports, and performances — the highlight of the year."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Experience WCBT for yourself",
+   "paras": [
+    "Schedule a campus visit to meet students, tour facilities, and feel the energy of our community."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Schedule a Visit",
+     "href": null
+    },
+    {
+     "text": "View Programs",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "route": "/student-life/student-support",
+ "title": "Student Support — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "We're with you, every step",
+   "heading": "",
+   "paras": [
+    "Student Support",
+    "From wellbeing to academics and finances, WCBT offers support services that help every student succeed and feel at home on campus.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "Here to Help",
+   "h1": "",
+   "heading": "Support that puts students first",
+   "paras": [
+    "Confidential, caring, and accessible services designed around your needs throughout your studies."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Support Services",
+   "h1": "",
+   "heading": "How we support you",
+   "paras": [
+    "A range of services to keep you healthy, focused, and on track for success."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Counselling Services",
+      "stat": "",
+      "text": [
+       "Confidential one-on-one counselling to help you navigate personal and academic challenges."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Mental Health & Wellbeing",
+      "stat": "",
+      "text": [
+       "Wellbeing workshops, stress management, and resources to support your mental health."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Academic Support",
+      "stat": "",
+      "text": [
+       "Tutoring, study skills, and guidance to help you stay on top of your coursework."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Disability Services",
+      "stat": "",
+      "text": [
+       "Reasonable accommodations and inclusive support for students with disabilities."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Financial Aid Advice",
+      "stat": "",
+      "text": [
+       "Guidance on scholarships, grants, and managing the cost of your education."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Emergency Contacts",
+      "stat": "",
+      "text": [
+       "Know who to reach and how to get help quickly in urgent situations."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Emergency Contacts",
+   "h1": "",
+   "heading": "Reach us when it matters",
+   "paras": [
+    "If you or a fellow student needs urgent assistance, contact our support team right away.",
+    "9714530056, 9714530057",
+    "Jhapa, Nepal",
+    "Support is available during office hours. For after-hours emergencies, please contact local emergency services."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "info@whitehouseeducation.edu.np",
+     "href": "mailto:info@whitehouseeducation.edu.np"
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Need to talk to someone?",
+   "paras": [
+    "Our team is ready to help with counselling, academics, accessibility, or financial questions."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Contact Support",
+     "href": null
+    },
+    {
+     "text": "Visit Campus",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

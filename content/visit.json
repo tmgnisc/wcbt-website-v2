@@ -1,0 +1,233 @@
+{
+ "route": "/visit",
+ "title": "Visit Us — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Come see our campus",
+   "heading": "",
+   "paras": [
+    "Visit Us",
+    "The best way to know WCBT is to experience it. Plan a visit, join an open day, or take a virtual tour from anywhere.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "Plan Your Visit",
+   "h1": "",
+   "heading": "We'd love to show you around",
+   "paras": [
+    "Meet our students and faculty, tour the facilities, and get your questions answered in person."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Can't visit yet?",
+   "h1": "",
+   "heading": "Take the virtual campus tour",
+   "paras": [
+    "Explore our premises online with an immersive, scrolling walkthrough."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Start the virtual tour",
+     "href": "/visit/virtual-tour"
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "What to expect",
+   "h1": "",
+   "heading": "Ways to explore WCBT",
+   "paras": [
+    "Choose the option that works best for you — on campus or online."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Campus Location & Map",
+      "stat": "",
+      "text": [
+       "Find us in Jhapa, Nepal, with easy directions to the campus."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Attractions Near College",
+      "stat": "",
+      "text": [
+       "Discover dining, lodging, and points of interest close to campus."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Open Day Schedule",
+      "stat": "",
+      "text": [
+       "Join scheduled open days to experience a typical day at WCBT."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Book a Campus Visit",
+      "stat": "",
+      "text": [
+       "Arrange a personalized tour at a time that suits you."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Virtual Tour",
+      "stat": "",
+      "text": [
+       "Explore our spaces online if you can't make it in person."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Transport & Parking",
+      "stat": "",
+      "text": [
+       "Public transport routes and parking guidance for your visit."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Getting here",
+   "h1": "",
+   "heading": "Easy to reach in Jhapa",
+   "paras": [
+    "WCBT is located on the premises of Nidi Secondary School & Indreni Campus in Jhapa, Nepal, with convenient access by public and private transport."
+   ],
+   "bullets": [
+    "Central location in Jhapa, Eastern Nepal",
+    "Accessible by bus and local transport",
+    "Parking available for visitors",
+    "Assistance available — just call ahead"
+   ],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Book your visit",
+   "h1": "",
+   "heading": "Plan a campus visit",
+   "paras": [
+    "Contact us in advance and our team will arrange a guided tour for you and your family.",
+    "9714530056, 9714530057",
+    "Jhapa, Nepal"
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "info@whitehouseeducation.edu.np",
+     "href": "mailto:info@whitehouseeducation.edu.np"
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Ready to visit WCBT?",
+   "paras": [
+    "Schedule your campus visit today and take the first step toward joining our community."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Book a Visit",
+     "href": null
+    },
+    {
+     "text": "Contact Us",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

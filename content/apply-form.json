@@ -1,0 +1,92 @@
+{
+ "route": "/apply-form",
+ "title": "Apply Now — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "Apply Now",
+   "h1": "",
+   "heading": "Submit your request",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [
+    {
+     "fields": [
+      {
+       "tag": "input",
+       "type": "text",
+       "name": "name",
+       "label": "",
+       "placeholder": "Full name",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "input",
+       "type": "text",
+       "name": "address",
+       "label": "",
+       "placeholder": "Address",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "input",
+       "type": "tel",
+       "name": "phone",
+       "label": "",
+       "placeholder": "Phone number",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "input",
+       "type": "email",
+       "name": "email",
+       "label": "",
+       "placeholder": "Email",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "select",
+       "type": "text",
+       "name": "purpose",
+       "label": "",
+       "placeholder": "",
+       "required": true,
+       "options": [
+        "Purpose of contact",
+        "General Query",
+        "Admission Query",
+        "Scholarship Query",
+        "Hackathon Event Query",
+        "Hackathon Registration"
+       ]
+      },
+      {
+       "tag": "textarea",
+       "type": "text",
+       "name": "message",
+       "label": "",
+       "placeholder": "Tell us more - any other details or questions (optional)",
+       "required": false,
+       "options": []
+      }
+     ],
+     "submit": "Submit",
+     "notes": [
+      "We respect your privacy. No spam, ever."
+     ]
+    }
+   ],
+   "faqs": []
+  }
+ ]
+}

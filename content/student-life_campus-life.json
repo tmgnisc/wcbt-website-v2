@@ -1,0 +1,511 @@
+{
+ "route": "/student-life/campus-life",
+ "title": "Campus Life — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "More than classrooms",
+   "heading": "",
+   "paras": [
+    "Campus Life",
+    "At WCBT, learning extends beyond lectures — through clubs, events, sports, and a vibrant student community in Jhapa.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "Student Community",
+   "h1": "",
+   "heading": "Learn, build, and belong",
+   "paras": [
+    "Join a supportive campus where technology enthusiasts and future educators collaborate, compete, and grow together."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "On campus",
+   "h1": "",
+   "heading": "Spaces designed for student life",
+   "paras": [
+    "From collaborative lounges to annual festivals, WCBT offers an environment where students thrive inside and outside the classroom."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Student Lounge",
+      "stat": "",
+      "text": [
+       "Relaxed spaces to study, collaborate, and connect between classes."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Clubs & Societies",
+      "stat": "15+",
+      "text": [
+       "15+ active student organizations across tech, arts, and community service."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Cafeteria",
+      "stat": "",
+      "text": [
+       "Affordable meals and refreshments throughout the academic day."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "Events",
+      "title": "Annual Fest",
+      "stat": "",
+      "text": [
+       "Culture, music, hackathons, and sports come together each spring."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Gallery",
+   "h1": "",
+   "heading": "Campus life in pictures",
+   "paras": [
+    "A visual tour of student activities, learning spaces, and campus events that shape daily life at WCBT."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Campus Festivities",
+      "stat": "",
+      "text": [
+       "Live performances, cultural nights, and student celebrations from across the year."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Study Spaces",
+      "stat": "",
+      "text": [
+       "Quiet corners and collaborative zones where students focus, create, and connect."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Sports Spirit",
+      "stat": "",
+      "text": [
+       "Team matches, fitness sessions, and outdoor games keep the campus active."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Creative Labs",
+      "stat": "",
+      "text": [
+       "Workshops, media projects, and innovation challenges in every semester."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Team Projects",
+      "stat": "",
+      "text": [
+       "Collaborative student work that bridges classroom learning with real-world impact."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Campus Evenings",
+      "stat": "",
+      "text": [
+       "Friendly social spaces and events that bring students together after classes."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Student experience",
+   "h1": "",
+   "heading": "A balanced college life",
+   "paras": [
+    "We encourage students to pursue passions beyond academics — whether that's competitive coding, sports, creative arts, or community service."
+   ],
+   "bullets": [
+    "Active clubs for every interest and skill level",
+    "Regular workshops, hackathons, and cultural events",
+    "Mentorship from seniors, faculty, and alumni",
+    "Safe, inclusive campus environment in Jhapa"
+   ],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Clubs & societies",
+   "h1": "",
+   "heading": "Find your community",
+   "paras": [
+    "Join one or more student organizations to build skills, friendships, and leadership experience."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Coding Club",
+      "stat": "",
+      "text": [
+       "Weekly meetups, competitive programming, and open-source contributions."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Robotics Society",
+      "stat": "",
+      "text": [
+       "Build and compete with robots — from line followers to autonomous projects."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Ed-Tech Circle",
+      "stat": "",
+      "text": [
+       "Explore digital tools, LMS platforms, and classroom innovation."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Photography & Media",
+      "stat": "",
+      "text": [
+       "Capture campus life and produce content for college channels."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Sports Association",
+      "stat": "",
+      "text": [
+       "Football, cricket, basketball, and inter-college tournaments."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Community Outreach",
+      "stat": "",
+      "text": [
+       "Tech literacy workshops and volunteer programs in local schools."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Wellbeing",
+   "h1": "",
+   "heading": "Support beyond academics",
+   "paras": [
+    "Student services help you stay healthy, connected, and motivated throughout your degree."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Peer mentoring",
+      "stat": "",
+      "text": [
+       "Senior students guide newcomers through academics and campus navigation."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Study spaces",
+      "stat": "",
+      "text": [
+       "Quiet zones and group rooms available throughout the day."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Sports & fitness",
+      "stat": "",
+      "text": [
+       "Intramural leagues and fitness activities promote physical wellbeing."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Cultural activities",
+      "stat": "",
+      "text": [
+       "Music, dance, and celebration events build community pride."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Housing",
+   "h1": "",
+   "heading": "Living near campus",
+   "paras": [
+    "While WCBT does not operate on-campus hostels, our team helps students find safe, affordable accommodation options in Jhapa with easy access to campus."
+   ],
+   "bullets": [
+    "Recommended lodging list updated each intake",
+    "Shared and private room options nearby",
+    "Walking distance and public transport routes",
+    "Contact admissions for current housing guidance"
+   ],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Annual calendar",
+   "h1": "",
+   "heading": "Events throughout the year",
+   "paras": [
+    "Mark your calendar — there's always something happening on campus."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Orientation Week",
+      "stat": "",
+      "text": [
+       "Jan",
+       "Welcome new students with campus tours, mentor meetups, and team-building activities."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Industry Speaker Series",
+      "stat": "",
+      "text": [
+       "Mar",
+       "Monthly talks from IT leaders, educators, and startup founders."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Summer Hackathon",
+      "stat": "",
+      "text": [
+       "Jun",
+       "48-hour build sprint with prizes, mentors, and recruiter networking."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "WCBT Annual Fest",
+      "stat": "",
+      "text": [
+       "Oct",
+       "The biggest celebration of the year — culture, tech expo, sports, and performances."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Experience WCBT for yourself",
+   "paras": [
+    "Schedule a campus visit to meet students, tour facilities, and feel the energy of our community."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Schedule a Visit",
+     "href": null
+    },
+    {
+     "text": "View Programs",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

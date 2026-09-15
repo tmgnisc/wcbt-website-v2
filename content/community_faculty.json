@@ -1,0 +1,232 @@
+{
+ "route": "/community/faculty",
+ "title": "Faculty — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Academic team supporting every learner",
+   "heading": "",
+   "paras": [
+    "Faculty",
+    "Our faculty and academic leaders guide students through practical, KU-aligned learning experiences.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Academic Role",
+   "h1": "",
+   "heading": "What faculty do at WCBT",
+   "paras": [
+    "Faculty are responsible for more than classroom delivery. They guide academic progress, mentor projects, coordinate practical learning, and help students connect theory with workplace expectations."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Teaching and academic guidance",
+      "stat": "",
+      "text": [
+       "Faculty members plan classes around Kathmandu University-aligned learning outcomes, explain core concepts, run practical sessions, and support students who need extra academic help. Students can approach faculty for subject clarification, assignment guidance, project direction, and exam preparation."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Project and career preparation",
+      "stat": "",
+      "text": [
+       "Faculty help students move from theory to application through lab work, presentations, team assignments, research exposure, and career-oriented feedback. This support builds confidence for internships, graduate study, teaching, technical roles, and entrepreneurship."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Academic Team",
+   "h1": "",
+   "heading": "Meet our faculty and academic leaders",
+   "paras": [
+    "Educators and coordinators focused on student success, learning quality, and campus engagement."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Arya Bhattarai",
+      "stat": "",
+      "text": [
+       "College Head",
+       "Leads day-to-day academic administration and campus coordination."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Aarohi Basnet",
+      "stat": "",
+      "text": [
+       "Program Officer, Admissions & ECA",
+       "Coordinates admissions support, student engagement, and extracurricular activities."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Learning Support",
+   "h1": "",
+   "heading": "How students work with faculty",
+   "paras": [
+    "The faculty relationship is designed to be practical, accessible, and focused on progress."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Subject Support",
+      "stat": "",
+      "text": [
+       "Students receive clarification on topics, assignments, lab work, and assessment expectations."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Project Mentoring",
+      "stat": "",
+      "text": [
+       "Faculty guide students through project planning, research, presentation, and improvement."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Class Coordination",
+      "stat": "",
+      "text": [
+       "Academic leaders coordinate schedules, notices, student concerns, and learning support."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Progress Guidance",
+      "stat": "",
+      "text": [
+       "Students are encouraged to discuss academic challenges before they become setbacks."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Student Expectations",
+   "h1": "",
+   "heading": "What faculty expect from students",
+   "paras": [],
+   "bullets": [
+    "Attend classes, labs, and academic activities consistently.",
+    "Ask questions early when topics, assignments, or expectations are unclear.",
+    "Participate in projects, presentations, workshops, and collaborative learning.",
+    "Use feedback from faculty to improve academic work and professional readiness."
+   ],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Have an academic question?",
+   "paras": [
+    "Contact the college team for program and faculty support."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Contact Us",
+     "href": null
+    },
+    {
+     "text": "Programs",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

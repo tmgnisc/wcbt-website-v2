@@ -1,0 +1,788 @@
+{
+ "route": "/",
+ "title": "WhiteHouse College of Business & Technology — KU Affiliated IT College in Nepal",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "WhiteHouse College of Business & Technology",
+   "heading": "",
+   "paras": [
+    "In Partnership with Kathmandu University",
+    "Empowering future innovators, technologists & leaders through world-class academic pathways rooted in Eastern Nepal."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Explore Programs",
+     "href": "/programs"
+    },
+    {
+     "text": "Scholarship Information",
+     "href": "/academics/scholarships"
+    },
+    {
+     "text": "Virtual Campus Tour",
+     "href": "/visit/virtual-tour"
+    }
+   ],
+   "images": [
+    "WhiteHouse College of Business & Technology campus"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "KU Affiliated Admissions Open 2026",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Scholarship Applications Available",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Orientation Program Notice",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Hackathon Registration Now Live",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "In Partnership with Kathmandu University",
+   "h1": "",
+   "heading": "WCBT - Jhapa Campus",
+   "paras": [
+    "(Under the Management of WhiteHouse Education Foundation)"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Quick filters:",
+   "h1": "",
+   "heading": "",
+   "paras": [],
+   "bullets": [],
+   "links": [
+    {
+     "text": "BIT",
+     "href": null
+    },
+    {
+     "text": "B.Tech Ed IT",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [
+    {
+     "fields": [
+      {
+       "tag": "input",
+       "type": "text",
+       "name": "",
+       "label": "",
+       "placeholder": "Search BIT or B.Tech Ed IT programs...",
+       "required": false,
+       "options": []
+      }
+     ],
+     "submit": "Search",
+     "notes": []
+    }
+   ],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Programs",
+   "h1": "",
+   "heading": "Future-ready degrees, designed with industry",
+   "paras": [
+    "Affiliated to Kathmandu University. Built for global outcomes."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "KU Affiliated",
+      "title": "BIT — Bachelor in Information Technology",
+      "stat": "",
+      "text": [
+       "Build the next generation of software, AI systems and intelligent platforms."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "BIT — Bachelor in Information Technology",
+      "href": "/programs/bit"
+     },
+     {
+      "eyebrow": "KU Affiliated",
+      "title": "B.Tech Ed IT — Technology in Education",
+      "stat": "",
+      "text": [
+       "Equip educators with cutting-edge tools to reshape modern classrooms."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "B.Tech Ed IT — Technology in Education",
+      "href": "/programs/btech-ed-it"
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Your next academic step",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Admission Process",
+      "stat": "",
+      "text": [
+       "Eligibility, deadlines & documents."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": "/academics/admissions"
+     },
+     {
+      "eyebrow": "",
+      "title": "Scholarship Schemes",
+      "stat": "",
+      "text": [
+       "Up to 75% merit-based aid."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": "/academics/scholarships"
+     },
+     {
+      "eyebrow": "",
+      "title": "Academic Inquiry",
+      "stat": "",
+      "text": [
+       "Talk to our admissions team."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": "/contact"
+     },
+     {
+      "eyebrow": "",
+      "title": "Jhapa Campus",
+      "stat": "",
+      "text": [
+       "Visit & explore our facilities."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": "/visit"
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Research",
+   "h1": "",
+   "heading": "Research & Innovation Ecosystem",
+   "paras": [
+    "Hands-on labs in AI, Robotics, IoT and applied innovation — preparing students to solve real-world problems alongside industry mentors."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "AI Robotics & IoT Innovation"
+   ],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "AI & ML",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Robotics",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "IoT Systems",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Innovation Labs",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "What's New",
+   "h1": "",
+   "heading": "Leadership & latest updates",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "Yuvraj Sharma, President"
+   ],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "From the President",
+      "stat": "",
+      "text": [
+       "\"Our mission is to nurture an academic ecosystem where Eastern Nepal's brightest minds engineer the future — with integrity, excellence and global ambition.\"",
+       "Yuvraj Sharma",
+       "President"
+      ],
+      "bullets": [],
+      "links": [
+       {
+        "text": "Read Full Message",
+        "href": "/community/board-members#president-message"
+       }
+      ],
+      "image": null,
+      "href": "/community/board-members#president-message"
+     }
+    ],
+    [
+     {
+      "eyebrow": "Hackathon",
+      "title": "48-hour AI Hackathon ignites student innovation",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [
+       {
+        "text": "Read more",
+        "href": "/updates/news"
+       }
+      ],
+      "image": null,
+      "href": "/updates/news"
+     },
+     {
+      "eyebrow": "Workshop",
+      "title": "Hands-on Industrial IoT workshop with mentors",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [
+       {
+        "text": "Read more",
+        "href": "/updates/news"
+       }
+      ],
+      "image": null,
+      "href": "/updates/news"
+     },
+     {
+      "eyebrow": "Seminar",
+      "title": "Future of EdTech: keynote by KU faculty",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [
+       {
+        "text": "Read more",
+        "href": "/updates/news"
+       }
+      ],
+      "image": null,
+      "href": "/updates/news"
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Events",
+   "h1": "",
+   "heading": "Upcoming on campus",
+   "paras": [],
+   "bullets": [],
+   "links": [
+    {
+     "text": "All events",
+     "href": "#"
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "Jan 12, 2026",
+      "title": "Orientation Program 2026",
+      "stat": "",
+      "text": [
+       "9:00 AM"
+      ],
+      "bullets": [],
+      "links": [
+       {
+        "text": "View Details",
+        "href": "#"
+       }
+      ],
+      "image": "Orientation Program 2026",
+      "href": "#"
+     },
+     {
+      "eyebrow": "Jan 20, 2026",
+      "title": "Guest Lecture: AI Ethics",
+      "stat": "",
+      "text": [
+       "2:00 PM"
+      ],
+      "bullets": [],
+      "links": [
+       {
+        "text": "View Details",
+        "href": "#"
+       }
+      ],
+      "image": "Guest Lecture: AI Ethics",
+      "href": "#"
+     },
+     {
+      "eyebrow": "Feb 04, 2026",
+      "title": "Tech Bootcamp — Web3",
+      "stat": "",
+      "text": [
+       "10:00 AM"
+      ],
+      "bullets": [],
+      "links": [
+       {
+        "text": "View Details",
+        "href": "#"
+       }
+      ],
+      "image": "Tech Bootcamp — Web3",
+      "href": "#"
+     },
+     {
+      "eyebrow": "Feb 18, 2026",
+      "title": "Inter-college Sports Week",
+      "stat": "",
+      "text": [
+       "All Day"
+      ],
+      "bullets": [],
+      "links": [
+       {
+        "text": "View Details",
+        "href": "#"
+       }
+      ],
+      "image": "Inter-college Sports Week",
+      "href": "#"
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Student Support",
+   "h1": "",
+   "heading": "Beyond the classroom — we back every student",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "Student life — clubs & hackathons"
+   ],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Paid Internships",
+      "stat": "92%",
+      "text": [
+       "Industry placements with stipends."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Laptop Installment Plan",
+      "stat": "100%",
+      "text": [
+       "Flexible monthly EMI for every student."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Counseling Services",
+      "stat": "80%",
+      "text": [
+       "Mental health & academic guidance."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "WhiteHouse College of Business & Technology campus"
+   ],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "",
+      "stat": "",
+      "text": [
+       "To establish a future-focused academic ecosystem in Eastern Nepal.",
+       "Integrity",
+       "Excellence",
+       "Innovation",
+       "Inclusiveness",
+       "Leadership"
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "By the numbers",
+   "h1": "",
+   "heading": "A campus built for ambition",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Campus Infrastructure",
+      "stat": "",
+      "text": [
+       "Modern facilities, built for learning"
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "Campus infrastructure",
+      "href": null
+     },
+     {
+      "eyebrow": "Mentors & Tie-ups",
+      "title": "Industry partners",
+      "stat": "150+",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Affiliation",
+      "stat": "",
+      "text": [
+       "Kathmandu University",
+       "Officially affiliated programs"
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Smart Classrooms",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": "Smart classroom",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "AI Innovation Labs",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": "AI labs",
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Request Information",
+   "h1": "",
+   "heading": "Talk to admissions",
+   "paras": [
+    "Tell us a little about you and we'll be in touch with personalised guidance."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Jhapa, Nepal",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": ",",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [
+       {
+        "text": "9714530056",
+        "href": "tel:9714530056"
+       },
+       {
+        "text": "9714530057",
+        "href": "tel:9714530057"
+       }
+      ],
+      "image": null,
+      "href": "tel:9714530056"
+     },
+     {
+      "eyebrow": "",
+      "title": "",
+      "stat": "",
+      "text": [],
+      "bullets": [],
+      "links": [
+       {
+        "text": "info@whitehouseeducation.edu.np",
+        "href": "mailto:info@whitehouseeducation.edu.np"
+       }
+      ],
+      "image": null,
+      "href": "mailto:info@whitehouseeducation.edu.np"
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [
+    {
+     "fields": [
+      {
+       "tag": "input",
+       "type": "text",
+       "name": "name",
+       "label": "",
+       "placeholder": "Full name",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "input",
+       "type": "tel",
+       "name": "phone",
+       "label": "",
+       "placeholder": "Phone",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "input",
+       "type": "email",
+       "name": "email",
+       "label": "",
+       "placeholder": "Email",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "input",
+       "type": "text",
+       "name": "program",
+       "label": "",
+       "placeholder": "Interested program (BIT or B.Tech Ed IT)",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "textarea",
+       "type": "text",
+       "name": "message",
+       "label": "",
+       "placeholder": "Your message",
+       "required": true,
+       "options": []
+      }
+     ],
+     "submit": "Submit Inquiry",
+     "notes": [
+      "We respect your privacy. No spam, ever."
+     ]
+    }
+   ],
+   "faqs": []
+  }
+ ]
+}

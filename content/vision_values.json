@@ -1,0 +1,134 @@
+{
+ "route": "/vision/values",
+ "title": "Values — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "The principles behind every decision",
+   "heading": "",
+   "paras": [
+    "Values",
+    "Integrity, excellence, innovation, inclusiveness, and leadership shape how WCBT teaches, supports students, and grows as an institution.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Core Values",
+   "h1": "",
+   "heading": "How our values show up on campus",
+   "paras": [
+    "These values guide academic delivery, student services, partnerships, and campus culture."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Integrity",
+      "stat": "",
+      "text": [
+       "We promote honesty, responsibility, and ethical decision-making in academic and institutional life."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Excellence",
+      "stat": "",
+      "text": [
+       "We set high expectations for teaching, learning, service, and student outcomes."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Innovation",
+      "stat": "",
+      "text": [
+       "We encourage practical problem-solving, experimentation, and technology-enabled learning."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Inclusiveness",
+      "stat": "",
+      "text": [
+       "We support students from diverse backgrounds through guidance, access, and care."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Leadership",
+      "stat": "",
+      "text": [
+       "We prepare students to take initiative, collaborate, and contribute with confidence."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Experience our student-centered culture",
+   "paras": [
+    "Visit the campus or contact our team to learn how WCBT supports students."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Visit Campus",
+     "href": null
+    },
+    {
+     "text": "Student Support",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

@@ -1,0 +1,367 @@
+{
+ "route": "/about",
+ "title": "About — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "WhiteHouse College of Business & Technology",
+   "heading": "",
+   "paras": [
+    "About WCBT",
+    "WCBT Jhapa Campus is in partnership with Kathmandu University, managed by WhiteHouse Education Foundation — empowering students across Eastern Nepal with future-ready education."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Mission",
+   "h1": "",
+   "heading": "Empowering Eastern Nepal through technology education",
+   "paras": [
+    "We exist to make world-class business and technology education accessible in Jhapa — nurturing innovators, educators, and leaders who can compete nationally and contribute locally.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [
+    "Deliver KU-partnered programs with academic rigor and practical relevance",
+    "Bridge classroom learning with industry exposure and community engagement",
+    "Build an inclusive campus culture that supports every student's growth"
+   ],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "Partnership",
+   "h1": "",
+   "heading": "In Partnership with Kathmandu University",
+   "paras": [
+    "Our degree programs follow Kathmandu University curricula and assessment standards, giving graduates nationally recognized qualifications backed by one of Nepal's leading universities."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Vision",
+   "h1": "",
+   "heading": "A regional hub for innovation and lifelong learning",
+   "paras": [
+    "We envision WCBT as Eastern Nepal's center for applied research, entrepreneurship, and technology-enabled education — where students, faculty, and industry solve real problems together."
+   ],
+   "bullets": [
+    "Expand research and innovation labs in AI, IoT, and ed-tech",
+    "Strengthen alumni and employer networks across Nepal",
+    "Champion digital literacy in schools and communities"
+   ],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Our values",
+   "h1": "",
+   "heading": "What guides everything we do",
+   "paras": [
+    "From admissions to graduation, these principles shape how we teach, support, and grow with our students."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Excellence",
+      "stat": "",
+      "text": [
+       "Rigorous academics aligned with Kathmandu University standards and industry expectations."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Inclusivity",
+      "stat": "",
+      "text": [
+       "Accessible education for students across Eastern Nepal and beyond, with scholarship support."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Innovation",
+      "stat": "",
+      "text": [
+       "Project-based learning, hackathons, and research exposure from day one."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Community",
+      "stat": "",
+      "text": [
+       "Strong ties with local schools, businesses, and alumni who mentor the next generation."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Campus at a glance",
+   "h1": "",
+   "heading": "Where learning meets community",
+   "paras": [
+    "Explore the spaces, people, and partnerships that make WCBT Jhapa Campus a vibrant place to study."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "Location",
+      "title": "Jhapa Campus",
+      "stat": "",
+      "text": [
+       "A purpose-built learning environment in the heart of Jhapa, Eastern Nepal.",
+       "Premises of Nidi Secondary School & Indreni Campus"
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Students Enrolled",
+      "stat": "500+",
+      "text": [
+       "A growing community across IT and education technology programs."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Industry Partners",
+      "stat": "",
+      "text": [
+       "Collaborations that bring internships, mentorship, and placement support."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Smart Facilities",
+      "stat": "",
+      "text": [
+       "Labs, libraries, and collaborative spaces designed for active learning.",
+       "Premises of Nidi Secondary School & Indreni Campus"
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Our journey",
+   "h1": "",
+   "heading": "Milestones that shaped WCBT",
+   "paras": [
+    "From a regional education initiative to a KU-partnered technology college — our story continues to evolve."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Foundation established",
+      "stat": "2014",
+      "text": [
+       "WhiteHouse Education Foundation begins its mission to expand quality higher education in Eastern Nepal."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "WCBT Jhapa Campus opens",
+      "stat": "2018",
+      "text": [
+       "The Jhapa campus launches with a focus on business and technology programs for the region."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Kathmandu University partnership",
+      "stat": "2021",
+      "text": [
+       "Formal academic partnership brings KU-affiliated BIT and B.Tech Ed IT programs to Jhapa."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Expanding innovation ecosystem",
+      "stat": "2026",
+      "text": [
+       "New labs, industry collaborations, and student-led initiatives strengthen the campus community."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Governance",
+   "h1": "",
+   "heading": "Managed with accountability and care",
+   "paras": [
+    "WCBT Jhapa Campus operates under WhiteHouse Education Foundation, with transparent governance, academic oversight, and a student-first approach to decision making."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "WhiteHouse Education Foundation",
+      "stat": "",
+      "text": [
+       "The foundation provides institutional leadership, infrastructure investment, and long-term vision for quality higher education in Eastern Nepal."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Academic oversight",
+      "stat": "",
+      "text": [
+       "Program quality is monitored through Kathmandu University guidelines, internal reviews, and continuous faculty development initiatives."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Visit WCBT Jhapa Campus",
+   "paras": [
+    "Schedule a campus tour, meet our admissions team, and see how we're building Eastern Nepal's future-focused academic ecosystem."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Schedule a Visit",
+     "href": null
+    },
+    {
+     "text": "Contact Us",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

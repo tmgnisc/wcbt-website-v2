@@ -1,0 +1,185 @@
+{
+ "route": "/community/advisors",
+ "title": "Advisors — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Guidance from academics and industry",
+   "heading": "",
+   "paras": [
+    "Advisors",
+    "Our advisors help align learning, projects, and exposure with academic standards and workplace needs."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Advisory Role",
+   "h1": "",
+   "heading": "Why advisors matter",
+   "paras": [
+    "Advisors bring outside perspective into academic planning. They help the college understand what students need for higher study, employment, industry exposure, and real-world project work."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Academic advisors",
+      "stat": "",
+      "text": [
+       "Academic advisors support program quality by reviewing learning priorities, suggesting improvements, and helping faculty keep teaching connected to current academic standards. Their role is especially important for curriculum relevance, research direction, and student progression."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Industry advisors",
+      "stat": "",
+      "text": [
+       "Industry advisors help students and faculty understand workplace expectations. They contribute through guest sessions, project feedback, internship connections, and guidance on skills that matter in technology, education, business, and innovation."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Advisory Support",
+   "h1": "",
+   "heading": "How advisors strengthen WCBT",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Academic Direction",
+      "stat": "",
+      "text": [
+       "Guidance on quality, curriculum relevance, and learning outcomes."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Industry Links",
+      "stat": "",
+      "text": [
+       "Connections that support visits, talks, internships, and projects."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Innovation Input",
+      "stat": "",
+      "text": [
+       "Advice on emerging technology, research, and practical learning."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Mentorship",
+      "stat": "",
+      "text": [
+       "Support for students, faculty, and institutional development."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Student Benefit",
+   "h1": "",
+   "heading": "How students benefit from advisors",
+   "paras": [],
+   "bullets": [
+    "Exposure to current industry practices and professional expectations.",
+    "Better project ideas through feedback from academic and industry perspectives.",
+    "Mentorship opportunities through guest lectures, talks, visits, and workshops.",
+    "Clearer understanding of career paths, internships, and graduate study options.",
+    "Support for innovation, entrepreneurship, and applied research activities.",
+    "A stronger bridge between classroom learning and real workplace needs."
+   ],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Connect with WCBT",
+   "paras": [
+    "Reach out for academic or partnership inquiries."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Contact Us",
+     "href": null
+    },
+    {
+     "text": "Industry Exposure",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

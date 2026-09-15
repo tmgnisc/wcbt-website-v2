@@ -1,0 +1,134 @@
+{
+ "route": "/vision/reports",
+ "title": "Reports — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Tracking progress with transparency",
+   "heading": "",
+   "paras": [
+    "Reports",
+    "WCBT reporting focuses on academic delivery, student outcomes, partnerships, and campus development priorities.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Reporting Areas",
+   "h1": "",
+   "heading": "What institutional reports cover",
+   "paras": [
+    "Reports help leadership, faculty, students, and partners understand progress and priorities."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Academic Delivery",
+      "stat": "",
+      "text": [
+       "Program delivery, curriculum alignment, teaching quality, and assessment practices."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Student Outcomes",
+      "stat": "",
+      "text": [
+       "Enrollment, progression, student support, achievements, and graduate readiness."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Partnerships",
+      "stat": "",
+      "text": [
+       "Industry collaboration, community engagement, events, and academic partnerships."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Campus Development",
+      "stat": "",
+      "text": [
+       "Facilities, labs, resources, services, and student experience improvements."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Quality Indicators",
+      "stat": "",
+      "text": [
+       "Feedback, performance measures, reviews, and continuous improvement actions."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Need institutional information?",
+   "paras": [
+    "Contact the administration office for official reporting and documentation queries."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Contact Administration",
+     "href": null
+    },
+    {
+     "text": "Governance",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

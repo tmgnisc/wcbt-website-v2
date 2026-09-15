@@ -1,0 +1,133 @@
+{
+ "route": "/careers/graduate-success",
+ "title": "Graduate Success — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Prepared for work, study, and leadership",
+   "heading": "",
+   "paras": [
+    "Graduate Success",
+    "WCBT supports graduate success through practical learning, mentoring, industry exposure, and career preparation."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Outcomes",
+   "h1": "",
+   "heading": "What success looks like",
+   "paras": [
+    "Graduate success is not a single destination. Students prepare for employment, entrepreneurship, teaching, training, and further study."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Employment Readiness",
+      "stat": "",
+      "text": [
+       "Students build technical, communication, project, and workplace-readiness skills."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Further Study",
+      "stat": "",
+      "text": [
+       "KU-aligned academic preparation supports students considering graduate programs."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Entrepreneurship",
+      "stat": "",
+      "text": [
+       "Project work and innovation activities encourage students to explore startup thinking."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Professional Network",
+      "stat": "",
+      "text": [
+       "Events, mentors, internships, and partnerships help students build useful connections."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Confidence & Leadership",
+      "stat": "",
+      "text": [
+       "Students gain confidence through presentations, teamwork, activities, and practical work."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Build your success story",
+   "paras": [
+    "Explore programs and placement support designed for long-term growth."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Explore Programs",
+     "href": null
+    },
+    {
+     "text": "Placements",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

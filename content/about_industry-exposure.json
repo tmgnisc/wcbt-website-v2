@@ -1,0 +1,246 @@
+{
+ "route": "/about/industry-exposure",
+ "title": "Industry Exposure — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Real-World Learning Experience",
+   "heading": "",
+   "paras": [
+    "Industry Connection",
+    "Through collaborations with businesses, organizations, and professionals, students benefit from practical exposure that bridges academic learning and industry requirements.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Our Approach",
+   "h1": "",
+   "heading": "Learning Beyond the Classroom",
+   "paras": [
+    "At WhiteHouse College, learning extends beyond the classroom. We believe that practical experience plays a vital role in professional success. Students are provided with opportunities to participate in internships, industrial visits, field projects, workshops, seminars, and interactions with industry experts."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Internships",
+      "stat": "",
+      "text": [
+       "Semester-long and summer internships with technology companies, startups, and businesses."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Mentorship Programs",
+      "stat": "",
+      "text": [
+       "One-on-one guidance from industry professionals and alumni working in leading organizations."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Workshops & Seminars",
+      "stat": "",
+      "text": [
+       "Regular training sessions on emerging technologies, professional skills, and industry best practices."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Industry Visits",
+      "stat": "",
+      "text": [
+       "Field trips and campus visits from companies to expose students to real workplace environments."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Why Industry Exposure Matters",
+   "paras": [
+    "Students who engage with real industry experience gain the confidence, skills, and networks needed to excel in their careers and contribute meaningfully to their professions."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Development",
+   "h1": "",
+   "heading": "Skills You'll Develop",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Problem-Solving Skills",
+      "stat": "",
+      "text": [
+       "Apply classroom knowledge to real-world challenges, developing the critical thinking and adaptability required in modern workplaces."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Teamwork & Communication",
+      "stat": "",
+      "text": [
+       "Collaborate with professionals from diverse backgrounds, building the soft skills essential for career success."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Professional Network",
+      "stat": "",
+      "text": [
+       "Build relationships with mentors, recruiters, and industry leaders that can lead to internships, job placements, and career opportunities."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Industry Insights",
+      "stat": "",
+      "text": [
+       "Gain firsthand knowledge of industry trends, technologies, and career pathways to make informed decisions about your future."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Practical Confidence",
+      "stat": "",
+      "text": [
+       "Experience working in professional settings, building the confidence and readiness needed to transition from student to professional."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Career Preparation",
+      "stat": "",
+      "text": [
+       "Understand workplace expectations, develop professional habits, and prepare for job interviews and career advancement."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Our Partners",
+   "h1": "",
+   "heading": "Industry Collaboration",
+   "paras": [
+    "WhiteHouse College collaborates with leading technology companies, startups, educational institutions, and organizations across Nepal and the region. These partnerships ensure that our students gain exposure to diverse industries, technologies, and career pathways."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Ready to Gain Industry Experience?",
+   "paras": [
+    "Explore our programs and discover how we prepare you for real-world professional success."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Explore Programs",
+     "href": null
+    },
+    {
+     "text": "Schedule Campus Visit",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

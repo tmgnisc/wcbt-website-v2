@@ -1,0 +1,255 @@
+{
+ "route": "/programs/bit",
+ "title": "BIT — Bachelor in Information Technology | WCBT",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Bachelor in Information Technology",
+   "heading": "",
+   "paras": [
+    "BIT Program",
+    "A four-year KU-partnered undergraduate program preparing you to design, build, and maintain software systems — from programming fundamentals to capstone projects."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "BIT — Bachelor in Information Technology",
+   "h1": "",
+   "heading": "BIT — Bachelor in Information Technology",
+   "paras": [
+    "A four-year undergraduate program for students who want to design, build, and maintain software systems. From programming fundamentals to capstone projects, BIT graduates leave with a portfolio that proves their skills.",
+    "4 Years · 8 Semesters",
+    "126 Credit Hours"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Key highlights",
+      "stat": "",
+      "text": [],
+      "bullets": [
+       "Object-oriented programming, web development, and mobile apps",
+       "Database design, cloud computing, and network administration",
+       "AI & machine learning fundamentals with lab projects",
+       "Agile team projects and industry capstone in final year",
+       "Internship placement with software and IT companies"
+      ],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Career pathways",
+      "stat": "",
+      "text": [],
+      "bullets": [
+       "Full-stack / frontend / backend developer",
+       "Systems analyst or IT consultant",
+       "DevOps and cloud support engineer",
+       "Cybersecurity and network administrator",
+       "Tech entrepreneur or product builder"
+      ],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "BIT curriculum",
+   "h1": "",
+   "heading": "BIT — 4-year KU curriculum structure",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Year 1",
+      "stat": "",
+      "text": [
+       "Foundation Year — Building Core Knowledge",
+       "Semester 1 (16 Credits)",
+       "Semester 2 (17 Credits)"
+      ],
+      "bullets": [
+       "Advanced Communication Skills 3 Credits",
+       "Calculus and Linear Algebra 3 Credits",
+       "Computer Programming 3 Credits",
+       "Digital Logic 3 Credits",
+       "Introduction to Information System Technology 2 Credits",
+       "Project I 2 Credits",
+       "Mathematics II (Advanced Calculus) 3 Credits",
+       "Management Principles 3 Credits",
+       "Microprocessor and Assembly Language Programming 3 Credits",
+       "Object Oriented Programming 3 Credits",
+       "Discrete Mathematics 3 Credits",
+       "Project II 2 Credits"
+      ],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Year 2",
+      "stat": "",
+      "text": [
+       "Core Technology and Systems",
+       "Semester 3 (17 Credits)",
+       "Semester 4 (17 Credits)"
+      ],
+      "bullets": [
+       "Probability and Statistics 3 Credits",
+       "Data Structures and Algorithms 3 Credits",
+       "Operating Systems 3 Credits",
+       "System Analysis and Design 3 Credits",
+       "Marketing Management 3 Credits",
+       "Project III 2 Credits",
+       "Computer Architecture and Design 3 Credits",
+       "Database Management System 3 Credits",
+       "Software Engineering 3 Credits",
+       "Financial Management and Accounting 3 Credits",
+       "IT Ethics and Information Security 3 Credits",
+       "Project IV 2 Credits"
+      ],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Year 3",
+      "stat": "",
+      "text": [
+       "Advanced Specialization and Applications",
+       "Semester 5 (17 Credits)",
+       "Semester 6 (17 Credits)"
+      ],
+      "bullets": [
+       "Data Communication and Networking 3 Credits",
+       "Web Application Development 3 Credits",
+       "Artificial Intelligence 3 Credits",
+       "Management Information System 3 Credits",
+       "Computer Graphics and Multimedia 3 Credits",
+       "Project V 2 Credits",
+       "Cloud Computing 3 Credits",
+       "Mobile Application Development 3 Credits",
+       "Big Data 3 Credits",
+       "Organizational Behavior 3 Credits",
+       "Digital Economy 3 Credits",
+       "Project VI 2 Credits"
+      ],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Year 4",
+      "stat": "",
+      "text": [
+       "Capstone, Electives and Internship",
+       "Semester 7 (14 Credits)",
+       "Semester 8 (12 Credits)"
+      ],
+      "bullets": [
+       "E-Commerce 3 Credits",
+       "Deep Learning 3 Credits",
+       "Research Seminar 3 Credits",
+       "Elective I (Specialization) 3 Credits",
+       "Project VII 2 Credits",
+       "Internship 6 Credits",
+       "Elective II (Specialization) 3 Credits",
+       "Elective III (Specialization) 3 Credits"
+      ],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Curriculum",
+   "h1": "",
+   "heading": "Program syllabus",
+   "paras": [
+    "View the official Kathmandu University curriculum. Click the card to expand the syllabus preview.",
+    "BIT — Bachelor in Information Technology (KU)",
+    "Official Kathmandu University syllabus (opens in preview)."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "View",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Ready to start your application?",
+   "paras": [
+    "Join WCBT Jhapa Campus and earn a Kathmandu University partnered BIT degree."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Apply Now",
+     "href": null
+    },
+    {
+     "text": "Contact Admissions",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

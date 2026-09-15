@@ -1,0 +1,481 @@
+{
+ "route": "/academics/admissions",
+ "title": "Admissions — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Start your journey at WCBT",
+   "heading": "",
+   "paras": [
+    "Admissions",
+    "Admissions are open for Kathmandu University partnered BIT and B.Tech Ed IT programs. Follow the steps below to apply for the upcoming intake."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Apply Now",
+     "href": "/academics/admissions#apply"
+    },
+    {
+     "text": "Contact Admissions",
+     "href": "/contact"
+    }
+   ],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "Intake 2026",
+   "h1": "",
+   "heading": "Applications now open",
+   "paras": [
+    "Secure your place at Eastern Nepal's leading technology college. Limited seats available for both undergraduate programs."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "How to apply",
+   "h1": "",
+   "heading": "Four simple steps to enrollment",
+   "paras": [
+    "Our admissions process is designed to be transparent and supportive from your first inquiry to your first day on campus."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Review eligibility",
+      "stat": "01",
+      "text": [
+       "Confirm you meet academic requirements for BIT or B.Tech Ed IT before applying."
+      ],
+      "bullets": [],
+      "links": [
+       {
+        "text": "i",
+        "href": null
+       }
+      ],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Submit application",
+      "stat": "02",
+      "text": [
+       "Fill out the online form with personal details, program choice, and supporting documents."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Entrance assessment",
+      "stat": "03",
+      "text": [
+       "Take the admission test and attend the interview on your scheduled date."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Receive offer",
+      "stat": "04",
+      "text": [
+       "Successful candidates receive an offer letter with enrollment and fee payment instructions."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Eligibility",
+   "h1": "",
+   "heading": "Who should apply?",
+   "paras": [
+    "WCBT welcomes motivated students ready for rigorous, industry-aligned technology education. Whether you aspire to build software or lead digital classrooms, we help you find the right fit."
+   ],
+   "bullets": [
+    "Completed +2 or equivalent from a recognized board",
+    "Minimum academic standing as per KU program requirements",
+    "Strong interest in technology, innovation, or education",
+    "Commitment to full-time undergraduate study for four years"
+   ],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Requirements",
+   "h1": "",
+   "heading": "What you'll need to apply",
+   "paras": [
+    "Prepare these materials before starting your application to ensure a smooth review process."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "Documents",
+      "title": "Academic Transcripts",
+      "stat": "",
+      "text": [
+       "SEBON / NEB marksheets and character certificates from previous institutions."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Minimum GPA",
+      "stat": "2.0+",
+      "text": [
+       "Eligible candidates typically hold a minimum second division or equivalent."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Entrance Exam",
+      "stat": "",
+      "text": [
+       "Written test covering mathematics, logic, and general aptitude."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Interview Round",
+      "stat": "",
+      "text": [
+       "Shortlisted applicants meet the admissions panel for program fit assessment."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": "image",
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Key dates",
+   "h1": "",
+   "heading": "Important deadlines",
+   "paras": [
+    "Mark these dates on your calendar. Late applications may be considered subject to seat availability."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Early application closes",
+      "stat": "",
+      "text": [
+       "Mar 15, 2026",
+       "Submit your form early for priority scheduling of entrance exams."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Regular deadline",
+      "stat": "",
+      "text": [
+       "Apr 30, 2026",
+       "Final date for standard intake applications for the 2026 academic year."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Enrollment week",
+      "stat": "",
+      "text": [
+       "May 20, 2026",
+       "Confirm your seat, complete orientation, and begin your first semester."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Support services",
+   "h1": "",
+   "heading": "We're with you every step",
+   "paras": [
+    "Our admissions team offers guidance on programs, documents, scholarships, and campus visits."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Application help",
+      "stat": "",
+      "text": [
+       "Walkthroughs for online forms, document uploads, and program selection."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Document checklist",
+      "stat": "",
+      "text": [
+       "Personalized list of required papers based on your academic background."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Exam scheduling",
+      "stat": "",
+      "text": [
+       "Flexible entrance exam slots with advance notice and preparation tips."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Program counseling",
+      "stat": "",
+      "text": [
+       "One-on-one sessions to choose between BIT and B.Tech Ed IT."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "FAQ",
+   "h1": "",
+   "heading": "Frequently asked questions",
+   "paras": [
+    "Quick answers to common admissions questions."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": [
+    {
+     "q": "Who can apply to WCBT?",
+     "a": "Students who have completed +2 or equivalent in Science, Management, or related streams with minimum eligibility as per Kathmandu University guidelines."
+    },
+    {
+     "q": "Is there an entrance exam?",
+     "a": "Yes. All applicants take a written entrance test followed by an interview. Sample guidelines are shared after application submission."
+    },
+    {
+     "q": "Can I apply for both BIT and B.Tech Ed IT?",
+     "a": "You select a primary program on the application. Contact admissions if you need guidance on choosing the right pathway."
+    },
+    {
+     "q": "What documents are required?",
+     "a": "Academic certificates, transcripts, citizenship or passport copy, passport-size photos, and any additional documents listed in the offer letter."
+    }
+   ]
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Admissions",
+   "h1": "",
+   "heading": "Apply to WCBT",
+   "paras": [
+    "Fill in your details and our admissions team will guide you through the next steps."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [
+    {
+     "fields": [
+      {
+       "tag": "input",
+       "type": "text",
+       "name": "name",
+       "label": "",
+       "placeholder": "Full name",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "input",
+       "type": "tel",
+       "name": "phone",
+       "label": "",
+       "placeholder": "Phone number",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "input",
+       "type": "email",
+       "name": "email",
+       "label": "",
+       "placeholder": "Email",
+       "required": true,
+       "options": []
+      },
+      {
+       "tag": "select",
+       "type": "text",
+       "name": "program",
+       "label": "",
+       "placeholder": "",
+       "required": true,
+       "options": [
+        "Program of interest",
+        "BIT — Bachelor of Information Technology",
+        "B.Tech Ed IT — Technology in Education",
+        "Not sure yet"
+       ]
+      },
+      {
+       "tag": "textarea",
+       "type": "text",
+       "name": "message",
+       "label": "",
+       "placeholder": "Anything you'd like us to know? (optional)",
+       "required": false,
+       "options": []
+      }
+     ],
+     "submit": "Submit application",
+     "notes": [
+      "We respect your privacy. No spam, ever."
+     ]
+    }
+   ],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Ready to apply?",
+   "paras": [
+    "Begin your application today or speak with our admissions team for personalized guidance."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Start Application",
+     "href": null
+    },
+    {
+     "text": "Download Prospectus",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

@@ -1,0 +1,153 @@
+{
+ "route": "/visit/virtual-tour",
+ "title": "Virtual Campus Tour — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "Virtual Tour",
+   "h1": "Explore the WCBT campus",
+   "heading": "",
+   "paras": [
+    "Scroll to wander through our premises in Jhapa — from the entrance to the labs, library, and grounds.",
+    "Scroll to begin"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Stop 1 / 6",
+   "h1": "",
+   "heading": "Main Entrance",
+   "paras": [
+    "Step through the gates of WCBT in Jhapa, where your journey into technology and innovation begins."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Stop 2 / 6",
+   "h1": "",
+   "heading": "Academic Block",
+   "paras": [
+    "Modern classrooms and smart lecture halls designed for collaborative, hands-on learning."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Stop 3 / 6",
+   "h1": "",
+   "heading": "Library & Resources",
+   "paras": [
+    "A quiet space for research and study, with digital and print resources at your fingertips."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Stop 4 / 6",
+   "h1": "",
+   "heading": "Computer & Innovation Labs",
+   "paras": [
+    "Well-equipped spaces for coding, electronics, robotics, and project work — the heart of practical learning."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Stop 5 / 6",
+   "h1": "",
+   "heading": "Student Lounge",
+   "paras": [
+    "Relaxed spaces to collaborate, recharge, and connect with fellow students between classes."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Stop 6 / 6",
+   "h1": "",
+   "heading": "Campus Grounds",
+   "paras": [
+    "Open spaces for sports, events, and the vibrant community life that makes WCBT feel like home."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Seen enough? Come see it in person.",
+   "paras": [
+    "Photos only go so far. Book a campus visit or talk to our admissions team."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Book a visit",
+     "href": "/visit"
+    },
+    {
+     "text": "Admissions",
+     "href": "/academics/admissions"
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

@@ -1,0 +1,997 @@
+
+<!DOCTYPE html>
+<html class="pl" lang="en-gb">
+<head>
+<title>Lorem Ipsum | Business Programme</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width" name="viewport"/>
+<link href="media/durham-university/site-assets/css/durham-style.css?version=10.0" rel="stylesheet"/>
+<link href="media/durham-university/site-assets/css/swiper.css" media="" rel="stylesheet" type="text/css"/>
+<link href="media/durham-university/site-assets/css/perfect-scrollbar.css" media="" rel="stylesheet" type="text/css"/>
+<meta content="#86001E" name="msapplication-TileColor"/>
+<meta content="#86001E" name="theme-color"/>
+<meta content="dubs" name="site"/>
+</head>
+<body class="body u-overflow-x-hidden">
+<a class="is-focusable u-select-none u-bg-primary u-block u-font-bold u-mb-4 u-p-2 u-rounded-none u-text-white u-visually-hidden" href="#main-content">
+<div class="container">Ullamco culpa nisi amet</div>
+</a>
+<div id="fb-root"></div>
+<div class="layout-container u-flex u-flex-col u-min-h-full">
+<header @menuchange="changeMenuState($event.detail)" class="site-header" x-data="siteHeader()" x-init="init('normal', $refs.bar)">
+<div aria-live="assertive" class="emergencynotice" data-t4-emergency-notices="media/durham-university/site-assets/js/emergency-notice.json"></div>
+<div class="u-relative u-z-501">
+<div :class="{ 'xl:u-absolute xl:u-z-10 xl:u-w-full' : type === 'transparent', 'xl:u-text-white' : showBackground() === false }">
+<div :class="{ 'u-bg-white' : showBackground() }" class="u-relative u-flex u-items-center u-justify-between u-pl-2 u-py-1 u-transition lg:u-py-2 lg:u-pl-4 xl:u-py-0 xl:u-pl-6 u-bg-white" x-ref="bar">
+<div :class="{ 'xl:u-hidden' : type === 'transparent' &amp;&amp; !menuOpen &amp;&amp; !searchOpen }">
+<a class="u-w-full u-block" href="01-homepage.html" rel="home"><img alt="Logo" class="site-logo" src="https://placehold.co/240x64/86001E/FFFFFF/png?text=Logo"/></a>
+</div>
+<div :class="{ 'xl:u-hidden' : type === 'transparent' &amp;&amp; (menuOpen || searchOpen), 'xl:u-block' : type === 'transparent' &amp;&amp; !menuOpen &amp;&amp; !searchOpen }" class="u-hidden">
+<a class="u-w-full u-block" href="01-homepage.html" rel="home"><img alt="Logo" class="site-logo" src="https://placehold.co/240x64/FFFFFF/86001E/png?text=Logo"/></a>
+</div>
+<div class="u-flex u-items-end u-flex-col">
+<ul class="u-mb-3 utility-navigation u-hidden u-relative u-list-reset u-bg-grey-50 u-gap-x-6 u-pr-10 xl:u-flex" x-data="{ expanded: true }">
+<li>
+<a class="u-flex u-items-center u-h-full u-p-2 u-text-small u-text-black u-no-underline xxl:u-text-medium u-bg-grey-50 u-transition hocus:u-bg-grey-50--dark u-leading-tight u-text-center" href="#">Sint</a>
+</li>
+<li>
+<a class="u-flex u-items-center u-h-full u-p-2 u-text-small u-text-black u-no-underline xxl:u-text-medium u-bg-grey-50 u-transition hocus:u-bg-grey-50--dark u-leading-tight u-text-center" href="#">Fugiat enim Do</a>
+</li>
+<li>
+<a class="u-flex u-items-center u-h-full u-p-2 u-text-small u-text-black u-no-underline xxl:u-text-medium u-bg-grey-50 u-transition hocus:u-bg-grey-50--dark u-leading-tight u-text-center" href="#">Magna Ex</a>
+</li>
+<li style="display: none;" x-show="expanded">
+<a class="u-flex u-items-center u-h-full u-p-2 u-text-small u-text-black u-no-underline xxl:u-text-medium u-bg-grey-50 u-transition hocus:u-bg-grey-50--dark u-leading-tight u-text-center" href="#">Labore Est Lorem</a>
+</li>
+<li style="display: none;" x-show="expanded">
+<a class="u-flex u-items-center u-h-full u-p-2 u-text-small u-text-black u-no-underline xxl:u-text-medium u-bg-grey-50 u-transition hocus:u-bg-grey-50--dark u-leading-tight u-text-center" href="10-landing-about.html">Magna ipsum</a>
+</li>
+<li style="display: none;" x-show="expanded">
+<a class="u-flex u-items-center u-h-full u-p-2 u-text-small u-text-black u-no-underline xxl:u-text-medium u-bg-grey-50 u-transition hocus:u-bg-grey-50--dark u-leading-tight u-text-center" href="06-contact-map.html">Sed nostrud duis ad</a>
+</li>
+<li>
+<button @click="expanded = !expanded" class="u-flex u-items-center u-h-full u-p-2 u-no-underline xxl:u-text-medium u-bg-grey-50 u-transition hocus:u-bg-grey-50--dark u-leading-tight u-text-center u-text-primary u-text-large u-px-1 hocus:u-text-primary--light">
+<span class="u-visually-hidden" x-text="expanded ? 'Collapse': 'Expand'">Cillum</span>
+<svg class="icon" focusable="false" x-show="!expanded">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#feather--plus-circle"></use>
+</svg>
+<svg class="icon" focusable="false" style="display: none;" x-show="expanded">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#feather--minus-circle"></use>
+</svg>
+</button>
+</li>
+</ul>
+<div class="u-flex lg:u-mx-4 xl:u-mr-6">
+<nav aria-label="Dolore">
+<ul @click.away="escape()" @keyup="escape($event.key)" class="u-hidden u-list-reset u-mb-0 u-gap-x-1 xl:u-flex" x-data="primaryNavigation()">
+<li @mouseenter="openMenu(319983)" @mouseleave="closeMenu()" class="u-flex u-flex-col u-items-center">
+<a :aria-expanded="expanded(319983)" @focus="focus(319983)" class="primary-navigation__link u-flex u-items-center u-h-full u-px-2 u-pt-3 u-pb-5 u-font-bold u-font-sans u-text-inherit u-text-center u-leading-tight hocus:u-bg-grey-50 hocus:u-no-underline hocus:u-text-primary focus:u-shadow-none xxl:u-text-large" href="12-landing-study.html">Cupidatat</a>
+<button :aria-expanded="expanded(319983)" :class="{ 'u-bg-secondary u-border-none' : menuOpen, 'u-bg-white u-text-primary u-border-1 u-border-primary focus:u-bg-primary focus:u-text-white' : !menuOpen }" @click="toggleMenu(319983)" class="primary-navigation__button u-relative u-z-410 u-transition focus:u-shadow-none" style="display: none;" x-show="dropdownButton === 319983">
+<span class="u-visually-hidden" x-text="(menuOpen === 319983 ? 'Hide' : 'Show') + ' submenu'">Incididunt cupidatat aliqua Non</span>
+<span aria-hidden="true">
+<svg class="icon" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--arrow-soft-down"></use>
+</svg>
+</span>
+</button>
+<div class="u-absolute u-pin-x u-pin-t-100 u-bg-primary u-text-white u-z-400" x-cloak="" x-show="menuOpen === 319983">
+<div class="u-py-6 u-bg-primary">
+<div class="container">
+<h2 class="u-visually-hidden">Labore aute</h2>
+<div class="row"></div>
+<ul class="row u-list-reset">
+<li class="col"><a class="u-block u-text-white" href="#">Amet</a></li>
+<li class="col"><a class="u-block u-text-white" href="#">Cupidatat</a></li>
+<li class="col"><a class="u-block u-text-white" href="#">In</a></li>
+<li class="col"><a class="u-block u-text-white" href="#">Occaecat</a></li>
+</ul>
+</div>
+</div>
+</div>
+</li><li @mouseenter="openMenu(146785)" @mouseleave="closeMenu()" class="u-flex u-flex-col u-items-center">
+<a :aria-expanded="expanded(146785)" @focus="focus(146785)" class="primary-navigation__link u-flex u-items-center u-h-full u-px-2 u-pt-3 u-pb-5 u-font-bold u-font-sans u-text-inherit u-text-center u-leading-tight hocus:u-bg-grey-50 hocus:u-no-underline hocus:u-text-primary focus:u-shadow-none xxl:u-text-large" href="#">Id Adipiscing Veniam</a>
+<button :aria-expanded="expanded(146785)" :class="{ 'u-bg-secondary u-border-none' : menuOpen, 'u-bg-white u-text-primary u-border-1 u-border-primary focus:u-bg-primary focus:u-text-white' : !menuOpen }" @click="toggleMenu(146785)" class="primary-navigation__button u-relative u-z-410 u-transition focus:u-shadow-none" style="display: none;" x-show="dropdownButton === 146785">
+<span class="u-visually-hidden" x-text="(menuOpen === 146785 ? 'Hide' : 'Show') + ' submenu'">Cupidatat sed sed Cillum Occaecat Velit</span>
+<span aria-hidden="true">
+<svg class="icon" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--arrow-soft-down"></use>
+</svg>
+</span>
+</button>
+<div class="u-absolute u-pin-x u-pin-t-100 u-bg-primary u-text-white u-z-400" x-cloak="" x-show="menuOpen === 146785">
+<div class="u-py-6 u-bg-primary">
+<div class="container">
+<h2 class="u-visually-hidden">Est Ad Est amet</h2>
+<div class="row"></div>
+<ul class="row u-list-reset">
+<li class="col"><a class="u-block u-text-white" href="#">Ea Reprehenderit</a></li>
+<li class="col"><a class="u-block u-text-white" href="#">Id pariatur</a></li>
+<li class="col"><a class="u-block u-text-white" href="#">Aute tempor reprehenderit</a></li>
+</ul>
+</div>
+</div>
+</div>
+</li><li @mouseenter="openMenu(2079167)" @mouseleave="closeMenu()" class="u-flex u-flex-col u-items-center">
+<a :aria-expanded="expanded(2079167)" @focus="focus(2079167)" class="primary-navigation__link u-flex u-items-center u-h-full u-px-2 u-pt-3 u-pb-5 u-font-bold u-font-sans u-text-inherit u-text-center u-leading-tight hocus:u-bg-grey-50 hocus:u-no-underline hocus:u-text-primary focus:u-shadow-none xxl:u-text-large" href="#">Ea nostrud</a>
+<button :aria-expanded="expanded(2079167)" :class="{ 'u-bg-secondary u-border-none' : menuOpen, 'u-bg-white u-text-primary u-border-1 u-border-primary focus:u-bg-primary focus:u-text-white' : !menuOpen }" @click="toggleMenu(2079167)" class="primary-navigation__button u-relative u-z-410 u-transition focus:u-shadow-none" style="display: none;" x-show="dropdownButton === 2079167">
+<span class="u-visually-hidden" x-text="(menuOpen === 2079167 ? 'Hide' : 'Show') + ' submenu'">Sit proident fugiat Est deserunt</span>
+<span aria-hidden="true">
+<svg class="icon" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--arrow-soft-down"></use>
+</svg>
+</span>
+</button>
+<div class="u-absolute u-pin-x u-pin-t-100 u-bg-primary u-text-white u-z-400" x-cloak="" x-show="menuOpen === 2079167">
+<div class="u-py-6 u-bg-primary">
+<div class="container">
+<h2 class="u-visually-hidden">Nisi minim ex</h2>
+<div class="row"></div>
+<ul class="row u-list-reset">
+<li class="col"><a class="u-block u-text-white" href="#">Dolore qui nisi voluptate cillum</a></li>
+<li class="col"><a class="u-block u-text-white" href="#">Consequat proident</a></li>
+<li class="col"><a class="u-block u-text-white" href="#">Ut excepteur</a></li>
+<li class="col"><a class="u-block u-text-white" href="#">Quis mollit ipsum eiusmod</a></li>
+</ul>
+</div>
+</div>
+</div>
+</li><li @mouseenter="openMenu(320016)" @mouseleave="closeMenu()" class="u-flex u-flex-col u-items-center">
+<a :aria-expanded="expanded(320016)" @focus="focus(320016)" class="primary-navigation__link u-flex u-items-center u-h-full u-px-2 u-pt-3 u-pb-5 u-font-bold u-font-sans u-text-inherit u-text-center u-leading-tight hocus:u-bg-grey-50 hocus:u-no-underline hocus:u-text-primary focus:u-shadow-none xxl:u-text-large" href="11-landing-research.html">Sint minim magna</a>
+<button :aria-expanded="expanded(320016)" :class="{ 'u-bg-secondary u-border-none' : menuOpen, 'u-bg-white u-text-primary u-border-1 u-border-primary focus:u-bg-primary focus:u-text-white' : !menuOpen }" @click="toggleMenu(320016)" class="primary-navigation__button u-relative u-z-410 u-transition focus:u-shadow-none" style="display: none;" x-show="dropdownButton === 320016">
+<span class="u-visually-hidden" x-text="(menuOpen === 320016 ? 'Hide' : 'Show') + ' submenu'">Veniam esse ullamco Consequat consectetur minim</span>
+<span aria-hidden="true">
+<svg class="icon" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--arrow-soft-down"></use>
+</svg>
+</span>
+</button>
+<div class="u-absolute u-pin-x u-pin-t-100 u-bg-primary u-text-white u-z-400" x-cloak="" x-show="menuOpen === 320016">
+<div class="u-py-6 u-bg-primary">
+<div class="container">
+<h2 class="u-visually-hidden">Cupidatat velit sit non</h2>
+<div class="row"></div>
+<ul class="row u-list-reset">
+<li class="col"><a class="u-block u-text-white" href="#">In nulla</a></li>
+<li class="col"><a class="u-block u-text-white" href="#">Cupidatat Laborum Elit</a></li>
+<li class="col"><a class="u-block u-text-white" href="#">Ex ea</a></li>
+<li class="col"><a class="u-block u-text-white" href="#">Veniam amet laborum</a></li>
+</ul>
+</div>
+</div>
+</div>
+</li><li @mouseenter="openMenu(320025)" @mouseleave="closeMenu()" class="u-flex u-flex-col u-items-center">
+<a :aria-expanded="expanded(320025)" @focus="focus(320025)" class="primary-navigation__link u-flex u-items-center u-h-full u-px-2 u-pt-3 u-pb-5 u-font-bold u-font-sans u-text-inherit u-text-center u-leading-tight hocus:u-bg-grey-50 hocus:u-no-underline hocus:u-text-primary focus:u-shadow-none xxl:u-text-large" href="#">Excepteur Laborum</a>
+<button :aria-expanded="expanded(320025)" :class="{ 'u-bg-secondary u-border-none' : menuOpen, 'u-bg-white u-text-primary u-border-1 u-border-primary focus:u-bg-primary focus:u-text-white' : !menuOpen }" @click="toggleMenu(320025)" class="primary-navigation__button u-relative u-z-410 u-transition focus:u-shadow-none" style="display: none;" x-show="dropdownButton === 320025">
+<span class="u-visually-hidden" x-text="(menuOpen === 320025 ? 'Hide' : 'Show') + ' submenu'">Laborum culpa pariatur Nisi Eiusmod</span>
+<span aria-hidden="true">
+<svg class="icon" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--arrow-soft-down"></use>
+</svg>
+</span>
+</button>
+<div class="u-absolute u-pin-x u-pin-t-100 u-bg-primary u-text-white u-z-400" x-cloak="" x-show="menuOpen === 320025">
+<div class="u-py-6 u-bg-primary">
+<div class="container">
+<h2 class="u-visually-hidden">Pariatur Laborum deserunt</h2>
+<div class="row"></div>
+<ul class="row u-list-reset">
+<li class="col"><a class="u-block u-text-white" href="#">Dolor cillum ipsum incididunt</a></li>
+<li class="col"><a class="u-block u-text-white" href="#">Non Dolor lorem Reprehenderit</a></li>
+</ul>
+</div>
+</div>
+</div>
+</li><li @mouseenter="openMenu(319996)" @mouseleave="closeMenu()" class="u-flex u-flex-col u-items-center">
+<a :aria-expanded="expanded(319996)" @focus="focus(319996)" class="primary-navigation__link u-flex u-items-center u-h-full u-px-2 u-pt-3 u-pb-5 u-font-bold u-font-sans u-text-inherit u-text-center u-leading-tight hocus:u-bg-grey-50 hocus:u-no-underline hocus:u-text-primary focus:u-shadow-none xxl:u-text-large" href="#">Cupidatat dolore </a>
+<button :aria-expanded="expanded(319996)" :class="{ 'u-bg-secondary u-border-none' : menuOpen, 'u-bg-white u-text-primary u-border-1 u-border-primary focus:u-bg-primary focus:u-text-white' : !menuOpen }" @click="toggleMenu(319996)" class="primary-navigation__button u-relative u-z-410 u-transition focus:u-shadow-none" style="display: none;" x-show="dropdownButton === 319996">
+<span class="u-visually-hidden" x-text="(menuOpen === 319996 ? 'Hide' : 'Show') + ' submenu'">Nulla proident ad Dolore adipiscing </span>
+<span aria-hidden="true">
+<svg class="icon" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--arrow-soft-down"></use>
+</svg>
+</span>
+</button>
+<div class="u-absolute u-pin-x u-pin-t-100 u-bg-primary u-text-white u-z-400" x-cloak="" x-show="menuOpen === 319996">
+<div class="u-py-6 u-bg-primary">
+<div class="container">
+<h2 class="u-visually-hidden">Do deserunt in</h2>
+<div class="row"></div>
+<ul class="row u-list-reset">
+<li class="col"><a class="u-block u-text-white" href="#">Ipsum aliqua proident duis</a></li>
+<li class="col"><a class="u-block u-text-white" href="#">Sit</a></li>
+<li class="col"><a class="u-block u-text-white" href="#">Dolore anim adipiscing duis</a></li>
+<li class="col"><a class="u-block u-text-white" href="#">Nisi</a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+<div class="u-flex u-text-h5">
+<button :class="{ 'u-text-white' : showBackground() === false, 'is-active' : searchOpen === true}" @click="searchOpen = true" class="site-header__search u-hidden u-relative u-bg-transparent u-px-2 u-pb-5 u-pt-3 hocus:u-bg-grey-50 hocus:u-text-primary u-text-large xl:u-block">
+<span class="u-visually-hidden">Consectetur</span>
+<svg class="icon" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--search"></use>
+</svg>
+</button>
+<button @click="searchOpen = searchOpen === false; menuMobileOpen = false" class="u-bg-transparent hocus:u-text-primary u-px-2 xl:u-hidden">
+<span class="u-visually-hidden">Veniam</span>
+<svg class="icon" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--search"></use>
+</svg>
+</button>
+<button @click="menuMobileOpen = menuMobileOpen === false; searchOpen = false" class="u-bg-transparent hocus:u-text-primary u-px-2 xl:u-hidden">
+<span class="u-visually-hidden">Minim exercitation</span>
+<svg class="icon" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--menu-rounded"></use>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="xl:u-hidden" style="display: none;" x-show="menuMobileOpen === true">
+<nav aria-label="Irure">
+<div class="u-bg-primary mobile-menu">
+<ul class="u-list-reset u-m-0" x-data="{ menuOpen: false }">
+<li class="u-border-b-1 u-border-darkpurple u-text-white u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="12-landing-study.html">Pariatur</a>
+<button :aria-expanded="menuOpen ? 'true' : 'false'" :class="{ 'mobile-menu__accordion--open' : menuOpen ===  319983}" @click="menuOpen = menuOpen === 319983 ? false : 319983" aria-expanded="false" class="mobile-menu__accordion u-transition">
+<span class="u-visually-hidden" x-text="(menuOpen === 319983 ? 'Hide' : 'Show') + ' submenu'">Et quis amet Sed</span>
+<span aria-hidden="true">
+<svg class="icon u-transition" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--arrow-soft-down"></use>
+</svg>
+</span>
+</button>
+<div class="u-w-full" style="display: none;" x-show="menuOpen === 319983">
+<div class="u-bg-darkpurple mobile-menu">
+<ul class="u-list-reset u-m-0" x-data="{ menuOpen: false }">
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Magna</a>
+</li>
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Dolore</a>
+</li>
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Ex</a>
+</li>
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Proident</a>
+</li>
+</ul>
+</div>
+</div>
+</li><li class="u-border-b-1 u-border-darkpurple u-text-white u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Reprehenderit Velit Pariatur</a>
+<button :aria-expanded="menuOpen ? 'true' : 'false'" :class="{ 'mobile-menu__accordion--open' : menuOpen ===  146785}" @click="menuOpen = menuOpen === 146785 ? false : 146785" aria-expanded="false" class="mobile-menu__accordion u-transition">
+<span class="u-visually-hidden" x-text="(menuOpen === 146785 ? 'Hide' : 'Show') + ' submenu'">Esse enim laborum Elit Esse Ex</span>
+<span aria-hidden="true">
+<svg class="icon u-transition" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--arrow-soft-down"></use>
+</svg>
+</span>
+</button>
+<div class="u-w-full" style="display: none;" x-show="menuOpen === 146785">
+<div class="u-bg-darkpurple mobile-menu">
+<ul class="u-list-reset u-m-0" x-data="{ menuOpen: false }">
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Adipiscing Amet</a>
+</li>
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Adipiscing commodo</a>
+</li>
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Qui enim irure</a>
+</li>
+</ul>
+</div>
+</div>
+</li><li class="u-border-b-1 u-border-darkpurple u-text-white u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Ex ullamco</a>
+<button :aria-expanded="menuOpen ? 'true' : 'false'" :class="{ 'mobile-menu__accordion--open' : menuOpen ===  2079167}" @click="menuOpen = menuOpen === 2079167 ? false : 2079167" aria-expanded="false" class="mobile-menu__accordion u-transition">
+<span class="u-visually-hidden" x-text="(menuOpen === 2079167 ? 'Hide' : 'Show') + ' submenu'">Fugiat amet nisi Cillum esse</span>
+<span aria-hidden="true">
+<svg class="icon u-transition" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--arrow-soft-down"></use>
+</svg>
+</span>
+</button>
+<div class="u-w-full" style="display: none;" x-show="menuOpen === 2079167">
+<div class="u-bg-darkpurple mobile-menu">
+<ul class="u-list-reset u-m-0" x-data="{ menuOpen: false }">
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Duis nostrud ullamco laborum cupidatat</a>
+</li>
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Anim commodo</a>
+</li>
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Voluptate excepteur</a>
+</li>
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Consectetur eiusmod adipiscing incididunt</a>
+</li>
+</ul>
+</div>
+</div>
+</li><li class="u-border-b-1 u-border-darkpurple u-text-white u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="11-landing-research.html">Esse id magna</a>
+<button :aria-expanded="menuOpen ? 'true' : 'false'" :class="{ 'mobile-menu__accordion--open' : menuOpen ===  320016}" @click="menuOpen = menuOpen === 320016 ? false : 320016" aria-expanded="false" class="mobile-menu__accordion u-transition">
+<span class="u-visually-hidden" x-text="(menuOpen === 320016 ? 'Hide' : 'Show') + ' submenu'">Mollit non deserunt Deserunt occaecat mollit</span>
+<span aria-hidden="true">
+<svg class="icon u-transition" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--arrow-soft-down"></use>
+</svg>
+</span>
+</button>
+<div class="u-w-full" style="display: none;" x-show="menuOpen === 320016">
+<div class="u-bg-darkpurple mobile-menu">
+<ul class="u-list-reset u-m-0" x-data="{ menuOpen: false }">
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Do ullamco</a>
+</li>
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Eiusmod Fugiat Proident</a>
+</li>
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Do et</a>
+</li>
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Eiusmod nulla voluptate</a>
+</li>
+</ul>
+</div>
+</div>
+</li><li class="u-border-b-1 u-border-darkpurple u-text-white u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Nisi Aliqua</a>
+<button :aria-expanded="menuOpen ? 'true' : 'false'" :class="{ 'mobile-menu__accordion--open' : menuOpen ===  320025}" @click="menuOpen = menuOpen === 320025 ? false : 320025" aria-expanded="false" class="mobile-menu__accordion u-transition">
+<span class="u-visually-hidden" x-text="(menuOpen === 320025 ? 'Hide' : 'Show') + ' submenu'">Mollit culpa dolore Ut Anim</span>
+<span aria-hidden="true">
+<svg class="icon u-transition" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--arrow-soft-down"></use>
+</svg>
+</span>
+</button>
+<div class="u-w-full" style="display: none;" x-show="menuOpen === 320025">
+<div class="u-bg-darkpurple mobile-menu">
+<ul class="u-list-reset u-m-0" x-data="{ menuOpen: false }">
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Esse deserunt deserunt sit</a>
+</li>
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Cupidatat Esse ipsum Consequat</a>
+</li>
+</ul>
+</div>
+</div>
+</li><li class="u-border-b-1 u-border-darkpurple u-text-white u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Enim culpa </a>
+<button :aria-expanded="menuOpen ? 'true' : 'false'" :class="{ 'mobile-menu__accordion--open' : menuOpen ===  319996}" @click="menuOpen = menuOpen === 319996 ? false : 319996" aria-expanded="false" class="mobile-menu__accordion u-transition">
+<span class="u-visually-hidden" x-text="(menuOpen === 319996 ? 'Hide' : 'Show') + ' submenu'">Id consequat qui Aliquip reprehenderit </span>
+<span aria-hidden="true">
+<svg class="icon u-transition" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--arrow-soft-down"></use>
+</svg>
+</span>
+</button>
+<div class="u-w-full" style="display: none;" x-show="menuOpen === 319996">
+<div class="u-bg-darkpurple mobile-menu">
+<ul class="u-list-reset u-m-0" x-data="{ menuOpen: false }">
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Nostrud et proident velit</a>
+</li>
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Aliquip</a>
+</li>
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Non minim consectetur do</a>
+</li>
+<li class="u-text-small u-border-b-1 u-border-darkpurple--dark u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Anim</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+<div class="u-bg-grey-50 mobile-menu">
+<ul class="u-list-reset u-m-0" x-data="{ menuOpen: false }">
+<li class="u-border-b-1 u-border-grey-50--dark u-text-primary u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Velit</a>
+</li>
+<li class="u-border-b-1 u-border-grey-50--dark u-text-primary u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Nulla culpa Fugiat</a>
+</li>
+<li class="u-border-b-1 u-border-grey-50--dark u-text-primary u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Laboris Duis</a>
+</li>
+<li class="u-border-b-1 u-border-grey-50--dark u-text-primary u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="#">Officia Laboris Pariatur</a>
+</li>
+<li class="u-border-b-1 u-border-grey-50--dark u-text-primary u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="10-landing-about.html">Nostrud id</a>
+</li>
+<li class="u-border-b-1 u-border-grey-50--dark u-text-primary u-flex u-flex-wrap u-justify-between">
+<a class="u-block u-flex-grow u-p-2 u-text-inherit" href="06-contact-map.html">Nostrud ea qui ullamco</a>
+</li>
+</ul>
+</div>
+</div>
+<div @click.away="menuOpen = false; searchOpen = false" class="has-dark-bg u-py-4 u-bg-primary u-text-white u-absolute u-pin-l u-pin-r" x-cloak="" x-show="searchOpen === true">
+<div class="container">
+<form action="#" class="search-form u-relative" x-data="{ liveSearchOpen: false }">
+<label class="h4 u-font-sans u-font-bolder u-mb-2" for="example_unique_id_906485678">Irure cillum</label>
+<div class="u-flex u-w-full">
+<input @blur="liveSearchOpen = false" @focus="liveSearchOpen = true" autocomplete="false" class="u-h-auto u-border-0 u-m-0 u-truncate u-px-1 u-rounded-none md:u-text-large md:u-px-4 md:u-py-2 lg:u-px-5 lg:u-py-3 xxl:u-text-h5 form-control" id="example_unique_id_906485678" name="searchstax[query]" placeholder="Cupidatat ullamco laboris do, mollit. ullamco reprehenderit" type="search"/>
+<button class="btn-secondary btn u-pl-1 u-pr-2 md:u-pl-3 md:u-pr-5" type="submit">
+<svg class="icon md:u-text-h5" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#feather--search"></use>
+</svg>
+<span class="u-visually-hidden">Quis</span>
+</button>
+</div>
+</form>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const searchForms = document.querySelectorAll('.search-form');
+  searchForms.forEach(form => {
+    const input = form.querySelector('input');
+    const baseUrl = form.getAttribute('action') || "/search/";
+    if (!form || !input) return;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const query = input.value.trim();
+      let params = new URLSearchParams();
+      params.append('searchstax[query]', query || '*');
+      const hiddenInputs = form.querySelectorAll('input[type="hidden"]');
+      hiddenInputs.forEach(hidden => {
+        if (hidden.name && hidden.value) {
+          params.append(hidden.name, hidden.value);
+        }
+      });
+      try {
+      	let queryString = params.toString();
+      	queryString = queryString.replace(/%5B/g, "[").replace(/%5D/g, "]").replace(/%3A/g, ":");
+        const searchUrl = `${baseUrl}?${queryString}`;
+        window.location.href = searchUrl;
+      } catch (err) {
+        console.error("Search redirect failed:", err);
+      }
+    });
+  });
+});
+</script>
+<button @click="menuOpen = false; searchOpen = false" class="u-hidden kbd-only:u-inline-block u-absolute u-pin-t u-pin-r u-m-4 u-bg-transparent u-text-current-color u-text-large">
+<span class="u-visually-hidden">Nulla pariatur</span>
+<svg class="icon hocus:u-text-primary" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--close"></use>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="u-fixed u-pin u-z-10 u-bg-black u-opacity-25" style="display: none;" x-show="menuOpen || searchOpen"></div>
+</header>
+<main class="main" id="main-content" role="main">
+<div class="main-content">
+<div class="page-header u-relative u-z-0 u-breakout has-dark-bg u-text-white u-py-4 u-bg-grey-300">
+<div class="u-flex u-flex-col u-relative u-z-10 container lg:u-min-h-image-header-large">
+<nav aria-label="Est" class="u-text-small u-mb-4 breadcrumb">
+<ol class="u-flex u-flex-wrap u-gap-y-1 u-pl-0 u-list-reset u-mb-0">
+<li>
+<svg class="icon" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg?v=ca02c231#feather--home"></use>
+</svg>
+<span>Magna</span>
+</li>
+<li> <span><a href="#">Pariatur Ea</a></span></li><li> <span><a href="#">Exercitation</a></span></li><li> <span><a href="#">Ea Consequat</a></span></li><li> <span><a href="08-business-programme.html">Laborum Nulla Voluptate</a></span></li>
+</ol>
+</nav>
+<div class="md:u-flex md:u-flex-grow md:u-justify-between md:u-flex-row-reverse">
+<img alt="Dolore consequat ex sint fugiat" class="page-header__crest u-mb-2 md:u-mb-0 md:u-ml-4 md:u-self-start lg:u-self-center image-scale-up-on-lazyload ls-is-cached lazyloaded" data-src="https://placehold.co/1200x800/png" src="https://placehold.co/1200x800/png"/>
+<div class="u-flex u-flex-col u-flex-grow u-justify-center">
+<div class="u-o-3 u-max-w-measure-lg">
+<h1 class="page-header__heading u-mb-0 u-leading-tight u-border-current-color u-pb-4 u-border-b-2 hero">
+            Tempor Anim Culpa
+          </h1>
+<div class="u-text-h5 u-font-bold u-font-sans u-leading-tight">
+            Sit Dolor Fugiat Consectetur incididunt, aute cupidatat adipiscing minim nulla officia dolor Et Mollit Magna Dolor ex culpa deserunt velit aute culpa culpa.
+          </div>
+</div>
+</div>
+</div>
+</div>
+<picture class="page-header--picture u-absolute u-pin u-blend-multiply" ref="page-header--picture">
+<img alt="Dolore quis" class="image-zoom-on-lazyload u-object-cover u-h-full u-w-full lazyloaded" data-src="https://placehold.co/1200x800/png" src="https://placehold.co/1200x800/png"/>
+</picture>
+</div>
+<div class="text-long u-max-w-measure-lg u-leading-normal u-o-3">
+<p> </p>
+<p> </p>
+</div>
+<div>
+<h2 class="h3 u-mb-3 u-heading-bar h2">
+    Aliquip Et Veniam Pariatur
+  </h2>
+<div class="u-o-3">
+<div class="text-long u-max-w-measure-lg u-leading-normal u-o-3">
+<p>Officia Ut Enim minim quis nisi aliquip ut qui sit pariatur labore amet sunt tempor est in culpa reprehenderit mollit fugiat laboris nisi fugiat id consectetur proident occaecat. Cupidatat, cillum aliquip id esse non tempor lorem cupidatat sed in duis amet tempor enim aliquip irure adipiscing lorem consectetur amet amet aliquip amet.</p>
+</div>
+<div>
+<div>
+<div class="row md:u-gap-y-5 u-gap-y-2">
+<div class="col-md-6">
+<div class="card group u-relative u-flex u-w-full u-h-full u-overflow-hidden u-justify-end u-select-none u-bg-white u-flex-col-reverse md:u-flex-row-reverse u-text-black hover:u-shadow u-transition u-cursor-pointer" data-card="">
+<div class="u-bg-grey-25 card-body u-flex u-content-box u-z-1 u-p-3" data-remove-classes-ie11="u-flex u-flex-1 u-flex-col">
+<div class="u-flex u-flex-col u-flex-1 u-o-2">
+<h3 class="card-heading u-mb-0 u-font-bolder u-leading-tight u-text-large u-text-primary">
+<a class="link u-text-inherit group-hocus:u-underline" href="#">
+            Eiusmod Occaecat 
+          </a>
+</h3>
+<div class="u-flex-1 u-text-small">
+<div class="text-long u-max-w-measure-lg u-leading-normal u-o-3">
+            In Velit Deserunt officia ad veniam ex nisi tempor laboris culpa do voluptate incididunt cillum aute Exercitation Nostrud Quis Amet pariatur officia Irure Cillum. 
+          </div>
+</div>
+</div>
+</div>
+<div class="card__image embed-responsive u-bg-grey-50 col-md-6 embed-responsive-16by9 u--order-1">
+<img alt="deserunt minim reprehenderit adipiscing labore laborum culpa" class="embed-responsive-item u-object-cover u-transition group-hocus:u-scale-110 image u-w-full lazyloaded" data-src="https://placehold.co/1200x800/png" src="https://placehold.co/1200x800/png"/>
+</div>
+</div>
+</div><div class="col-md-6">
+<div class="card group u-relative u-flex u-w-full u-h-full u-overflow-hidden u-justify-end u-select-none u-bg-white u-flex-col-reverse md:u-flex-row-reverse u-text-black hover:u-shadow u-transition u-cursor-pointer" data-card="">
+<div class="u-bg-grey-25 card-body u-flex u-content-box u-z-1 u-p-3" data-remove-classes-ie11="u-flex u-flex-1 u-flex-col">
+<div class="u-flex u-flex-col u-flex-1 u-o-2">
+<h3 class="card-heading u-mb-0 u-font-bolder u-leading-tight u-text-large u-text-primary">
+<a class="link u-text-inherit group-hocus:u-underline" href="#">
+            Laboris consectetur Exercitation
+          </a>
+</h3>
+<div class="u-flex-1 u-text-small">
+<div class="text-long u-max-w-measure-lg u-leading-normal u-o-3">
+            Sunt dolor Elit dolor tempor mollit aliqua aute ullamco veniam non fugiat.
+          </div>
+</div>
+</div>
+</div>
+<div class="card__image embed-responsive u-bg-grey-50 col-md-6 embed-responsive-16by9 u--order-1">
+<img alt="Aliqua aliquip in aute mollit reprehenderit" class="embed-responsive-item u-object-cover u-transition group-hocus:u-scale-110 image u-w-full lazyloaded" data-src="https://placehold.co/1200x800/png" src="https://placehold.co/1200x800/png"/>
+</div>
+</div>
+</div><div class="col-md-6">
+<div class="card group u-relative u-flex u-w-full u-h-full u-overflow-hidden u-justify-end u-select-none u-bg-white u-flex-col-reverse md:u-flex-row-reverse u-text-black hover:u-shadow u-transition u-cursor-pointer" data-card="">
+<div class="u-bg-grey-25 card-body u-flex u-content-box u-z-1 u-p-3" data-remove-classes-ie11="u-flex u-flex-1 u-flex-col">
+<div class="u-flex u-flex-col u-flex-1 u-o-2">
+<h3 class="card-heading u-mb-0 u-font-bolder u-leading-tight u-text-large u-text-primary">
+<a class="link u-text-inherit group-hocus:u-underline" href="#">
+            Ipsum fugiat Veniam
+          </a>
+</h3>
+<div class="u-flex-1 u-text-small">
+<div class="text-long u-max-w-measure-lg u-leading-normal u-o-3">
+            Nulla sint veniam aliqua Ad aute reprehenderit sit tempor anim dolore enim commodo quis enim pariatur. 
+          </div>
+</div>
+</div>
+</div>
+<div class="card__image embed-responsive u-bg-grey-50 col-md-6 embed-responsive-16by9 u--order-1">
+<img alt="velit dolor" class="embed-responsive-item u-object-cover u-transition group-hocus:u-scale-110 image u-w-full lazyloaded" data-src="https://placehold.co/1200x800/png" src="https://placehold.co/1200x800/png"/>
+</div>
+</div>
+</div><div class="col-md-6">
+<div class="card group u-relative u-flex u-w-full u-h-full u-overflow-hidden u-justify-end u-select-none u-bg-white u-flex-col-reverse md:u-flex-row-reverse u-text-black hover:u-shadow u-transition u-cursor-pointer" data-card="">
+<div class="u-bg-grey-25 card-body u-flex u-content-box u-z-1 u-p-3" data-remove-classes-ie11="u-flex u-flex-1 u-flex-col">
+<div class="u-flex u-flex-col u-flex-1 u-o-2">
+<h3 class="card-heading u-mb-0 u-font-bolder u-leading-tight u-text-large u-text-primary">
+<a class="link u-text-inherit group-hocus:u-underline" href="#">
+            Non Occaecat Fugiat Nulla
+          </a>
+</h3>
+<div class="u-flex-1 u-text-small">
+<div class="text-long u-max-w-measure-lg u-leading-normal u-o-3">
+            Nulla duis eiusmod consectetur irure ut esse esse do et, ullamco culpa consectetur anim mollit laborum sint velit culpa fugiat magna.
+          </div>
+</div>
+</div>
+</div>
+<div class="card__image embed-responsive u-bg-grey-50 col-md-6 embed-responsive-16by9 u--order-1">
+<img alt="Cupidatat nostrud cupidatat" class="embed-responsive-item u-object-cover u-transition group-hocus:u-scale-110 image u-w-full lazyloaded" data-src="https://placehold.co/1200x800/png" src="https://placehold.co/1200x800/png"/>
+</div>
+</div>
+</div><div class="col-md-6">
+<div class="card group u-relative u-flex u-w-full u-h-full u-overflow-hidden u-justify-end u-select-none u-bg-white u-flex-col-reverse md:u-flex-row-reverse u-text-black hover:u-shadow u-transition u-cursor-pointer" data-card="">
+<div class="u-bg-grey-25 card-body u-flex u-content-box u-z-1 u-p-3" data-remove-classes-ie11="u-flex u-flex-1 u-flex-col">
+<div class="u-flex u-flex-col u-flex-1 u-o-2">
+<h3 class="card-heading u-mb-0 u-font-bolder u-leading-tight u-text-large u-text-primary">
+<a class="link u-text-inherit group-hocus:u-underline" href="#">
+            Laboris sint In
+          </a>
+</h3>
+<div class="u-flex-1 u-text-small">
+<div class="text-long u-max-w-measure-lg u-leading-normal u-o-3">
+            Enim eiusmod laborum est cupidatat ipsum quis aute aliquip fugiat laboris sit nulla.
+          </div>
+</div>
+</div>
+</div>
+<div class="card__image embed-responsive u-bg-grey-50 col-md-6 embed-responsive-16by9 u--order-1">
+<img alt="Aute aliqua dolor qui" class="embed-responsive-item u-object-cover u-transition group-hocus:u-scale-110 image u-w-full lazyloaded" data-src="https://placehold.co/1200x800/png" src="https://placehold.co/1200x800/png"/>
+</div>
+</div>
+</div><div class="col-md-6">
+<div class="card group u-relative u-flex u-w-full u-h-full u-overflow-hidden u-justify-end u-select-none u-bg-white u-flex-col-reverse md:u-flex-row-reverse u-text-black hover:u-shadow u-transition u-cursor-pointer" data-card="">
+<div class="u-bg-grey-25 card-body u-flex u-content-box u-z-1 u-p-3" data-remove-classes-ie11="u-flex u-flex-1 u-flex-col">
+<div class="u-flex u-flex-col u-flex-1 u-o-2">
+<h3 class="card-heading u-mb-0 u-font-bolder u-leading-tight u-text-large u-text-primary">
+<a class="link u-text-inherit group-hocus:u-underline" href="#">
+            Officia aliqua Magna 
+          </a>
+</h3>
+<div class="u-flex-1 u-text-small">
+<div class="text-long u-max-w-measure-lg u-leading-normal u-o-3">
+            Nulla sint mollit deserunt consequat, laboris occaecat quis esse anim ex irure culpa labore excepteur enim sed commodo officia dolore.
+          </div>
+</div>
+</div>
+</div>
+<div class="card__image embed-responsive u-bg-grey-50 col-md-6 embed-responsive-16by9 u--order-1">
+<img alt="Officia Nostrud Deserunt nostrud" class="embed-responsive-item u-object-cover u-transition group-hocus:u-scale-110 image u-w-full lazyloaded" data-src="https://placehold.co/1200x800/png" src="https://placehold.co/1200x800/png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="text-long u-max-w-measure-lg u-leading-normal u-o-3">
+<p> </p>
+<p> </p>
+</div>
+<div class="landing-page-section landing-page-section--get-in-touch u-breakout u-py-4 md:u-py-10 lg:u-py-16 landing-page-section--image u-bg-cover u-bg-bottom u-text-white has-dark-bg" style="background-image: url('https://placehold.co/1920x1080/png');">
+<div class="container u-o-5 u-relative u-z-1">
+<div class="row u-flex-col u-justify-between lg:u-flex-row u-items-center">
+<div class="u-o-5 col-lg-6">
+<h2 class="h2 u-mb-4">
+          Nulla duis
+        </h2>
+<div class="text-long u-max-w-measure-lg u-leading-normal u-o-3">
+<p>Aute sed nostrud labore officia irure aliquip nisi enim mollit pariatur fugiat est veniam voluptate Esse Consequat pariatur.</p>
+</div>
+<div>
+<ul class="u-list-reset u-gap-y-3"><li>
+<a class="btn btn-primary btn-secondary" href="#">
+              Incididunt Aliqua Ea Non Velit
+              <svg class="icon u-ml-1" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg?v=71ae8f6c#feather--arrow-right"></use>
+</svg>
+</a>
+</li>
+<li>
+<a class="btn btn-primary btn-secondary" href="#">
+              Dolore sunt Aliquip Proident
+              <svg class="icon u-ml-1" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg?v=71ae8f6c#feather--arrow-right"></use>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="u-o-5 u-mt-4 lg:u-mt-0 col-lg-4">
+<div class="u-flex u-leading-normal">
+<div class="u-mr-2">
+<svg class="u-text-h4 u-mt-1 icon u-scale-110" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg?v=f9031e22#durham--pin-location"></use>
+</svg>
+</div>
+<div>
+<p><strong>mollit Consequat Commodo,</strong><br/>15 ut Irure<br/>77710 Ipsum<br/><strong>Enim:<span> </span></strong>+33 1 53 34 23 61</p>
+<p> </p>
+<p><strong>Aliquip Ut Cillum Minim,</strong><br/><span>Ad Officia, </span><br/><span>Ullamco Lorem cupidatat,</span><br/><span>Aliquip Lorem<br/></span><strong>Magna:<span> </span></strong>+44 (8)490 642 8287<br/><br/></p>
+<p> </p>
+<p> </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="landing-page-section__corner u-absolute u-pin-t u-pin-l landing-page-section__corner--left u-text-white"></div>
+</div>
+</div>
+</main>
+<footer class="u-bg-white">
+<div class="u-text-white u-py-5 lg:u-py-8">
+<div class="container u-o-4 lg:u-o-5">
+<div class="u-flex u-flex-col u-items-center u-justify-between md:u-flex-row">
+<ul class="u-list-reset u-flex u-flex-col u-items-center u-gap-y-3 u-gap-x-2 u-mb-2 md:u-flex-row">
+<li>
+<a class="btn btn-primary" href="06-contact-map.html">
+              Esse Do Velit
+              <svg class="icon u-ml-1" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#feather--arrow-right"></use>
+</svg>
+</a>
+</li>
+<li>
+<a class="hocus:u-text-primary--dark link cta-link u-font-bold u-no-underline u-pr-2 hocus:u-underline u-block" href="10-landing-about.html">
+             Ex minim
+              <svg class="icon u-transition u-ml-1" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#cti--arrow-button-right"></use>
+</svg>
+</a>
+</li>
+</ul>
+<div class="u-text-center lg:u-text-right">
+<ul class="u-list-reset u-flex u-flex-wrap u-gap-y-1 u-gap-x-2">
+<li>
+<a class="u-inline-block u-bg-transparent hocus:u-scale-110 u-p-0 u-text-primary hocus:u-text-primary--dark" href="#">
+<span class="u-visually-hidden">Voluptate Laborum velit Velit</span>
+<svg class="icon u-h-icon-lg u-w-icon-lg u-border-current-color u-border-1 u-rounded-full u-p-1" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#simple-icons--bluesky"></use>
+</svg>
+</a>
+</li>
+<li>
+<a class="u-inline-block u-bg-transparent hocus:u-scale-110 u-p-0 u-text-primary hocus:u-text-primary--dark" href="#">
+<span class="u-visually-hidden">Ex Voluptate occaecat Ex</span>
+<svg class="icon u-h-icon-lg u-w-icon-lg u-border-current-color u-border-1 u-rounded-full u-p-1" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#simple-icons--x"></use>
+</svg>
+</a>
+</li>
+<li>
+<a class="u-inline-block u-bg-transparent hocus:u-scale-110 u-p-0 u-text-primary hocus:u-text-primary--dark" href="#">
+<span class="u-visually-hidden">Sunt Lorem amet Veniam</span>
+<svg class="icon u-h-icon-lg u-w-icon-lg u-border-current-color u-border-1 u-rounded-full u-p-1" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#simple-icons--facebook"></use>
+</svg>
+</a>
+</li>
+<li>
+<a class="u-inline-block u-bg-transparent hocus:u-scale-110 u-p-0 u-text-primary hocus:u-text-primary--dark" href="#">
+<span class="u-visually-hidden">Non Aute quis In</span>
+<svg class="icon u-h-icon-lg u-w-icon-lg u-border-current-color u-border-1 u-rounded-full u-p-1" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#simple-icons--linkedin"></use>
+</svg>
+</a>
+</li>
+<li>
+<a class="u-inline-block u-bg-transparent hocus:u-scale-110 u-p-0 u-text-primary hocus:u-text-primary--dark" href="#">
+<span class="u-visually-hidden">Officia Nisi labore Elit</span>
+<svg class="icon u-h-icon-lg u-w-icon-lg u-border-current-color u-border-1 u-rounded-full u-p-1" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#simple-icons--youtube"></use>
+</svg>
+</a>
+</li>
+<li>
+<a class="u-inline-block u-bg-transparent hocus:u-scale-110 u-p-0 u-text-primary hocus:u-text-primary--dark" href="#">
+<span class="u-visually-hidden">Nulla Cupidatat ipsum Dolor</span>
+<svg class="icon u-h-icon-lg u-w-icon-lg u-border-current-color u-border-1 u-rounded-full u-p-1" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#simple-icons--instagram"></use>
+</svg>
+</a>
+</li>
+<li>
+<a class="u-inline-block u-bg-transparent hocus:u-scale-110 u-p-0 u-text-primary hocus:u-text-primary--dark" href="#">
+<span class="u-visually-hidden">Ut Laborum culpa Cillum</span>
+<svg class="icon u-h-icon-lg u-w-icon-lg u-border-current-color u-border-1 u-rounded-full u-p-1" focusable="false">
+<use xlink:href="media/durham-university/site-assets/image/sprite.svg#simple-icons--tiktok"></use>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="row u-gap-y-2">
+<div class="col-6 col-md u-text-primary">
+<hr class="u-w-3/4 sm:u-w-1/2 u-ml-0 u-mb-2 u-border-t-6 u-border-current-color"/>
+<span class="u-block u-text-primary u-font-bolder u-mb-2">Incididunt Incididunt</span>
+<ul class="list-unstyled u-text-grey-300 u-font-thin">
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="10-landing-about.html">
+        Excepteur eiusmod
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Duis
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="06-contact-map.html">
+        Culpa consequat 
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Consectetur nostrud 
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Cupidatat Nostrud
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Fugiat Mollit
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Laborum
+      </a>
+</li>
+</ul>
+</div><div class="col-6 col-md u-text-primary">
+<hr class="u-w-3/4 sm:u-w-1/2 u-ml-0 u-mb-2 u-border-t-6 u-border-current-color"/>
+<span class="u-block u-text-primary u-font-bolder u-mb-2">Sit incididunt id</span>
+<ul class="list-unstyled u-text-grey-300 u-font-thin">
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Consectetur
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Occaecat amet Quis Ea
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Consectetur nisi veniam
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="">
+        Amet irure
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Elit occaecat
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Duis aliqua do exercitation esse
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Fugiat
+      </a>
+</li>
+</ul>
+</div><div class="col-6 col-md u-text-primary">
+<hr class="u-w-3/4 sm:u-w-1/2 u-ml-0 u-mb-2 u-border-t-6 u-border-current-color"/>
+<span class="u-block u-text-primary u-font-bolder u-mb-2">Enim ullamco</span>
+<ul class="list-unstyled u-text-grey-300 u-font-thin">
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Consequat et
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Anim est
+      </a>
+</li>
+</ul>
+</div><div class="col-6 col-md u-text-primary">
+<hr class="u-w-3/4 sm:u-w-1/2 u-ml-0 u-mb-2 u-border-t-6 u-border-current-color"/>
+<span class="u-block u-text-primary u-font-bolder u-mb-2">Lorem Fugiat</span>
+<ul class="list-unstyled u-text-grey-300 u-font-thin">
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Officia Ad
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Labore exercitation non
+      </a>
+</li>
+</ul>
+</div><div class="col-6 col-md u-text-primary">
+<hr class="u-w-3/4 sm:u-w-1/2 u-ml-0 u-mb-2 u-border-t-6 u-border-current-color"/>
+<span class="u-block u-text-primary u-font-bolder u-mb-2">Amet do</span>
+<ul class="list-unstyled u-text-grey-300 u-font-thin">
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Commodo Quis
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Mollit Cillum
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Nulla incididunt
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Aliquip Dolor
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Amet Aliquip ipsum)
+      </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="list-item u-mb-1 sm:u-mb-2 u-text-grey-300 u-text-small sm:u-text-medium link" href="#">
+        Nisi voluptate mollit velit
+      </a>
+</li>
+</ul>
+</div>
+</div>
+<div class="lg:u-flex lg:u-justify-between lg:u-items-center">
+<div class="u-mb-4">
+<a href="01-homepage.html" rel="home"><img alt="Logo" class="footer-logo u-mb-2" src="https://placehold.co/240x64/86001E/FFFFFF/png?text=Logo"/></a>
+<div class="u-text-small u-leading-tight u-text-grey-400">
+<p>Proident Occaecat Magna<br/>Occaecat Irure<br/>Lorem Voluptate<br/>Ut <br/>Ullamco minim</p>
+<p> </p>
+</div>
+</div>
+<ul class="accreditation-links u-list-reset u-gap-y-3 u-flex u-flex-wrap u-gap-x-3">
+<li>
+<a class="accreditation-links__item group u-flex u-flex-col u-h-full link" href="#">
+<div class="u-flex u-items-center u-justify-center u-flex-1 u-transition group-hocus:u-scale-110">
+<img alt="Non Esse est Et Sed Et Id Esse Fugiat Culpa irure elit Et 9353 est" class="img u-w-full lazyload" data-src="https://placehold.co/1200x800/png" src="https://placehold.co/1200x800/png"/>
+</div>
+</a>
+</li>
+</ul>
+</div>
+<div class="u-text-small u-text-grey-400 lg:u-flex lg:u-items-center lg:u-flex-row-reverse lg:u-justify-between">
+<ul class="u-list-reset u-mb-4 lg:u-flex lg:u-mb-0 lg:u-gap-x-3 ul">
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="u-text-grey-400 u-underline hocus:u-text-grey-400--light link" href="#">
+      Sed consequat 
+    </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="u-text-grey-400 u-underline hocus:u-text-grey-400--light link" href="#">
+      Ex
+    </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="u-text-grey-400 u-underline hocus:u-text-grey-400--light link" href="#">
+      Aliquip labore
+    </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="u-text-grey-400 u-underline hocus:u-text-grey-400--light link" href="#">
+      Enim enim
+    </a>
+</li>
+<li class="list-item u-mb-1 sm:u-mb-2">
+<a class="u-text-grey-400 u-underline hocus:u-text-grey-400--light link" href="#">
+      Et non
+    </a>
+</li>
+</ul>
+<p>©9757 Do Laborum </p>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="vendor/jquery-3.5.1.min.js"></script>
+<script src="media/durham-university/site-assets/js/durham-dependencies.js" type="text/javascript"></script>
+<script src="media/durham-university/site-assets/js/durham-app.js" type="text/javascript"></script>
+<script src="media/durham-university/site-assets/js/emergency.js" type="text/javascript"></script>
+</body>
+</html>

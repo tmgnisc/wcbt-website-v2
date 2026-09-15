@@ -1,0 +1,219 @@
+{
+ "route": "/careers/placements",
+ "title": "Placements — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Career support from classroom to workplace",
+   "heading": "",
+   "paras": [
+    "Placements",
+    "WCBT supports students with internship preparation, employer exposure, and career guidance for the next step after graduation."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Placement Overview",
+   "h1": "",
+   "heading": "How placement support works",
+   "paras": [
+    "Placement support is a gradual process. Students first build academic and project foundations, then strengthen communication and workplace readiness, and finally connect with internship and career opportunities."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Prepare",
+      "stat": "",
+      "text": [
+       "Students work on CVs, portfolios, communication, project documentation, and interview confidence."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Connect",
+      "stat": "",
+      "text": [
+       "The college connects students with industry exposure, employer talks, visits, and internship guidance."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Improve",
+      "stat": "",
+      "text": [
+       "Students use feedback from faculty, mentors, and employers to improve skills and readiness."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Placement Support",
+   "h1": "",
+   "heading": "How we prepare students",
+   "paras": [
+    "Placement support starts before graduation, combining skill preparation with practical exposure."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Profile Readiness",
+      "stat": "",
+      "text": [
+       "Students receive guidance on CVs, portfolios, project presentation, and interview preparation."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Internship Support",
+      "stat": "",
+      "text": [
+       "The college helps students identify internship opportunities that match their skills and program pathway."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Employer Connections",
+      "stat": "",
+      "text": [
+       "Industry exposure, visits, and partner conversations connect students with real workplace expectations."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Career Mentoring",
+      "stat": "",
+      "text": [
+       "Faculty and advisors help students plan for employment, entrepreneurship, and further study."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Readiness Areas",
+   "h1": "",
+   "heading": "What students should build before placement",
+   "paras": [],
+   "bullets": [
+    "A clear CV that presents education, projects, skills, and activities.",
+    "A practical project or portfolio that shows problem-solving ability.",
+    "Basic workplace communication, punctuality, teamwork, and reporting habits.",
+    "Confidence explaining technical work in interviews or presentations.",
+    "Awareness of career paths in software, IT support, ed-tech, analytics, teaching, and startups.",
+    "Willingness to learn from feedback during internships, visits, and mentoring sessions."
+   ],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Student Checklist",
+   "h1": "",
+   "heading": "What students can expect",
+   "paras": [],
+   "bullets": [
+    "Career orientation and pathway guidance",
+    "CV, interview, and communication preparation",
+    "Internship and project-readiness support",
+    "Employer exposure through visits, talks, and partnerships"
+   ],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Planning your career path?",
+   "paras": [
+    "Talk with the college team about internships, projects, and graduate opportunities."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Contact Career Support",
+     "href": null
+    },
+    {
+     "text": "Explore Careers",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}

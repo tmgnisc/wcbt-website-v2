@@ -1,0 +1,274 @@
+{
+ "route": "/about/governance",
+ "title": "Governance — WhiteHouse College of Business & Technology",
+ "description": "WhiteHouse College of Business & Technology — Kathmandu University affiliated BIT and B.Tech Ed IT programs in Jhapa, Nepal.",
+ "blocks": [
+  {
+   "tone": "plain",
+   "eyebrow": "",
+   "h1": "Governance & Leadership",
+   "heading": "",
+   "paras": [
+    "Institution Management",
+    "WhiteHouse College follows a transparent, accountable, and participatory governance system that supports academic excellence and institutional growth.",
+    "Premises of Nidi Secondary School & Indreni Campus"
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [
+    "image"
+   ],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Our Structure",
+   "h1": "",
+   "heading": "Transparent & Accountable Management",
+   "paras": [
+    "WhiteHouse College follows a transparent, accountable, and participatory governance system that supports academic excellence and institutional growth. The college is guided by experienced academic leaders, administrators, and governing bodies committed to maintaining high standards in education, research, and student services."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Guided by Commitment to Excellence",
+   "paras": [
+    "Our governance structure ensures that every decision prioritizes student success, academic quality, and institutional sustainability."
+   ],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Governance Framework",
+   "h1": "",
+   "heading": "Key Components",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Academic Oversight",
+      "stat": "",
+      "text": [
+       "Program quality is monitored through Kathmandu University guidelines, internal reviews, and continuous faculty development initiatives."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Participatory Leadership",
+      "stat": "",
+      "text": [
+       "Experienced academic leaders and administrators collaborate with faculty, staff, and student representatives in decision-making."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Quality Assurance",
+      "stat": "",
+      "text": [
+       "Regular assessments, accreditation reviews, and performance metrics ensure institutional standards are maintained and improved."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Institutional Accountability",
+      "stat": "",
+      "text": [
+       "Transparent reporting, financial oversight, and compliance with regulatory standards demonstrate our commitment to responsible management."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "plain",
+   "eyebrow": "Leadership",
+   "h1": "",
+   "heading": "Our Governing Bodies",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Institutional Board",
+      "stat": "",
+      "text": [
+       "Provides strategic oversight and long-term vision for institutional development and sustainability."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Academic Council",
+      "stat": "",
+      "text": [
+       "Oversees curriculum development, program quality, and faculty development initiatives."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Administrative Leadership",
+      "stat": "",
+      "text": [
+       "Manages daily operations, student services, and institutional support systems."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "muted",
+   "eyebrow": "Commitment",
+   "h1": "",
+   "heading": "Principles That Guide Us",
+   "paras": [],
+   "bullets": [],
+   "links": [],
+   "images": [],
+   "quote": null,
+   "groups": [
+    [
+     {
+      "eyebrow": "",
+      "title": "Transparency",
+      "stat": "",
+      "text": [
+       "Open communication about policies, decisions, and performance metrics affecting the college community."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Accountability",
+      "stat": "",
+      "text": [
+       "Clear responsibility for outcomes and continuous monitoring of institutional performance."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Student-Centered Focus",
+      "stat": "",
+      "text": [
+       "Every policy and decision prioritizes student success, safety, and overall development."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     },
+     {
+      "eyebrow": "",
+      "title": "Academic Integrity",
+      "stat": "",
+      "text": [
+       "Maintaining high standards in teaching, research, and institutional reputation through ethical practices."
+      ],
+      "bullets": [],
+      "links": [],
+      "image": null,
+      "href": null
+     }
+    ]
+   ],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  },
+  {
+   "tone": "dark",
+   "eyebrow": "",
+   "h1": "",
+   "heading": "Questions About Governance?",
+   "paras": [
+    "Contact our administration office for more information about institutional policies and leadership."
+   ],
+   "bullets": [],
+   "links": [
+    {
+     "text": "Contact Administration",
+     "href": null
+    },
+    {
+     "text": "Learn More About WCBT",
+     "href": null
+    }
+   ],
+   "images": [],
+   "quote": null,
+   "groups": [],
+   "tables": [],
+   "forms": [],
+   "faqs": []
+  }
+ ]
+}
