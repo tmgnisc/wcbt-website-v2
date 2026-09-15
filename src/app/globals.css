@@ -1,0 +1,6 @@
+/* The template stylesheets live in public/media/durham-university/site-assets/css and are linked per page. */
+
+/* The wrapper around template markup must not affect layout (e.g. `.layout-container { min-height: 100% }`). */
+.template-root {
+  display: contents;
+}
