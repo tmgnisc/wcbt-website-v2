@@ -53,6 +53,15 @@ college_backend/
 │   │   │   ├── views.py
 │   │   │   └── urls.py
 │   │   └── models.py
+│   ├── staff/                 # Staff management
+│   │   ├── api/
+│   │   │   ├── serializers.py
+│   │   │   ├── views.py
+│   │   │   └── urls.py
+│   │   ├── management/commands/
+│   │   │   └── create_sample_staff.py
+│   │   ├── models.py
+│   │   └── migrations/
 │   └── common/                # Shared utilities
 │       ├── responses.py
 │       ├── exceptions.py
@@ -62,7 +71,8 @@ college_backend/
 │   ├── conftest.py
 │   ├── test_auth.py
 │   ├── test_otp.py
-│   └── test_programs.py
+│   ├── test_programs.py
+│   └── test_staff.py
 ├── .env
 ├── .env.example
 ├── requirements.txt
@@ -124,6 +134,16 @@ college_backend/
 - Default: admin@WCBTcollege.com / Admin@1234
 - Supports --email, --password, --username, --first-name, --last-name
 
+### Phase 7: Staff App
+
+- GET/POST `/api/staff/` — List, create (Admin + SuperAdmin)
+- GET/PATCH/DELETE `/api/staff/{id}/` — Detail, update, soft-delete (Admin + SuperAdmin)
+- PATCH `/api/staff/{id}/toggle-status/` — Enable/disable login
+- Auto-generated staff IDs (`WCBT-S-0001`)
+- Activity logging (create, update, toggle, deactivate)
+- Salary hidden from non-superadmin users
+- `IsAdmin` permission on all staff endpoints
+
 ---
 
 ## API Conventions
@@ -170,13 +190,13 @@ college_backend/
 | Auth (signup, login, logout, profile, refresh) | 20 |
 | OTP (send, verify, forgot password, reset) | 14 |
 | Programs (CRUD + validation) | 15 |
-| **Total** | **49** |
+| Staff (CRUD + permissions + toggle + activity) | 18 |
+| **Total** | **67** |
 
 ---
 
 ## Pending Phases
 
-- [ ] Staff app (CRUD + activity + salary gate)
 - [ ] Admissions app (CRUD + bulk + trend + convert)
 - [ ] Notifications app (CRUD + publish + bulk ops)
 - [ ] Settings app (single document resource)

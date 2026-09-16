@@ -210,7 +210,7 @@ class TestPermissions:
 
     def test_staff_cannot_manage_staff(self, auth_client):
         response = auth_client.get("/api/staff/")
-        assert response.status_code == status.HTTP_404_NOT_FOUND
+        assert response.status_code == status.HTTP_403_FORBIDDEN
 
     def test_superadmin_endpoint_requires_superadmin(self, auth_client):
         """Staff users should not access SuperAdmin-only endpoints."""
