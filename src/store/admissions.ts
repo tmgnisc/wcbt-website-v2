@@ -1,7 +1,6 @@
 import { create } from 'zustand';
 import * as api from '@/api/admissions';
 import type { Admission, AdmissionDraft, AdmissionStage } from '@/types/admission';
-import { createId } from '@/lib/utils';
 
 interface AdmissionsState {
   items: Admission[];
@@ -39,22 +38,44 @@ export const useAdmissionsStore = create<AdmissionsState>()((set, get) => ({
   },
 
   create: async (draft) => {
-    const admission: Admission = { ...draft, id: createId('adm') };
+    const tempId = `adm-temp-${Date.now()}`;
+    const admission: Admission = { ...draft, id: tempId };
     set((state) => ({ items: [admission, ...state.items] }));
-    await api.createAdmission(admission);
-    return admission;
+    try {
+      const serverAdmission = await api.createAdmission(admission);
+      set((state) => ({
+        items: state.items.map((item) => (item.id === tempId ? serverAdmission : item)),
+      }));
+      return serverAdmission;
+    } catch (error) {
+      set((state) => ({ items: state.items.filter((item) => item.id !== tempId) }));
+      throw error;
+    }
   },
 
   update: async (id, draft) => {
+    let previous: Admission | undefined;
     let updated: Admission | undefined;
     set((state) => ({
       items: state.items.map((item) => {
         if (item.id !== id) return item;
+        previous = item;
         updated = { ...item, ...draft };
         return updated;
       }),
     }));
-    if (updated) await api.updateAdmission(updated);
+    if (updated) {
+      try {
+        await api.updateAdmission(updated);
+      } catch (error) {
+        if (previous) {
+          set((state) => ({
+            items: state.items.map((item) => (item.id === id ? previous! : item)),
+          }));
+        }
+        throw error;
+      }
+    }
   },
 
   setStatus: async (id, status) => {
@@ -62,23 +83,81 @@ export const useAdmissionsStore = create<AdmissionsState>()((set, get) => ({
   },
 
   setStatusMany: async (ids, status) => {
+    const previous: Admission[] = [];
     set((state) => ({
-      items: state.items.map((item) => (ids.includes(item.id) ? { ...item, status } : item)),
+      items: state.items.map((item) => {
+        if (ids.includes(item.id)) {
+          previous.push(item);
+          return { ...item, status };
+        }
+        return item;
+      }),
     }));
+    try {
+      await api.bulkUpdateStatus(ids, status);
+    } catch (error) {
+      set((state) => ({
+        items: state.items.map((item) => {
+          const prev = previous.find((p) => p.id === item.id);
+          return prev ?? item;
+        }),
+      }));
+      throw error;
+    }
   },
 
   convertToStudent: async (id) => {
-    await get().update(id, { convertedToStudent: true });
+    let previous: Admission | undefined;
+    set((state) => ({
+      items: state.items.map((item) => {
+        if (item.id !== id) return item;
+        previous = item;
+        return { ...item, convertedToStudent: true };
+      }),
+    }));
+    try {
+      const updated = await api.convertToStudent(id);
+      set((state) => ({
+        items: state.items.map((item) => (item.id === id ? updated : item)),
+      }));
+    } catch (error) {
+      if (previous) {
+        set((state) => ({
+          items: state.items.map((item) => (item.id === id ? previous! : item)),
+        }));
+      }
+      throw error;
+    }
   },
 
   remove: async (id) => {
-    set((state) => ({ items: state.items.filter((item) => item.id !== id) }));
-    await api.deleteAdmission(id);
+    let removed: Admission | undefined;
+    set((state) => {
+      removed = state.items.find((item) => item.id === id);
+      return { items: state.items.filter((item) => item.id !== id) };
+    });
+    try {
+      await api.deleteAdmission(id);
+    } catch (error) {
+      if (removed) {
+        set((state) => ({ items: [...state.items, removed!] }));
+      }
+      throw error;
+    }
   },
 
   removeMany: async (ids) => {
-    set((state) => ({ items: state.items.filter((item) => !ids.includes(item.id)) }));
-    await Promise.all(ids.map((id) => api.deleteAdmission(id)));
+    let removed: Admission[] = [];
+    set((state) => {
+      removed = state.items.filter((item) => ids.includes(item.id));
+      return { items: state.items.filter((item) => !ids.includes(item.id)) };
+    });
+    try {
+      await Promise.all(ids.map((id) => api.deleteAdmission(id)));
+    } catch (error) {
+      set((state) => ({ items: [...state.items, ...removed] }));
+      throw error;
+    }
   },
 
   nextApplicationId: () => {

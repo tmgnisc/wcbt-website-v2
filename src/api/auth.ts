@@ -1,23 +1,28 @@
-import { accountsSeed } from '@/data/users';
 import type { AuthUser, Credentials } from '@/types/auth';
-import { request, requestFailure } from './client';
+import { request, setTokens } from './client';
 
-export async function login({ identifier, password }: Credentials): Promise<AuthUser> {
-  const account = accountsSeed.find(
-    (candidate) =>
-      candidate.email.toLowerCase() === identifier.trim().toLowerCase() ||
-      candidate.email.split('@')[0].toLowerCase() === identifier.trim().toLowerCase(),
-  );
+interface LoginResponse {
+  user: AuthUser;
+  access: string;
+  refresh: string;
+}
 
-  if (!account || account.password !== password) {
-    return requestFailure('Invalid email or password. Please try again.');
-  }
+export async function login({ identifier, password }: Credentials): Promise<LoginResponse> {
+  const data = await request<LoginResponse>('/auth/login/', {
+    method: 'POST',
+    body: JSON.stringify({ identifier, password }),
+  });
+  setTokens(data.access, data.refresh);
+  return data;
+}
 
-  const { password: _password, ...user } = account;
-  return request(user);
+export async function verifySession(): Promise<AuthUser> {
+  return request<AuthUser>('/auth/me/');
 }
 
 export async function requestPasswordReset(email: string): Promise<{ sent: boolean }> {
-  // Always resolves so the UI cannot be used to enumerate valid accounts.
-  return request({ sent: Boolean(email) });
+  return request<{ sent: boolean }>('/auth/forgot-password/', {
+    method: 'POST',
+    body: JSON.stringify({ email }),
+  });
 }

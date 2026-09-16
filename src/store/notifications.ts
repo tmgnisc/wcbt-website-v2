@@ -1,7 +1,6 @@
 import { create } from 'zustand';
 import * as api from '@/api/notifications';
 import type { Notification, NotificationDraft } from '@/types/notification';
-import { createId } from '@/lib/utils';
 
 interface NotificationsState {
   items: Notification[];
@@ -19,8 +18,6 @@ interface NotificationsState {
   markRead: (id: string) => void;
   markAllRead: () => void;
 }
-
-const nowISO = () => new Date().toISOString();
 
 export const useNotificationsStore = create<NotificationsState>()((set, get) => ({
   items: [],
@@ -40,79 +37,139 @@ export const useNotificationsStore = create<NotificationsState>()((set, get) => 
   },
 
   create: async (draft, author) => {
+    const tempId = `ntf-temp-${Date.now()}`;
     const notification: Notification = {
       ...draft,
-      id: createId('ntf'),
+      id: tempId,
       read: false,
       createdBy: author,
-      createdAt: nowISO(),
-      updatedAt: nowISO(),
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
     };
     set((state) => ({ items: [notification, ...state.items] }));
-    await api.createNotification(notification);
-    return notification;
+    try {
+      const serverNotification = await api.createNotification(draft as Notification);
+      set((state) => ({
+        items: state.items.map((item) => (item.id === tempId ? serverNotification : item)),
+      }));
+      return serverNotification;
+    } catch (error) {
+      set((state) => ({ items: state.items.filter((item) => item.id !== tempId) }));
+      throw error;
+    }
   },
 
   update: async (id, draft) => {
+    let previous: Notification | undefined;
     let updated: Notification | undefined;
     set((state) => ({
       items: state.items.map((item) => {
         if (item.id !== id) return item;
-        updated = { ...item, ...draft, updatedAt: nowISO() };
+        previous = item;
+        updated = { ...item, ...draft, updatedAt: new Date().toISOString() };
         return updated;
       }),
     }));
-    if (updated) await api.updateNotification(updated);
+    if (updated) {
+      try {
+        await api.updateNotification(updated);
+      } catch (error) {
+        if (previous) {
+          set((state) => ({
+            items: state.items.map((item) => (item.id === id ? previous! : item)),
+          }));
+        }
+        throw error;
+      }
+    }
   },
 
   remove: async (id) => {
-    set((state) => ({ items: state.items.filter((item) => item.id !== id) }));
-    await api.deleteNotification(id);
+    let removed: Notification | undefined;
+    set((state) => {
+      removed = state.items.find((item) => item.id === id);
+      return { items: state.items.filter((item) => item.id !== id) };
+    });
+    try {
+      await api.deleteNotification(id);
+    } catch (error) {
+      if (removed) {
+        set((state) => ({ items: [...state.items, removed!] }));
+      }
+      throw error;
+    }
   },
 
   removeMany: async (ids) => {
-    set((state) => ({ items: state.items.filter((item) => !ids.includes(item.id)) }));
-    await Promise.all(ids.map((id) => api.deleteNotification(id)));
+    let removed: Notification[] = [];
+    set((state) => {
+      removed = state.items.filter((item) => ids.includes(item.id));
+      return { items: state.items.filter((item) => !ids.includes(item.id)) };
+    });
+    try {
+      await api.bulkDelete(ids);
+    } catch (error) {
+      set((state) => ({ items: [...state.items, ...removed] }));
+      throw error;
+    }
   },
 
   archiveMany: async (ids) => {
-    set((state) => ({
-      items: state.items.map((item) =>
-        ids.includes(item.id) ? { ...item, status: 'Archived', updatedAt: nowISO() } : item,
-      ),
-    }));
+    let previous: Notification[] = [];
+    set((state) => {
+      previous = state.items.filter((item) => ids.includes(item.id));
+      return {
+        items: state.items.map((item) =>
+          ids.includes(item.id)
+            ? { ...item, status: 'Archived' as const, updatedAt: new Date().toISOString() }
+            : item,
+        ),
+      };
+    });
+    try {
+      await api.bulkArchive(ids);
+    } catch (error) {
+      set((state) => ({
+        items: state.items.map((item) => {
+          const prev = previous.find((p) => p.id === item.id);
+          return prev ?? item;
+        }),
+      }));
+      throw error;
+    }
   },
 
   togglePublish: async (id) => {
-    let updated: Notification | undefined;
+    let previous: Notification | undefined;
     set((state) => ({
       items: state.items.map((item) => {
         if (item.id !== id) return item;
-        updated = {
+        previous = item;
+        return {
           ...item,
-          status: item.status === 'Published' ? 'Draft' : 'Published',
-          updatedAt: nowISO(),
+          status: item.status === 'Published' ? ('Draft' as const) : ('Published' as const),
+          updatedAt: new Date().toISOString(),
         };
-        return updated;
       }),
     }));
-    if (updated) await api.updateNotification(updated);
+    try {
+      const updated = await api.togglePublish(id);
+      set((state) => ({
+        items: state.items.map((item) => (item.id === id ? updated : item)),
+      }));
+    } catch (error) {
+      if (previous) {
+        set((state) => ({
+          items: state.items.map((item) => (item.id === id ? previous! : item)),
+        }));
+      }
+      throw error;
+    }
   },
 
   duplicate: async (id) => {
-    const source = get().items.find((item) => item.id === id);
-    if (!source) return;
-    const copy: Notification = {
-      ...source,
-      id: createId('ntf'),
-      title: `${source.title} (copy)`,
-      status: 'Draft',
-      read: false,
-      createdAt: nowISO(),
-      updatedAt: nowISO(),
-    };
-    set((state) => ({ items: [copy, ...state.items] }));
-    await api.createNotification(copy);
+    const duplicated = await api.duplicateNotification(id);
+    set((state) => ({ items: [duplicated, ...state.items] }));
   },
 
   markRead: (id) =>

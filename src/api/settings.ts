@@ -1,11 +1,13 @@
-import { settingsSeed } from '@/data/settings';
 import type { Settings } from '@/types/settings';
-import { clone, request } from './client';
+import { request } from './client';
 
 export function fetchSettings(): Promise<Settings> {
-  return request(clone(settingsSeed));
+  return request<Settings>('/settings/');
 }
 
 export function saveSettings(settings: Settings): Promise<Settings> {
-  return request(settings);
+  return request<Settings>('/settings/', {
+    method: 'PUT',
+    body: JSON.stringify(settings),
+  });
 }

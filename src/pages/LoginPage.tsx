@@ -186,13 +186,7 @@ export function LoginPage() {
                 </Button>
               </form>
 
-              <div className="mt-6 rounded-lg bg-wcbt-cream p-3 text-xs text-wcbt-muted">
-                <p className="font-medium text-wcbt-ink">Demo accounts</p>
-                <p className="mt-1">principal@wcbt.edu.np — Super Admin</p>
-                <p>admissions@wcbt.edu.np — Admin</p>
-                <p>nabin@wcbt.edu.np — Staff</p>
-                <p className="mt-1">Password for all: wcbt1234</p>
-              </div>
+
             </>
           )}
 

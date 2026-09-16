@@ -1,7 +1,6 @@
 import { create } from 'zustand';
 import * as api from '@/api/programs';
 import type { Program, ProgramDraft } from '@/types/program';
-import { createId } from '@/lib/utils';
 
 interface ProgramsState {
   items: Program[];
@@ -14,8 +13,6 @@ interface ProgramsState {
   remove: (id: string) => Promise<void>;
   toggleStatus: (id: string) => Promise<void>;
 }
-
-const nowISO = () => new Date().toISOString();
 
 export const useProgramsStore = create<ProgramsState>()((set, get) => ({
   items: [],
@@ -35,48 +32,94 @@ export const useProgramsStore = create<ProgramsState>()((set, get) => ({
   },
 
   create: async (draft) => {
+    const tempId = `prg-temp-${Date.now()}`;
     const program: Program = {
       ...draft,
-      id: createId('prg'),
-      createdAt: nowISO(),
-      updatedAt: nowISO(),
+      id: tempId,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
     };
     set((state) => ({ items: [program, ...state.items] }));
-    await api.createProgram(program);
-    return program;
+    try {
+      const serverProgram = await api.createProgram(program);
+      set((state) => ({
+        items: state.items.map((item) => (item.id === tempId ? serverProgram : item)),
+      }));
+      return serverProgram;
+    } catch (error) {
+      set((state) => ({ items: state.items.filter((item) => item.id !== tempId) }));
+      throw error;
+    }
   },
 
   update: async (id, draft) => {
+    let previous: Program | undefined;
     let updated: Program | undefined;
     set((state) => ({
       items: state.items.map((item) => {
         if (item.id !== id) return item;
-        updated = { ...item, ...draft, updatedAt: nowISO() };
+        previous = item;
+        updated = { ...item, ...draft, updatedAt: new Date().toISOString() };
         return updated;
       }),
     }));
-    if (updated) await api.updateProgram(updated);
+    if (updated) {
+      try {
+        await api.updateProgram(updated);
+      } catch (error) {
+        if (previous) {
+          set((state) => ({
+            items: state.items.map((item) => (item.id === id ? previous! : item)),
+          }));
+        }
+        throw error;
+      }
+    }
   },
 
   remove: async (id) => {
-    set((state) => ({ items: state.items.filter((item) => item.id !== id) }));
-    await api.deleteProgram(id);
+    let removed: Program | undefined;
+    set((state) => {
+      removed = state.items.find((item) => item.id === id);
+      return { items: state.items.filter((item) => item.id !== id) };
+    });
+    try {
+      await api.deleteProgram(id);
+    } catch (error) {
+      if (removed) {
+        set((state) => ({ items: [...state.items, removed!] }));
+      }
+      throw error;
+    }
   },
 
   toggleStatus: async (id) => {
+    let previous: Program | undefined;
     let updated: Program | undefined;
     set((state) => ({
       items: state.items.map((item) => {
         if (item.id !== id) return item;
+        previous = item;
         updated = {
           ...item,
           status: item.status === 'Active' ? 'Inactive' : 'Active',
-          updatedAt: nowISO(),
+          updatedAt: new Date().toISOString(),
         };
         return updated;
       }),
     }));
-    if (updated) await api.updateProgram(updated);
+    if (updated) {
+      try {
+        await api.updateProgram(updated);
+      } catch (error) {
+        if (previous) {
+          set((state) => ({
+            items: state.items.map((item) => (item.id === id ? previous! : item)),
+          }));
+        }
+        throw error;
+      }
+    }
   },
 }));
 

@@ -1,19 +1,26 @@
-import { programsSeed } from '@/data/programs';
 import type { Program } from '@/types/program';
-import { clone, request } from './client';
+import { request } from './client';
 
 export function fetchPrograms(): Promise<Program[]> {
-  return request(clone(programsSeed));
+  return request<Program[]>('/programs/');
 }
 
 export function createProgram(program: Program): Promise<Program> {
-  return request(program);
+  return request<Program>('/programs/', {
+    method: 'POST',
+    body: JSON.stringify(program),
+  });
 }
 
 export function updateProgram(program: Program): Promise<Program> {
-  return request(program);
+  return request<Program>(`/programs/${program.id}/`, {
+    method: 'PATCH',
+    body: JSON.stringify(program),
+  });
 }
 
 export function deleteProgram(id: string): Promise<{ id: string }> {
-  return request({ id });
+  return request<{ id: string }>(`/programs/${id}/`, {
+    method: 'DELETE',
+  });
 }

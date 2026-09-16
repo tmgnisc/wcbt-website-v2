@@ -1,7 +1,6 @@
 import { create } from 'zustand';
 import * as api from '@/api/staff';
 import type { StaffDraft, StaffMember, StaffStatus } from '@/types/staff';
-import { createId } from '@/lib/utils';
 
 interface StaffState {
   items: StaffMember[];
@@ -35,12 +34,13 @@ export const useStaffStore = create<StaffState>()((set, get) => ({
   },
 
   create: async (draft, actor) => {
+    const tempId = `stf-temp-${Date.now()}`;
     const member: StaffMember = {
       ...draft,
-      id: createId('stf'),
+      id: tempId,
       activity: [
         {
-          id: createId('act'),
+          id: `act-temp-${Date.now()}`,
           action: 'Profile created',
           actor,
           timestamp: new Date().toISOString(),
@@ -48,27 +48,48 @@ export const useStaffStore = create<StaffState>()((set, get) => ({
       ],
     };
     set((state) => ({ items: [member, ...state.items] }));
-    await api.createStaff(member);
-    return member;
+    try {
+      const serverMember = await api.createStaff(member);
+      set((state) => ({
+        items: state.items.map((item) => (item.id === tempId ? serverMember : item)),
+      }));
+      return serverMember;
+    } catch (error) {
+      set((state) => ({ items: state.items.filter((item) => item.id !== tempId) }));
+      throw error;
+    }
   },
 
   update: async (id, draft, actor, action = 'Profile updated') => {
+    let previous: StaffMember | undefined;
     let updated: StaffMember | undefined;
     set((state) => ({
       items: state.items.map((item) => {
         if (item.id !== id) return item;
+        previous = item;
         updated = {
           ...item,
           ...draft,
           activity: [
-            { id: createId('act'), action, actor, timestamp: new Date().toISOString() },
+            { id: `act-temp-${Date.now()}`, action, actor, timestamp: new Date().toISOString() },
             ...item.activity,
           ],
         };
         return updated;
       }),
     }));
-    if (updated) await api.updateStaff(updated);
+    if (updated) {
+      try {
+        await api.updateStaff(updated);
+      } catch (error) {
+        if (previous) {
+          set((state) => ({
+            items: state.items.map((item) => (item.id === id ? previous! : item)),
+          }));
+        }
+        throw error;
+      }
+    }
   },
 
   setStatus: async (id, status, actor) => {
@@ -76,8 +97,19 @@ export const useStaffStore = create<StaffState>()((set, get) => ({
   },
 
   remove: async (id) => {
-    set((state) => ({ items: state.items.filter((item) => item.id !== id) }));
-    await api.deleteStaff(id);
+    let removed: StaffMember | undefined;
+    set((state) => {
+      removed = state.items.find((item) => item.id === id);
+      return { items: state.items.filter((item) => item.id !== id) };
+    });
+    try {
+      await api.deleteStaff(id);
+    } catch (error) {
+      if (removed) {
+        set((state) => ({ items: [...state.items, removed!] }));
+      }
+      throw error;
+    }
   },
 
   nextStaffId: () => {
