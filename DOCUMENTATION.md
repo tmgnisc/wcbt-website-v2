@@ -83,6 +83,13 @@ college_backend/
 │   │   │   └── urls.py
 │   │   ├── models.py
 │   │   └── migrations/
+│   ├── files/                 # File uploads
+│   │   ├── api/
+│   │   │   ├── serializers.py
+│   │   │   ├── views.py
+│   │   │   └── urls.py
+│   │   ├── models.py
+│   │   └── migrations/
 │   └── common/                # Shared utilities
 │       ├── responses.py
 │       ├── exceptions.py
@@ -96,7 +103,8 @@ college_backend/
 │   ├── test_staff.py
 │   ├── test_admissions.py
 │   ├── test_notifications.py
-│   └── test_settings.py
+│   ├── test_settings.py
+│   └── test_files.py
 ├── .env
 ├── .env.example
 ├── requirements.txt
@@ -198,6 +206,14 @@ college_backend/
 - Singleton pattern (only one CollegeInfo instance)
 - Fields: college_name, college_code, address, phone, email, website, logo, motto, notification preferences
 
+### Phase 11: File Upload App
+
+- POST `/api/files/upload/` — Upload file (Admin + SuperAdmin, 10MB limit)
+- GET `/api/files/` — List files with category filter
+- DELETE `/api/files/{id}/` — Delete file from storage
+- Categories: staff, admission, program, notification, general
+- Auto-detects MIME type, stores metadata
+
 ---
 
 ## API Conventions
@@ -248,13 +264,13 @@ college_backend/
 | Admissions (CRUD + bulk + trend + convert) | 26 |
 | Notifications (CRUD + publish + bulk + mark read) | 19 |
 | College Settings (singleton retrieve/update) | 7 |
-| **Total** | **119** |
+| File Upload (upload, list, delete, categories) | 13 |
+| **Total** | **132** |
 
 ---
 
 ## Pending Phases
 
-- [ ] File upload endpoint
 - [ ] Dashboard summary endpoint
 - [ ] Permission classes (HasPortalPermission)
 - [ ] Comprehensive tests for all new endpoints
