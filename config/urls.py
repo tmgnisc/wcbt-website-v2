@@ -24,19 +24,23 @@ urlpatterns = [
     path("api/settings/", include("apps.collegesettings.api.urls")),
     path("api/files/", include("apps.files.api.urls")),
     path("api/dashboard/", include("apps.dashboard.api.urls")),
-    # API Documentation
-    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
-    path(
-        "api/docs/",
-        SpectacularSwaggerView.as_view(url_name="schema"),
-        name="swagger-ui",
-    ),
-    path(
-        "api/redoc/",
-        SpectacularRedocView.as_view(url_name="schema"),
-        name="redoc",
-    ),
 ]
+
+# API Documentation - only in DEBUG mode
+if settings.DEBUG:
+    urlpatterns += [
+        path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
+        path(
+            "api/docs/",
+            SpectacularSwaggerView.as_view(url_name="schema"),
+            name="swagger-ui",
+        ),
+        path(
+            "api/redoc/",
+            SpectacularRedocView.as_view(url_name="schema"),
+            name="redoc",
+        ),
+    ]
 
 # Serve media files in production
 if not settings.DEBUG:
