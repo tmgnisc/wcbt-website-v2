@@ -1,29 +1,16 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
-import {
-  Bell,
-  Columns3,
-  Download,
-  GraduationCap,
-  MoreVertical,
-  Pencil,
-  Plus,
-  Table2,
-  Trash2,
-  UserCheck,
-} from 'lucide-react';
+import { Bell, Download, GraduationCap, MoreVertical, Pencil, Plus, Trash2, UserCheck } from 'lucide-react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { DataTable, type Column } from '@/components/shared/DataTable';
 import { ConfirmDialog } from '@/components/shared/ConfirmDialog';
 import { StatusBadge } from '@/components/shared/StatusBadge';
 import { Can } from '@/components/shared/Can';
-import { EmptyState } from '@/components/shared/EmptyState';
-import { PipelineBoard } from '@/components/admissions/PipelineBoard';
 import { NotificationPanel } from '@/components/notifications/NotificationPanel';
 import { Avatar } from '@/components/ui/Avatar';
 import { Button } from '@/components/ui/Button';
 import { Dropdown, DropdownDivider, DropdownItem } from '@/components/ui/Dropdown';
-import { Input, Segmented, Select } from '@/components/ui/Field';
+import { Input, Select } from '@/components/ui/Field';
 import { useAuth } from '@/context/AuthContext';
 import { useToast } from '@/context/ToastContext';
 import { useAdmissionsStore } from '@/store/admissions';
@@ -46,7 +33,6 @@ export function AdmissionsPage() {
   const items = useAdmissionsStore((state) => state.items);
   const loading = useAdmissionsStore((state) => state.loading);
   const load = useAdmissionsStore((state) => state.load);
-  const setStatus = useAdmissionsStore((state) => state.setStatus);
   const setStatusMany = useAdmissionsStore((state) => state.setStatusMany);
   const convertToStudent = useAdmissionsStore((state) => state.convertToStudent);
   const remove = useAdmissionsStore((state) => state.remove);
@@ -55,7 +41,6 @@ export function AdmissionsPage() {
   const loadPrograms = useProgramsStore((state) => state.load);
   const programs = useMemo(() => activeProgramCodes(programItems), [programItems]);
 
-  const [view, setView] = useState<'table' | 'pipeline'>('table');
   const [program, setProgram] = useState('all');
   const [status, setStatusFilter] = useState('all');
   const [from, setFrom] = useState('');
@@ -160,11 +145,6 @@ export function AdmissionsPage() {
     toast({ title: 'Applicant list exported' });
   };
 
-  const changeStage = async (id: string, stage: AdmissionStage) => {
-    await setStatus(id, stage);
-    toast({ title: `Moved to ${stage}` });
-  };
-
   return (
     <>
       <PageHeader
@@ -173,15 +153,6 @@ export function AdmissionsPage() {
         breadcrumb={[{ label: 'Home', to: '/dashboard' }, { label: 'Admissions' }]}
         actions={
           <>
-            <Segmented
-              value={view}
-              onChange={setView}
-              ariaLabel="View mode"
-              options={[
-                { label: 'Table', value: 'table' },
-                { label: 'Pipeline', value: 'pipeline' },
-              ]}
-            />
             <Button variant="subtle" onClick={exportCsv} disabled={filtered.length === 0}>
               <Download className="h-4 w-4" aria-hidden="true" /> Export
             </Button>
@@ -196,189 +167,148 @@ export function AdmissionsPage() {
         }
       />
 
-      {view === 'table' ? (
-        <DataTable
-          columns={columns}
-          data={filtered}
-          rowKey={(row) => row.id}
-          loading={loading}
-          searchable
-          searchPlaceholder="Search applicants…"
-          caption="Admission applications"
-          selectable
-          selectedIds={selected}
-          onSelectionChange={setSelected}
-          onRowClick={(row) => navigate(`/admissions/${row.id}`)}
-          filters={
-            <>
-              <Select
-                value={program}
-                onChange={(event) => setProgram(event.target.value)}
-                aria-label="Filter by program"
-                className="w-full sm:w-44"
-              >
-                <option value="all">All programs</option>
-                {programs.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </Select>
-              <Select
-                value={status}
-                onChange={(event) => setStatusFilter(event.target.value)}
-                aria-label="Filter by status"
-                className="w-full sm:w-48"
-              >
-                <option value="all">All statuses</option>
-                {ADMISSION_STAGES_WITH_REJECTED.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </Select>
-              <div className="flex items-center gap-1">
-                <Input
-                  type="date"
-                  value={from}
-                  onChange={(event) => setFrom(event.target.value)}
-                  aria-label="Applied from"
-                  className="w-full sm:w-36"
-                />
-                <span className="text-xs text-wcbt-muted">to</span>
-                <Input
-                  type="date"
-                  value={to}
-                  onChange={(event) => setTo(event.target.value)}
-                  aria-label="Applied to"
-                  className="w-full sm:w-36"
-                />
-              </div>
-            </>
-          }
-          bulkActions={(ids) => (
-            <>
-              <Select
-                value={bulkStage}
-                onChange={(event) => setBulkStage(event.target.value as AdmissionStage)}
-                aria-label="Bulk status"
-                className="h-8 w-44 py-1 text-xs"
-              >
-                {ADMISSION_STAGES_WITH_REJECTED.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </Select>
-              <Button
-                variant="subtle"
-                size="sm"
-                onClick={async () => {
-                  await setStatusMany(ids, bulkStage);
-                  toast({ title: `${ids.length} applications moved to ${bulkStage}` });
-                  setSelected([]);
-                }}
-              >
-                Apply
-              </Button>
-            </>
-          )}
-          empty={{
-            icon: <GraduationCap className="h-6 w-6" aria-hidden="true" />,
-            title: 'No applications found',
-            message: 'Adjust the filters, or record a walk-in application.',
-            action: (
-              <Can permission="admissions:add">
-                <Link to="/admissions/new">
-                  <Button>
-                    <Plus className="h-4 w-4" aria-hidden="true" /> New Application
-                  </Button>
-                </Link>
-              </Can>
-            ),
-          }}
-          rowActions={(row) => (
-            <Dropdown
-              menuLabel={`Actions for ${row.fullName}`}
-              trigger={({ toggle }) => (
-                <button
-                  type="button"
-                  onClick={toggle}
-                  aria-label={`Actions for ${row.fullName}`}
-                  className="rounded-lg p-1.5 text-wcbt-muted transition-colors hover:bg-wcbt-cream hover:text-wcbt-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wcbt-maroon"
-                >
-                  <MoreVertical className="h-4 w-4" />
-                </button>
-              )}
+      <DataTable
+        columns={columns}
+        data={filtered}
+        rowKey={(row) => row.id}
+        loading={loading}
+        searchable
+        searchPlaceholder="Search applicants…"
+        caption="Admission applications"
+        selectable
+        selectedIds={selected}
+        onSelectionChange={setSelected}
+        onRowClick={(row) => navigate(`/admissions/${row.id}`)}
+        filters={
+          <>
+            <Select
+              value={program}
+              onChange={(event) => setProgram(event.target.value)}
+              aria-label="Filter by program"
+              className="w-full sm:w-44"
             >
-              <DropdownItem icon={<Pencil className="h-4 w-4" />} onSelect={() => navigate(`/admissions/${row.id}`)}>
-                View / Edit
-              </DropdownItem>
-              <DropdownItem
-                icon={<Bell className="h-4 w-4" />}
-                onSelect={() =>
-                  setNotifyRecipient({ type: 'applicant', id: row.id, name: row.fullName })
-                }
-              >
-                Send notification
-              </DropdownItem>
-              <DropdownItem
-                icon={<UserCheck className="h-4 w-4" />}
-                disabled={row.status !== 'Enrolled' || row.convertedToStudent}
-                onSelect={async () => {
-                  await convertToStudent(row.id);
-                  toast({ title: `${row.fullName} converted to student` });
-                }}
-              >
-                {row.convertedToStudent ? 'Already a student' : 'Convert to student'}
-              </DropdownItem>
-              <DropdownDivider />
-              <DropdownItem icon={<Trash2 className="h-4 w-4" />} danger onSelect={() => setPendingDelete(row)}>
-                Delete
-              </DropdownItem>
-            </Dropdown>
-          )}
-        />
-      ) : (
-        <div className="space-y-3">
-          <div className="wcbt-card flex flex-wrap items-center gap-2 p-3">
-            <Columns3 className="h-4 w-4 text-wcbt-maroon" aria-hidden="true" />
-            <p className="text-xs text-wcbt-muted">
-              Drag a card between columns to change its stage, or use the select on each card.
-            </p>
-            <div className="ml-auto flex items-center gap-2">
-              <Select
-                value={program}
-                onChange={(event) => setProgram(event.target.value)}
-                aria-label="Filter by program"
-                className="h-8 w-40 py-1 text-xs"
-              >
-                <option value="all">All programs</option>
-                {programs.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </Select>
-              <Button variant="ghost" size="sm" onClick={() => setView('table')}>
-                <Table2 className="h-3.5 w-3.5" aria-hidden="true" /> Table view
-              </Button>
-            </div>
-          </div>
-
-          {filtered.length === 0 ? (
-            <div className="wcbt-card">
-              <EmptyState
-                icon={<GraduationCap className="h-6 w-6" aria-hidden="true" />}
-                title="No applications in the pipeline"
-                message="New applications appear in the Applied column."
+              <option value="all">All programs</option>
+              {programs.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </Select>
+            <Select
+              value={status}
+              onChange={(event) => setStatusFilter(event.target.value)}
+              aria-label="Filter by status"
+              className="w-full sm:w-48"
+            >
+              <option value="all">All statuses</option>
+              {ADMISSION_STAGES_WITH_REJECTED.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </Select>
+            <div className="flex items-center gap-1">
+              <Input
+                type="date"
+                value={from}
+                onChange={(event) => setFrom(event.target.value)}
+                aria-label="Applied from"
+                className="w-full sm:w-36"
+              />
+              <span className="text-xs text-wcbt-muted">to</span>
+              <Input
+                type="date"
+                value={to}
+                onChange={(event) => setTo(event.target.value)}
+                aria-label="Applied to"
+                className="w-full sm:w-36"
               />
             </div>
-          ) : (
-            <PipelineBoard items={filtered} onStageChange={changeStage} />
-          )}
-        </div>
-      )}
+          </>
+        }
+        bulkActions={(ids) => (
+          <>
+            <Select
+              value={bulkStage}
+              onChange={(event) => setBulkStage(event.target.value as AdmissionStage)}
+              aria-label="Bulk status"
+              className="h-8 w-44 py-1 text-xs"
+            >
+              {ADMISSION_STAGES_WITH_REJECTED.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </Select>
+            <Button
+              variant="subtle"
+              size="sm"
+              onClick={async () => {
+                await setStatusMany(ids, bulkStage);
+                toast({ title: `${ids.length} applications moved to ${bulkStage}` });
+                setSelected([]);
+              }}
+            >
+              Apply
+            </Button>
+          </>
+        )}
+        empty={{
+          icon: <GraduationCap className="h-6 w-6" aria-hidden="true" />,
+          title: 'No applications found',
+          message: 'Adjust the filters, or record a walk-in application.',
+          action: (
+            <Can permission="admissions:add">
+              <Link to="/admissions/new">
+                <Button>
+                  <Plus className="h-4 w-4" aria-hidden="true" /> New Application
+                </Button>
+              </Link>
+            </Can>
+          ),
+        }}
+        rowActions={(row) => (
+          <Dropdown
+            menuLabel={`Actions for ${row.fullName}`}
+            trigger={({ toggle }) => (
+              <button
+                type="button"
+                onClick={toggle}
+                aria-label={`Actions for ${row.fullName}`}
+                className="rounded-lg p-1.5 text-wcbt-muted transition-colors hover:bg-wcbt-cream hover:text-wcbt-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wcbt-maroon"
+              >
+                <MoreVertical className="h-4 w-4" />
+              </button>
+            )}
+          >
+            <DropdownItem icon={<Pencil className="h-4 w-4" />} onSelect={() => navigate(`/admissions/${row.id}`)}>
+              View / Edit
+            </DropdownItem>
+            <DropdownItem
+              icon={<Bell className="h-4 w-4" />}
+              onSelect={() =>
+                setNotifyRecipient({ type: 'applicant', id: row.id, name: row.fullName })
+              }
+            >
+              Send notification
+            </DropdownItem>
+            <DropdownItem
+              icon={<UserCheck className="h-4 w-4" />}
+              disabled={row.status !== 'Enrolled' || row.convertedToStudent}
+              onSelect={async () => {
+                await convertToStudent(row.id);
+                toast({ title: `${row.fullName} converted to student` });
+              }}
+            >
+              {row.convertedToStudent ? 'Already a student' : 'Convert to student'}
+            </DropdownItem>
+            <DropdownDivider />
+            <DropdownItem icon={<Trash2 className="h-4 w-4" />} danger onSelect={() => setPendingDelete(row)}>
+              Delete
+            </DropdownItem>
+          </Dropdown>
+        )}
+      />
 
       <NotificationPanel
         open={Boolean(notifyRecipient)}

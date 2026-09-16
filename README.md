@@ -17,7 +17,6 @@ running entirely on a mock data layer that is structured to be swapped for a rea
 | State | React Context (auth, toasts) + Zustand stores per module |
 | Forms | react-hook-form + zod |
 | Charts | Recharts |
-| Drag and drop | dnd-kit (admissions pipeline) |
 
 ## Getting started
 
@@ -50,8 +49,8 @@ All three use the password `wcbt1234`:
 - **Staff** — list with filters and CSV export, four-tab create/edit form (personal, employment,
   account, documents) with per-tab error markers, and a profile page with overview, documents and
   an activity log.
-- **Admissions** — table view and a drag-and-drop kanban pipeline sharing one Zustand store, a
-  five-tab application form with a status stepper, permission-gated test scores, "send notification"
+- **Admissions** — filterable applicant table with CSV export and bulk stage changes, a five-tab
+  application form with a status stepper, permission-gated test scores, "send notification"
   cross-module reuse, and convert-to-student.
 - **Programs** — the courses the campus offers, with intake capacity, fees, coordinator and status,
   plus an add/edit side panel. Active programs feed the program select on admission applications,
