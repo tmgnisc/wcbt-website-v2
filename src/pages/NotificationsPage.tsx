@@ -136,13 +136,13 @@ export function NotificationsPage() {
   return (
     <>
       <PageHeader
-        title="Notifications"
+        title="Notices"
         description="Create, publish and archive campus notices."
-        breadcrumb={[{ label: 'Home', to: '/dashboard' }, { label: 'Notifications' }]}
+        breadcrumb={[{ label: 'Home', to: '/dashboard' }, { label: 'Notices' }]}
         actions={
           <Can permission="notifications:add">
             <Button onClick={openCreate}>
-              <Plus className="h-4 w-4" aria-hidden="true" /> Add Notification
+              <Plus className="h-4 w-4" aria-hidden="true" /> Add Notice
             </Button>
           </Can>
         }
@@ -154,8 +154,8 @@ export function NotificationsPage() {
         rowKey={(row) => row.id}
         loading={loading}
         searchable
-        searchPlaceholder="Search notifications…"
-        caption="Campus notifications"
+        searchPlaceholder="Search notices…"
+        caption="Campus notices"
         selectable
         selectedIds={selected}
         onSelectionChange={setSelected}
@@ -227,7 +227,7 @@ export function NotificationsPage() {
               onClick={async () => {
                 await archiveMany(ids);
                 setSelected([]);
-                toast({ title: `${ids.length} notifications archived` });
+                toast({ title: `${ids.length} notices archived` });
               }}
             >
               <Archive className="h-3.5 w-3.5" aria-hidden="true" /> Archive
@@ -241,12 +241,12 @@ export function NotificationsPage() {
         )}
         empty={{
           icon: <Bell className="h-6 w-6" aria-hidden="true" />,
-          title: 'No notifications found',
+          title: 'No notices found',
           message: 'Adjust the filters, or publish the first notice for this session.',
           action: (
             <Can permission="notifications:add">
               <Button onClick={openCreate}>
-                <Plus className="h-4 w-4" aria-hidden="true" /> Add Notification
+                <Plus className="h-4 w-4" aria-hidden="true" /> Add Notice
               </Button>
             </Can>
           ),
@@ -282,7 +282,7 @@ export function NotificationsPage() {
               onSelect={async () => {
                 await togglePublish(row.id);
                 toast({
-                  title: row.status === 'Published' ? 'Notification unpublished' : 'Notification published',
+                  title: row.status === 'Published' ? 'Notice unpublished' : 'Notice published',
                 });
               }}
             >
@@ -315,10 +315,10 @@ export function NotificationsPage() {
         onSubmit={async (draft) => {
           if (editing) {
             await updateNotification(editing.id, draft);
-            toast({ title: 'Notification updated' });
+            toast({ title: 'Notice updated' });
           } else {
             await createNotification(draft, user?.name ?? 'Admin');
-            toast({ title: 'Notification created' });
+            toast({ title: 'Notice created' });
           }
         }}
       />
@@ -370,9 +370,9 @@ export function NotificationsPage() {
         onConfirm={async () => {
           if (!pendingDelete) return;
           await removeNotification(pendingDelete.id);
-          toast({ title: 'Notification deleted' });
+          toast({ title: 'Notice deleted' });
         }}
-        title="Delete notification?"
+        title="Delete notice?"
         message={
           <>
             <span className="font-medium text-wcbt-ink">{pendingDelete?.title}</span> will be removed
@@ -386,11 +386,11 @@ export function NotificationsPage() {
         onClose={() => setBulkDeleteOpen(false)}
         onConfirm={async () => {
           await removeMany(selected);
-          toast({ title: `${selected.length} notifications deleted` });
+          toast({ title: `${selected.length} notices deleted` });
           setSelected([]);
         }}
-        title="Delete selected notifications?"
-        message={`${selected.length} notifications will be removed permanently.`}
+        title="Delete selected notices?"
+        message={`${selected.length} notices will be removed permanently.`}
       />
     </>
   );

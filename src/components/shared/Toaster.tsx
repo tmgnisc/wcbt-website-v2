@@ -36,7 +36,7 @@ export function Toaster() {
             <button
               type="button"
               onClick={() => dismiss(toast.id)}
-              aria-label="Dismiss notification"
+              aria-label="Dismiss notice"
               className="rounded p-0.5 text-wcbt-muted transition-colors hover:text-wcbt-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wcbt-maroon"
             >
               <X className="h-3.5 w-3.5" />

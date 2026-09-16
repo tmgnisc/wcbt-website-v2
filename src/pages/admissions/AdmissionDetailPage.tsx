@@ -209,7 +209,7 @@ export function AdmissionDetailPage() {
             existing && (
               <>
                 <Button type="button" variant="subtle" onClick={() => setNotifyOpen(true)}>
-                  <Bell className="h-4 w-4" aria-hidden="true" /> Send notification
+                  <Bell className="h-4 w-4" aria-hidden="true" /> Send notice
                 </Button>
                 <Button
                   type="button"
@@ -471,7 +471,7 @@ export function AdmissionDetailPage() {
         }
         onSubmit={async (draft) => {
           await createNotification(draft, user?.name ?? 'Admin');
-          toast({ title: 'Notification sent to applicant' });
+          toast({ title: 'Notice sent to applicant' });
         }}
       />
     </>

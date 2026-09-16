@@ -40,7 +40,7 @@ export function Sidebar({ collapsed, onToggleCollapse, mobileOpen, onCloseMobile
 
   const items: NavItem[] = [
     { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { to: '/notifications', label: 'Notifications', icon: Bell, badge: unread },
+    { to: '/notifications', label: 'Notices', icon: Bell, badge: unread },
     { to: '/staff', label: 'Staff', icon: Users },
     { to: '/admissions', label: 'Admissions', icon: GraduationCap, badge: pendingApplications },
     { to: '/programs', label: 'Programs', icon: BookOpen },

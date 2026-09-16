@@ -30,7 +30,7 @@ const TABS = [
   { value: 'general', label: 'General', icon: <Building2 className="h-4 w-4" aria-hidden="true" /> },
   { value: 'users', label: 'Users & Roles', icon: <Users className="h-4 w-4" aria-hidden="true" /> },
   { value: 'catalog', label: 'Departments & Lists', icon: <Building2 className="h-4 w-4" aria-hidden="true" /> },
-  { value: 'notifications', label: 'Notifications', icon: <Bell className="h-4 w-4" aria-hidden="true" /> },
+  { value: 'notifications', label: 'Notices', icon: <Bell className="h-4 w-4" aria-hidden="true" /> },
   { value: 'appearance', label: 'Appearance', icon: <Palette className="h-4 w-4" aria-hidden="true" /> },
   { value: 'security', label: 'Security', icon: <ShieldCheck className="h-4 w-4" aria-hidden="true" /> },
   { value: 'data', label: 'Data & Backup', icon: <Database className="h-4 w-4" aria-hidden="true" /> },
@@ -211,7 +211,7 @@ export function SettingsPage() {
 
           {tab === 'notifications' && (
             <SettingsSection
-              title="Notification settings"
+              title="Notice settings"
               description="Defaults applied when a new notice is created."
               onSave={handleSave}
               saving={saving}

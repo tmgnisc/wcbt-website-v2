@@ -290,7 +290,7 @@ export function AdmissionsPage() {
                 setNotifyRecipient({ type: 'applicant', id: row.id, name: row.fullName })
               }
             >
-              Send notification
+              Send notice
             </DropdownItem>
             <DropdownItem
               icon={<UserCheck className="h-4 w-4" />}
@@ -316,7 +316,7 @@ export function AdmissionsPage() {
         recipient={notifyRecipient}
         onSubmit={async (draft) => {
           await createNotification(draft, user?.name ?? 'Admin');
-          toast({ title: 'Notification sent to applicant' });
+          toast({ title: 'Notice sent to applicant' });
         }}
       />
 

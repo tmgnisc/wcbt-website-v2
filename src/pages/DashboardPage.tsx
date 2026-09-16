@@ -105,7 +105,7 @@ export function DashboardPage() {
               <UserPlus className="h-4 w-4" aria-hidden="true" /> Add Staff
             </Button>
             <Button variant="outline" size="sm" onClick={() => navigate('/notifications?new=true')}>
-              <Bell className="h-4 w-4" aria-hidden="true" /> New Notification
+              <Bell className="h-4 w-4" aria-hidden="true" /> New Notice
             </Button>
             <Button variant="outline" size="sm" onClick={() => navigate('/admissions?new=true')}>
               <GraduationCap className="h-4 w-4" aria-hidden="true" /> New Admission
@@ -129,7 +129,7 @@ export function DashboardPage() {
           delta={{ value: '+12%', direction: 'up' }}
           loading={admissionsLoading}
         />
-        <StatCard label="Pending Notifications" value={pendingNotifications} icon={Bell} />
+        <StatCard label="Pending Notices" value={pendingNotifications} icon={Bell} />
       </div>
 
       <div className="mt-4 grid grid-cols-1 gap-4 xl:grid-cols-3">

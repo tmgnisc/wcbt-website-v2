@@ -113,7 +113,7 @@ export function NotificationPanel({
     <SidePanel
       open={open}
       onClose={onClose}
-      title={editing ? 'Edit notification' : 'New notification'}
+      title={editing ? 'Edit notice' : 'New notice'}
       description={
         recipient && !editing
           ? `Addressed to ${recipient.name}`
@@ -127,7 +127,7 @@ export function NotificationPanel({
           ]}
           value={tab}
           onChange={setTab}
-          ariaLabel="Notification editor"
+          ariaLabel="Notice editor"
           className="border-0"
         />
       }
@@ -141,7 +141,7 @@ export function NotificationPanel({
             disabled={!form.formState.isValid}
             loading={form.formState.isSubmitting}
           >
-            {editing ? 'Save changes' : 'Create notification'}
+            {editing ? 'Save changes' : 'Create notice'}
           </Button>
         </>
       }

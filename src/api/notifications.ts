@@ -1,22 +1,51 @@
 import type { Notification } from '@/types/notification';
 import { request } from './client';
 
-export function fetchNotifications(): Promise<Notification[]> {
-  return request<Notification[]>('/notifications/');
+/* eslint-disable @typescript-eslint/no-explicit-any */
+function normalize(raw: any): Notification {
+  return {
+    id: raw.id ?? '',
+    title: raw.title ?? '',
+    message: raw.message ?? '',
+    category: raw.category ?? 'General',
+    priority: raw.priority ?? 'Normal',
+    audience: Array.isArray(raw.audience)
+      ? raw.audience
+      : Array.isArray(raw.targetRoles)
+        ? raw.targetRoles
+        : ['All'],
+    status: raw.status ?? 'Draft',
+    publishDate: raw.publishDate ?? raw.createdAt ?? '',
+    expiryDate: raw.expiryDate ?? null,
+    attachments: Array.isArray(raw.attachments) ? raw.attachments : [],
+    recipient: raw.recipient ?? null,
+    read: raw.read ?? raw.isRead ?? false,
+    createdBy: raw.createdByName ?? raw.createdBy ?? '',
+    createdAt: raw.createdAt ?? '',
+    updatedAt: raw.updatedAt ?? '',
+  };
+}
+/* eslint-enable @typescript-eslint/no-explicit-any */
+
+export async function fetchNotifications(): Promise<Notification[]> {
+  const raw = await request<unknown[]>('/notifications/');
+  return Array.isArray(raw) ? raw.map(normalize) : [];
 }
 
-export function createNotification(notification: Notification): Promise<Notification> {
-  return request<Notification>('/notifications/', {
+export async function createNotification(notification: Notification): Promise<Notification> {
+  const raw = await request<unknown>('/notifications/', {
     method: 'POST',
     body: JSON.stringify(notification),
   });
+  return normalize(raw);
 }
 
-export function updateNotification(notification: Notification): Promise<Notification> {
-  return request<Notification>(`/notifications/${notification.id}/`, {
+export async function updateNotification(notification: Notification): Promise<Notification> {
+  const raw = await request<unknown>(`/notifications/${notification.id}/`, {
     method: 'PATCH',
     body: JSON.stringify(notification),
   });
+  return normalize(raw);
 }
 
 export function deleteNotification(id: string): Promise<{ id: string }> {
@@ -25,16 +54,18 @@ export function deleteNotification(id: string): Promise<{ id: string }> {
   });
 }
 
-export function togglePublish(id: string): Promise<Notification> {
-  return request<Notification>(`/notifications/${id}/publish/`, {
+export async function togglePublish(id: string): Promise<Notification> {
+  const raw = await request<unknown>(`/notifications/${id}/publish/`, {
     method: 'POST',
   });
+  return normalize(raw);
 }
 
-export function duplicateNotification(id: string): Promise<Notification> {
-  return request<Notification>(`/notifications/${id}/duplicate/`, {
+export async function duplicateNotification(id: string): Promise<Notification> {
+  const raw = await request<unknown>(`/notifications/${id}/duplicate/`, {
     method: 'POST',
   });
+  return normalize(raw);
 }
 
 export function markRead(id: string): Promise<void> {

@@ -14,7 +14,7 @@ import { htmlToText } from '@/lib/sanitize';
 
 const TITLES: { match: RegExp; title: string }[] = [
   { match: /^\/dashboard/, title: 'Dashboard' },
-  { match: /^\/notifications/, title: 'Notifications' },
+  { match: /^\/notifications/, title: 'Notices' },
   { match: /^\/staff\/new/, title: 'Add Staff Member' },
   { match: /^\/staff\/[^/]+\/edit/, title: 'Edit Staff Member' },
   { match: /^\/staff\/[^/]+/, title: 'Staff Profile' },
@@ -59,7 +59,7 @@ export function Topbar({ onOpenMobileSidebar }: TopbarProps) {
       ...notifications
         .filter((item) => item.title.toLowerCase().includes(term))
         .slice(0, 3)
-        .map((item) => ({ id: item.id, label: item.title, group: 'Notifications', to: '/notifications' })),
+        .map((item) => ({ id: item.id, label: item.title, group: 'Notices', to: '/notifications' })),
     ];
   }, [query, staff, admissions, notifications]);
 
@@ -118,14 +118,14 @@ export function Topbar({ onOpenMobileSidebar }: TopbarProps) {
         </div>
 
         <Dropdown
-          menuLabel="Recent notifications"
+          menuLabel="Recent notices"
           widthClassName="w-80"
           trigger={({ toggle }) => (
             <button
               type="button"
               onClick={toggle}
               className="relative rounded-lg p-2 text-wcbt-muted transition-colors hover:bg-wcbt-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wcbt-maroon"
-              aria-label={`Notifications${unread > 0 ? `, ${unread} unread` : ''}`}
+              aria-label={`Notices${unread > 0 ? `, ${unread} unread` : ''}`}
             >
               <Bell className="h-5 w-5" />
               {unread > 0 && (
@@ -148,7 +148,7 @@ export function Topbar({ onOpenMobileSidebar }: TopbarProps) {
           </div>
           <div className="max-h-80 overflow-y-auto">
             {latest.length === 0 ? (
-              <p className="px-3 py-6 text-center text-sm text-wcbt-muted">No notifications yet.</p>
+              <p className="px-3 py-6 text-center text-sm text-wcbt-muted">No notices yet.</p>
             ) : (
               latest.map((item) => (
                 <Link
@@ -173,7 +173,7 @@ export function Topbar({ onOpenMobileSidebar }: TopbarProps) {
             to="/notifications"
             className="block rounded-lg px-3 py-2 text-center text-sm font-medium text-wcbt-maroon hover:bg-wcbt-cream"
           >
-            View all notifications
+            View all notices
           </Link>
         </Dropdown>
 
