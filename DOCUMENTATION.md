@@ -76,6 +76,13 @@ college_backend/
 │   │   │   └── urls.py
 │   │   ├── models.py
 │   │   └── migrations/
+│   ├── collegesettings/       # College settings (singleton)
+│   │   ├── api/
+│   │   │   ├── serializers.py
+│   │   │   ├── views.py
+│   │   │   └── urls.py
+│   │   ├── models.py
+│   │   └── migrations/
 │   └── common/                # Shared utilities
 │       ├── responses.py
 │       ├── exceptions.py
@@ -88,7 +95,8 @@ college_backend/
 │   ├── test_programs.py
 │   ├── test_staff.py
 │   ├── test_admissions.py
-│   └── test_notifications.py
+│   ├── test_notifications.py
+│   └── test_settings.py
 ├── .env
 ├── .env.example
 ├── requirements.txt
@@ -182,6 +190,14 @@ college_backend/
 - Priority levels: Normal, High, Urgent
 - Status workflow: Draft → Published → Archived
 
+### Phase 10: College Settings App
+
+- GET `/api/settings/` — Retrieve college info (SuperAdmin only)
+- PUT `/api/settings/` — Full update (SuperAdmin only)
+- PATCH `/api/settings/` — Partial update (SuperAdmin only)
+- Singleton pattern (only one CollegeInfo instance)
+- Fields: college_name, college_code, address, phone, email, website, logo, motto, notification preferences
+
 ---
 
 ## API Conventions
@@ -231,13 +247,13 @@ college_backend/
 | Staff (CRUD + permissions + toggle + activity) | 18 |
 | Admissions (CRUD + bulk + trend + convert) | 26 |
 | Notifications (CRUD + publish + bulk + mark read) | 19 |
-| **Total** | **112** |
+| College Settings (singleton retrieve/update) | 7 |
+| **Total** | **119** |
 
 ---
 
 ## Pending Phases
 
-- [ ] Settings app (single document resource)
 - [ ] File upload endpoint
 - [ ] Dashboard summary endpoint
 - [ ] Permission classes (HasPortalPermission)

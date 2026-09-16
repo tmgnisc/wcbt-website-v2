@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "apps.staff",
     "apps.admissions",
     "apps.notifications",
+    "apps.collegesettings",
 ]
 
 MIDDLEWARE = [
