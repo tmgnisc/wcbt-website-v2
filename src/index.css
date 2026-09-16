@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@layer base {
+  body { @apply bg-cream text-slate-900; }
+}

@@ -1,0 +1,53 @@
+/* WCBT Brand Overrides — Maroon / White Academic Theme */
+:root {
+  --wcbt-primary: #8B1A2B;
+  --wcbt-primary-dark: #7A1524;
+  --wcbt-primary-light: #9B1C2E;
+  --wcbt-secondary: #F5F5F5;
+  --wcbt-bg: #F0EBEC;
+  --wcbt-text: #1E1E1E;
+  --wcbt-white: #FFFFFF;
+  --wcbt-card: #FFFFFF;
+}
+.btn-wcbt { background:#8B1A2B; color:#fff; border:none; border-radius:8px; padding:.45rem 1rem; font-weight:600; letter-spacing:.01em; transition:background .15s; }
+.btn-wcbt:hover { background:#7A1524; color:#fff; }
+.btn-outline-wcbt { background:transparent; color:#8B1A2B; border:1.5px solid #8B1A2B; border-radius:8px; padding:.45rem 1rem; font-weight:600; }
+.btn-outline-wcbt:hover { background:#8B1A2B; color:#fff; }
+.text-wcbt { color:#8B1A2B; }
+.bg-wcbt { background:#8B1A2B; }
+.side-nav-wcbt { background:#8B1A2B; color:#fff; }
+.side-nav-wcbt a { color:#fff; opacity:.95; }
+.side-nav-wcbt a.active { background:#9B1C2E; color:#fff; }
+.stat-card { background:#fff; border-radius:12px; padding:1.25rem; box-shadow:0 1px 3px rgba(0,0,0,.06); border:1px solid #F0EBEC; }
+.stat-card .icon-wrap { width:48px; height:48px; border-radius:12px; background:rgba(139,26,43,.08); color:#8B1A2B; display:inline-flex; align-items:center; justify-content:center; font-size:22px; }
+.page-header { border-bottom:2px solid #F0EBEC; padding-bottom:1rem; margin-bottom:1.5rem; }
+.page-header h1 { color:#8B1A2B; font-weight:800; letter-spacing:-.02em; text-transform:uppercase; font-size:1.75rem; }
+.card { border-radius:12px; border:1px solid #F0EBEC; background:#fff; box-shadow:0 1px 4px rgba(0,0,0,.04); }
+.status-badge { display:inline-flex; align-items:center; gap:.35rem; padding:.25rem .6rem; border-radius:9999px; font-size:.78rem; font-weight:600; letter-spacing:.01em; white-space:nowrap; }
+.status-badge.draft { background:#6B7280; color:#fff; }
+.status-badge.published { background:#10B981; color:#fff; }
+.status-badge.archived { background:#374151; color:#fff; }
+.status-badge.pending { background:#F59E0B; color:#fff; }
+.status-badge.shortlisted { background:#3B82F6; color:#fff; }
+.status-badge.selected { background:#14B8A6; color:#fff; }
+.status-badge.enrolled { background:#10B981; color:#fff; }
+.status-badge.rejected { background:#EF4444; color:#fff; }
+.status-badge.active { background:#10B981; color:#fff; }
+.status-badge.inactive { background:#9CA3AF; color:#fff; }
+.status-badge.urgent { background:#EF4444; color:#fff; }
+.status-badge.high { background:#F59E0B; color:#fff; }
+.status-badge.normal { background:#6B7280; color:#fff; }
+.empty-state { text-align:center; padding:3rem 1rem; color:#6B7280; }
+.empty-state .icon-wrap { font-size:3rem; color:#9B1C2E; margin-bottom:.75rem; }
+.skeleton-bar { height:14px; background:linear-gradient(90deg,#F5F5F5 25%,#EDE5E8 50%,#F5F5F5 75%); background-size:200% 100%; animation:skeletonPulse 1.2s infinite ease-in-out; border-radius:6px; }
+@keyframes skeletonPulse { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+.form-control { border-radius:8px; border:1px solid #E5E0E1; background:#fff; padding:.55rem .85rem; font-size:.9rem; transition:border-color .15s; }
+.form-control:focus { border-color:#8B1A2B; box-shadow:0 0 0 3px rgba(139,26,43,.12); outline:none; }
+.form-label { font-weight:600; font-size:.85rem; color:#1E1E1E; margin-bottom:.25rem; }
+.table th { background:#8B1A2B; color:#fff; font-weight:600; font-size:.82rem; text-transform:uppercase; letter-spacing:.03em; border-bottom:2px solid #F5F5F5; }
+.table td { font-size:.85rem; vertical-align:middle; padding:.65rem .75rem; border-bottom:1px solid #F0EBEC; color:#1E1E1E; }
+.table-hover tbody tr:hover { background:#F5F5F5; }
+/* Sidebar override for master layout */
+.sidebar { background:#8B1A2B!important; }
+.sidebar .sidebar-menu li a { color:#fff!important; }
+.sidebar .sidebar-menu .dropdown.open > a { background:#9B1C2E!important; color:#fff!important; }
