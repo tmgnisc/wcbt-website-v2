@@ -14,6 +14,10 @@ load_dotenv(BASE_DIR / ".env")
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 
+# Resend
+RESEND_API_KEY = os.getenv("RESEND_API_KEY", "")
+RESEND_FROM_EMAIL = os.getenv("RESEND_FROM_EMAIL", "noreply@college.com")
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -28,6 +32,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     # Local
     "apps.authentication",
+    "apps.email_verification",
 ]
 
 MIDDLEWARE = [
