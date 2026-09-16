@@ -6,7 +6,7 @@ from .base import *  # noqa: F401, F403
 
 DEBUG = False
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")  # noqa: F405
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "apiwcbt.nirvixtech.com").split(",")  # noqa: F405
 
 # Database - MySQL for production
 DATABASES = {
@@ -24,7 +24,7 @@ DATABASES = {
 }
 
 CORS_ALLOWED_ORIGINS = os.getenv(  # noqa: F405
-    "CORS_ALLOWED_ORIGINS", ""
+    "CORS_ALLOWED_ORIGINS", "https://apiwcbt.nirvixtech.com"
 ).split(",")
 
 CORS_ALLOW_CREDENTIALS = True

@@ -12,9 +12,9 @@ ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")  # 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": os.getenv("DB_NAME", "college_db"),  # noqa: F405
-        "USER": os.getenv("DB_USER", "root"),  # noqa: F405
-        "PASSWORD": os.getenv("DB_PASSWORD", ""),  # noqa: F405
+        "NAME": os.getenv("DB_NAME"),  # noqa: F405
+        "USER": os.getenv("DB_USER"),  # noqa: F405
+        "PASSWORD": os.getenv("DB_PASSWORD"),  # noqa: F405
         "HOST": os.getenv("DB_HOST", "127.0.0.1"),  # noqa: F405
         "PORT": os.getenv("DB_PORT", "3306"),  # noqa: F405
         "OPTIONS": {
