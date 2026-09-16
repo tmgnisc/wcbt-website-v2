@@ -13,7 +13,7 @@ import { SettingsSection } from '@/components/settings/SettingsSection';
 import { UsersRolesPanel } from '@/components/settings/UsersRolesPanel';
 import { CatalogPanel } from '@/components/settings/CatalogPanel';
 import { DataTable, type Column } from '@/components/shared/DataTable';
-import { WcbtCrest } from '@/components/layout/WcbtCrest';
+import { Logo } from '@/components/layout/Logo';
 import { Button } from '@/components/ui/Button';
 import { Checkbox, Field, Input, Select, Switch } from '@/components/ui/Field';
 import { ChipSelect } from '@/components/ui/TagInput';
@@ -190,11 +190,11 @@ export function SettingsPage() {
               <div className="mt-6">
                 <p className="wcbt-label mb-2">Logo preview</p>
                 <div className="flex flex-wrap gap-3">
-                  <div className="flex h-24 w-40 items-center justify-center rounded-xl bg-wcbt-cream">
-                    <WcbtCrest className="h-12 w-12 text-wcbt-maroon" />
+                  <div className="flex h-24 w-40 items-center justify-center rounded-xl bg-wcbt-cream px-4">
+                    <Logo variant="lockup" className="h-8 max-w-full" />
                   </div>
-                  <div className="flex h-24 w-40 items-center justify-center rounded-xl bg-wcbt-maroon">
-                    <WcbtCrest className="h-12 w-12 text-white" />
+                  <div className="flex h-24 w-40 items-center justify-center rounded-xl bg-wcbt-maroon px-4">
+                    <Logo variant="lockup" tone="light" className="h-8 max-w-full" />
                   </div>
                 </div>
               </div>
@@ -288,14 +288,14 @@ export function SettingsPage() {
               <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <div className="overflow-hidden rounded-xl border border-black/5">
                   <div className="flex h-10 items-center gap-2 bg-wcbt-maroon px-3 text-white">
-                    <WcbtCrest className="h-5 w-5" />
+                    <Logo variant="crest" tone="light" className="h-5" />
                     <span className="text-sm font-semibold">WCBT Admin</span>
                   </div>
                   <p className="p-3 text-xs text-wcbt-muted">Sidebar logo placement</p>
                 </div>
                 <div className="overflow-hidden rounded-xl border border-black/5">
                   <div className="flex h-10 items-center justify-center bg-wcbt-cream">
-                    <WcbtCrest className="h-5 w-5 text-wcbt-maroon" />
+                    <Logo variant="crest" className="h-6" />
                   </div>
                   <p className="p-3 text-xs text-wcbt-muted">Login panel logo placement</p>
                 </div>

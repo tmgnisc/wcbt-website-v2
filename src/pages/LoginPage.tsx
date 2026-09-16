@@ -3,7 +3,7 @@ import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { AlertTriangle, ArrowLeft, Eye, EyeOff, Lock, Mail, MailCheck, ShieldAlert } from 'lucide-react';
-import { WcbtCrest } from '@/components/layout/WcbtCrest';
+import { Logo } from '@/components/layout/Logo';
 import { Button } from '@/components/ui/Button';
 import { Checkbox, Field, Input } from '@/components/ui/Field';
 import { useAuth } from '@/context/AuthContext';
@@ -63,12 +63,18 @@ export function LoginPage() {
   return (
     <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
       <section className="wcbt-circuit relative hidden flex-col items-center justify-center bg-wcbt-maroon px-10 text-center text-white lg:flex">
-        <WcbtCrest className="h-24 w-24 text-white/95" />
-        <h1 className="mt-6 max-w-sm text-2xl font-semibold tracking-tight">
+        <Logo
+          variant="lockup"
+          tone="light"
+          alt="WCBT — Learn. Innovate. Lead. Birtamod Campus"
+          className="h-28 max-w-full"
+        />
+        <h1 className="mt-8 max-w-sm text-2xl font-semibold tracking-tight">
           WhiteHouse College of Business &amp; Technology
         </h1>
-        <p className="mt-3 text-lg font-medium text-white/90">Learn. Innovate. Lead.</p>
-        <p className="mt-1 text-sm text-white/70">Birtamod Campus</p>
+        <p className="mt-3 text-sm text-white/75">
+          Admissions, staff and campus notices in one portal.
+        </p>
         <p className="absolute bottom-8 text-xs text-white/60">
           Affiliated to Kathmandu University · whitehouseeducation.edu.np
         </p>
@@ -77,7 +83,7 @@ export function LoginPage() {
       <section className="flex items-center justify-center bg-wcbt-surface px-6 py-12">
         <div className="w-full max-w-sm">
           <div className="mb-8 flex items-center gap-3 lg:hidden">
-            <WcbtCrest className="h-10 w-10 text-wcbt-maroon" />
+            <Logo variant="crest" className="h-10" />
             <div>
               <p className="font-semibold tracking-tight text-wcbt-ink">WCBT Admin Portal</p>
               <p className="text-xs text-wcbt-muted">Birtamod Campus</p>

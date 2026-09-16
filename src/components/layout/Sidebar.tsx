@@ -12,7 +12,7 @@ import {
   X,
   type LucideIcon,
 } from 'lucide-react';
-import { WcbtCrest } from './WcbtCrest';
+import { Logo } from './Logo';
 import { useAuth } from '@/context/AuthContext';
 import { useNotificationsStore, selectUnreadCount } from '@/store/notifications';
 import { useAdmissionsStore, selectPendingApplications } from '@/store/admissions';
@@ -66,7 +66,8 @@ export function Sidebar({ collapsed, onToggleCollapse, mobileOpen, onCloseMobile
           onClick={onCloseMobile}
           className="flex items-center gap-2 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
         >
-          <WcbtCrest className="h-7 w-7 text-white" />
+          {/* The crest alone: the lockup's tagline is unreadable at sidebar scale. */}
+          <Logo variant="crest" tone="light" alt="WCBT Admin Portal" className="h-8" />
           {!collapsed && (
             <span className="text-lg font-semibold tracking-tight">
               WCBT
