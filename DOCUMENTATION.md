@@ -62,6 +62,13 @@ college_backend/
 │   │   │   └── create_sample_staff.py
 │   │   ├── models.py
 │   │   └── migrations/
+│   ├── admissions/            # Admission management
+│   │   ├── api/
+│   │   │   ├── serializers.py
+│   │   │   ├── views.py
+│   │   │   └── urls.py
+│   │   ├── models.py
+│   │   └── migrations/
 │   └── common/                # Shared utilities
 │       ├── responses.py
 │       ├── exceptions.py
@@ -72,7 +79,8 @@ college_backend/
 │   ├── test_auth.py
 │   ├── test_otp.py
 │   ├── test_programs.py
-│   └── test_staff.py
+│   ├── test_staff.py
+│   └── test_admissions.py
 ├── .env
 ├── .env.example
 ├── requirements.txt
@@ -144,6 +152,17 @@ college_backend/
 - Salary hidden from non-superadmin users
 - `IsAdmin` permission on all staff endpoints
 
+### Phase 8: Admissions App
+
+- GET/POST `/api/admissions/` — List, create (Admin + SuperAdmin)
+- GET/PATCH/DELETE `/api/admissions/{id}/` — Detail, update, soft-delete (Admin + SuperAdmin)
+- PATCH `/api/admissions/{id}/status/` — Update stage/status
+- POST `/api/admissions/{id}/convert/` — Convert enrolled admission to student
+- POST `/api/admissions/bulk-action/` — Bulk stage/status/delete operations
+- GET `/api/admissions/trend/` — 30-day admission trends
+- Activity logging for all changes
+- Admission stages: Applied → Document Verification → Test/Interview → Result → Enrolled/Rejected
+
 ---
 
 ## API Conventions
@@ -191,13 +210,13 @@ college_backend/
 | OTP (send, verify, forgot password, reset) | 14 |
 | Programs (CRUD + validation) | 15 |
 | Staff (CRUD + permissions + toggle + activity) | 18 |
-| **Total** | **67** |
+| Admissions (CRUD + bulk + trend + convert) | 26 |
+| **Total** | **93** |
 
 ---
 
 ## Pending Phases
 
-- [ ] Admissions app (CRUD + bulk + trend + convert)
 - [ ] Notifications app (CRUD + publish + bulk ops)
 - [ ] Settings app (single document resource)
 - [ ] File upload endpoint

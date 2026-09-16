@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     "apps.email_verification",
     "apps.programs",
     "apps.staff",
+    "apps.admissions",
 ]
 
 MIDDLEWARE = [
