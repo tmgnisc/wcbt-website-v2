@@ -229,6 +229,16 @@ college_backend/
 - Notifications stats: total, unread
 - Files stats: total
 
+### Phase 13: Permission Classes
+
+- `IsStaffUser` — Staff, Admin, SuperAdmin
+- `IsAdmin` — Admin, SuperAdmin
+- `IsSuperAdmin` — SuperAdmin only
+- `HasPortalPermission` — Fine-grained portal-based permissions
+  - Maps (portal, action) → allowed roles
+  - Portals: staff, admissions, programs, notifications, settings, files, dashboard, auth
+  - Actions: read (GET/HEAD/OPTIONS), write (POST/PUT/PATCH/DELETE)
+
 ---
 
 ## API Conventions
@@ -281,11 +291,11 @@ college_backend/
 | College Settings (singleton retrieve/update) | 7 |
 | File Upload (upload, list, delete, categories) | 13 |
 | Dashboard (summary stats) | 5 |
-| **Total** | **137** |
+| Permissions (IsStaffUser, IsAdmin, IsSuperAdmin, HasPortalPermission) | 15 |
+| **Total** | **152** |
 
 ---
 
 ## Pending Phases
 
-- [ ] Permission classes (HasPortalPermission)
 - [ ] Comprehensive tests for all new endpoints
