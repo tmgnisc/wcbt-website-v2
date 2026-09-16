@@ -123,7 +123,18 @@ class TestLogin:
 
 @pytest.mark.django_db
 class TestProfile:
-    """Tests for GET /api/auth/profile/"""
+    """Tests for GET /api/auth/me/ and /api/auth/profile/"""
+
+    def test_me_authorized(self, auth_client, user):
+        response = auth_client.get("/api/auth/me/")
+        assert response.status_code == status.HTTP_200_OK
+        assert response.data["data"]["user"]["email"] == user.email
+        assert response.data["data"]["user"]["role"] == User.Role.STAFF
+        assert response.data["data"]["user"]["name"] == user.full_name
+
+    def test_me_unauthorized(self, api_client):
+        response = api_client.get("/api/auth/me/")
+        assert response.status_code == status.HTTP_401_UNAUTHORIZED
 
     def test_profile_authorized(self, auth_client, user):
         response = auth_client.get("/api/auth/profile/")
@@ -167,7 +178,7 @@ class TestLogout:
 
 @pytest.mark.django_db
 class TestTokenRefresh:
-    """Tests for POST /api/auth/token/refresh/"""
+    """Tests for POST /api/auth/refresh/"""
 
     def test_token_refresh_success(self, api_client, user):
         # Login to get tokens
@@ -179,7 +190,7 @@ class TestTokenRefresh:
 
         # Refresh the token
         response = api_client.post(
-            "/api/auth/token/refresh/",
+            "/api/auth/refresh/",
             {"refresh": refresh_token},
         )
         assert response.status_code == status.HTTP_200_OK
@@ -187,7 +198,7 @@ class TestTokenRefresh:
 
     def test_token_refresh_invalid(self, api_client):
         response = api_client.post(
-            "/api/auth/token/refresh/",
+            "/api/auth/refresh/",
             {"refresh": "invalid-token"},
         )
         assert response.status_code == status.HTTP_401_UNAUTHORIZED

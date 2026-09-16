@@ -142,8 +142,28 @@ class LogoutView(generics.GenericAPIView):
         return success_response(message="Logged out successfully")
 
 
+class MeView(generics.GenericAPIView):
+    """Return the authenticated user in the same shape as login."""
+
+    serializer_class = UserResponseSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request) -> Response:
+        user = request.user
+        data = {
+            "user": {
+                "id": str(user.id),
+                "name": user.full_name,
+                "email": user.email,
+                "role": user.role,
+                "avatarUrl": None,
+            }
+        }
+        return success_response(data=data)
+
+
 class ProfileView(generics.GenericAPIView):
-    """Return the authenticated user's profile."""
+    """Return the authenticated user's full profile."""
 
     serializer_class = UserResponseSerializer
     permission_classes = [IsAuthenticated]
