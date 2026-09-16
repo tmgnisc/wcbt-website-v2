@@ -90,6 +90,11 @@ college_backend/
 │   │   │   └── urls.py
 │   │   ├── models.py
 │   │   └── migrations/
+│   ├── dashboard/             # Dashboard summary
+│   │   ├── api/
+│   │   │   ├── views.py
+│   │   │   └── urls.py
+│   │   └── models.py
 │   └── common/                # Shared utilities
 │       ├── responses.py
 │       ├── exceptions.py
@@ -104,7 +109,8 @@ college_backend/
 │   ├── test_admissions.py
 │   ├── test_notifications.py
 │   ├── test_settings.py
-│   └── test_files.py
+│   ├── test_files.py
+│   └── test_dashboard.py
 ├── .env
 ├── .env.example
 ├── requirements.txt
@@ -214,6 +220,15 @@ college_backend/
 - Categories: staff, admission, program, notification, general
 - Auto-detects MIME type, stores metadata
 
+### Phase 12: Dashboard App
+
+- GET `/api/dashboard/` — Summary statistics (Admin + SuperAdmin)
+- Staff stats: total, active, inactive, by department
+- Programs stats: total, active, inactive
+- Admissions stats: total, pending, enrolled, recent 30 days, by stage
+- Notifications stats: total, unread
+- Files stats: total
+
 ---
 
 ## API Conventions
@@ -265,12 +280,12 @@ college_backend/
 | Notifications (CRUD + publish + bulk + mark read) | 19 |
 | College Settings (singleton retrieve/update) | 7 |
 | File Upload (upload, list, delete, categories) | 13 |
-| **Total** | **132** |
+| Dashboard (summary stats) | 5 |
+| **Total** | **137** |
 
 ---
 
 ## Pending Phases
 
-- [ ] Dashboard summary endpoint
 - [ ] Permission classes (HasPortalPermission)
 - [ ] Comprehensive tests for all new endpoints
