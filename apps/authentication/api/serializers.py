@@ -33,8 +33,9 @@ class SignupSerializer(serializers.Serializer):
 class LoginSerializer(serializers.Serializer):
     """Serializer for user login."""
 
-    email = serializers.EmailField()
+    identifier = serializers.CharField()
     password = serializers.CharField(write_only=True)
+    remember = serializers.BooleanField(required=False, default=False)
 
 
 class TokenRefreshSerializer(serializers.Serializer):
@@ -53,19 +54,25 @@ class UserResponseSerializer(serializers.ModelSerializer):
     """Serializer for user data in responses."""
 
     full_name = serializers.SerializerMethodField()
+    avatar_url = serializers.SerializerMethodField()
 
     def get_full_name(self, obj: User) -> str:
         return obj.full_name
+
+    def get_avatar_url(self, obj: User) -> str | None:
+        return None
 
     class Meta:
         model = User
         fields = [
             "id",
             "email",
+            "username",
             "first_name",
             "last_name",
             "full_name",
             "role",
+            "avatar_url",
             "is_active",
             "created_at",
             "updated_at",

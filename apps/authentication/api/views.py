@@ -74,7 +74,7 @@ class LoginView(generics.GenericAPIView):
 
         try:
             data = authenticate_user(
-                email=serializer.validated_data["email"],
+                identifier=serializer.validated_data["identifier"],
                 password=serializer.validated_data["password"],
             )
         except ValueError as e:

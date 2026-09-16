@@ -5,7 +5,6 @@ Business logic for authentication.
 import logging
 
 from django.contrib.auth import get_user_model
-from django.contrib.auth.tokens import default_token_generator
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from apps.common.validators import validate_strong_password
@@ -31,11 +30,14 @@ def create_user(email: str, first_name: str, last_name: str, password: str) -> U
     return user
 
 
-def authenticate_user(email: str, password: str) -> dict:
-    """Authenticate user and return JWT tokens."""
-    try:
-        user = User.objects.get(email=email)
-    except User.DoesNotExist:
+def authenticate_user(identifier: str, password: str) -> dict:
+    """Authenticate user by email or username and return JWT tokens."""
+    if "@" in identifier:
+        user = User.objects.filter(email__iexact=identifier).first()
+    else:
+        user = User.objects.filter(username__iexact=identifier).first()
+
+    if user is None:
         raise ValueError("Invalid credentials.")
 
     if not user.check_password(password):
@@ -49,15 +51,15 @@ def authenticate_user(email: str, password: str) -> dict:
     logger.info("User logged in: %s", user.email)
 
     return {
+        "user": {
+            "id": str(user.id),
+            "name": user.full_name,
+            "email": user.email,
+            "role": user.role,
+            "avatarUrl": None,
+        },
         "access": str(refresh.access_token),
         "refresh": str(refresh),
-        "user": {
-            "id": user.id,
-            "email": user.email,
-            "first_name": user.first_name,
-            "last_name": user.last_name,
-            "role": user.role,
-        },
     }
 
 

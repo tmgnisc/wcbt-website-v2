@@ -15,6 +15,7 @@ class UserAdmin(BaseUserAdmin):
     model = User
     list_display = (
         "email",
+        "username",
         "first_name",
         "last_name",
         "role",
@@ -23,13 +24,25 @@ class UserAdmin(BaseUserAdmin):
         "created_at",
     )
     list_filter = ("role", "is_active", "is_staff")
-    search_fields = ("email", "first_name", "last_name")
+    search_fields = ("email", "username", "first_name", "last_name")
     ordering = ("-created_at",)
 
     fieldsets = (
         (None, {"fields": ("email", "password")}),
-        ("Personal info", {"fields": ("first_name", "last_name")}),
-        ("Roles & Permissions", {"fields": ("role", "is_active", "is_staff", "is_superuser", "groups", "user_permissions")}),
+        ("Personal info", {"fields": ("username", "first_name", "last_name")}),
+        (
+            "Roles & Permissions",
+            {
+                "fields": (
+                    "role",
+                    "is_active",
+                    "is_staff",
+                    "is_superuser",
+                    "groups",
+                    "user_permissions",
+                )
+            },
+        ),
     )
 
     add_fieldsets = (
@@ -39,6 +52,7 @@ class UserAdmin(BaseUserAdmin):
                 "classes": ("wide",),
                 "fields": (
                     "email",
+                    "username",
                     "first_name",
                     "last_name",
                     "password1",

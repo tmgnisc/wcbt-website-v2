@@ -72,7 +72,7 @@ class TestLogin:
 
     def test_login_success(self, api_client, user):
         payload = {
-            "email": "staff@example.com",
+            "identifier": "staff@example.com",
             "password": "StrongPass1!",
         }
         response = api_client.post("/api/auth/login/", payload)
@@ -80,10 +80,21 @@ class TestLogin:
         assert response.data["success"] is True
         assert "access" in response.data["data"]
         assert "refresh" in response.data["data"]
+        assert "user" in response.data["data"]
+
+    def test_login_by_username(self, api_client, user):
+        user.username = "johndoe"
+        user.save()
+        payload = {
+            "identifier": "johndoe",
+            "password": "StrongPass1!",
+        }
+        response = api_client.post("/api/auth/login/", payload)
+        assert response.status_code == status.HTTP_200_OK
 
     def test_login_wrong_password(self, api_client, user):
         payload = {
-            "email": "staff@example.com",
+            "identifier": "staff@example.com",
             "password": "WrongPassword1!",
         }
         response = api_client.post("/api/auth/login/", payload)
@@ -92,7 +103,7 @@ class TestLogin:
 
     def test_login_nonexistent_email(self, api_client):
         payload = {
-            "email": "nobody@example.com",
+            "identifier": "nobody@example.com",
             "password": "StrongPass1!",
         }
         response = api_client.post("/api/auth/login/", payload)
@@ -103,7 +114,7 @@ class TestLogin:
         user.is_active = False
         user.save()
         payload = {
-            "email": "staff@example.com",
+            "identifier": "staff@example.com",
             "password": "StrongPass1!",
         }
         response = api_client.post("/api/auth/login/", payload)
@@ -133,7 +144,7 @@ class TestLogout:
         # Login to get tokens
         login_response = api_client.post(
             "/api/auth/login/",
-            {"email": "staff@example.com", "password": "StrongPass1!"},
+            {"identifier": "staff@example.com", "password": "StrongPass1!"},
         )
         refresh_token = login_response.data["data"]["refresh"]
 
@@ -162,7 +173,7 @@ class TestTokenRefresh:
         # Login to get tokens
         login_response = api_client.post(
             "/api/auth/login/",
-            {"email": "staff@example.com", "password": "StrongPass1!"},
+            {"identifier": "staff@example.com", "password": "StrongPass1!"},
         )
         refresh_token = login_response.data["data"]["refresh"]
 
@@ -192,5 +203,4 @@ class TestPermissions:
 
     def test_superadmin_endpoint_requires_superadmin(self, auth_client):
         """Staff users should not access SuperAdmin-only endpoints."""
-        # This will be relevant once staff management endpoints exist
         pass

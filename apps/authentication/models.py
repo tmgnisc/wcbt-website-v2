@@ -2,6 +2,8 @@
 Custom User model for the College Management System.
 """
 
+import uuid
+
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
 
@@ -33,7 +35,7 @@ class UserManager(BaseUserManager):
         """Create and return a superuser."""
         extra_fields.setdefault("is_staff", True)
         extra_fields.setdefault("is_superuser", True)
-        extra_fields.setdefault("role", User.Role.SUPERADMIN)
+        extra_fields.setdefault("role", User.Role.SUPER_ADMIN)
 
         if extra_fields.get("is_staff") is not True:
             raise ValueError("Superuser must have is_staff=True.")
@@ -47,11 +49,13 @@ class User(AbstractBaseUser, PermissionsMixin):
     """Custom User model with email as the primary identifier."""
 
     class Role(models.TextChoices):
-        STAFF = "STAFF", "Staff"
-        SUPERADMIN = "SUPERADMIN", "SuperAdmin"
+        SUPER_ADMIN = "super_admin", "Super Admin"
+        ADMIN = "admin", "Admin"
+        STAFF = "staff", "Staff"
 
-    id = models.BigAutoField(primary_key=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     email = models.EmailField(unique=True, max_length=255)
+    username = models.CharField(max_length=150, blank=True, default="")
     first_name = models.CharField(max_length=150)
     last_name = models.CharField(max_length=150)
     role = models.CharField(
@@ -82,5 +86,5 @@ class User(AbstractBaseUser, PermissionsMixin):
         return f"{self.first_name} {self.last_name}"
 
     @property
-    def is_superadmin(self) -> bool:
-        return self.role == self.Role.SUPERADMIN
+    def is_super_admin(self) -> bool:
+        return self.role == self.Role.SUPER_ADMIN
