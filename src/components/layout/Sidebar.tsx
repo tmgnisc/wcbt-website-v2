@@ -43,8 +43,7 @@ export function Sidebar({ collapsed, onToggleCollapse, mobileOpen, onCloseMobile
     { to: '/notifications', label: 'Notifications', icon: Bell, badge: unread },
     { to: '/staff', label: 'Staff', icon: Users },
     { to: '/admissions', label: 'Admissions', icon: GraduationCap, badge: pendingApplications },
-    { to: '/students', label: 'Students', icon: BookOpen },
-    { to: '/reports', label: 'Reports', icon: BookOpen },
+    { to: '/programs', label: 'Programs', icon: BookOpen },
     { to: '/settings', label: 'Settings', icon: Settings },
   ];
 

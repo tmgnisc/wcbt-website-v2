@@ -4,6 +4,7 @@ export const PERMISSION_MODULES: PermissionModule[] = [
   'notifications',
   'staff',
   'admissions',
+  'programs',
   'settings',
 ];
 
@@ -28,18 +29,21 @@ const permissionMatrix: PermissionMatrix = {
     notifications: allowAll(),
     staff: allowAll(),
     admissions: allowAll(),
+    programs: allowAll(),
     settings: allowAll(),
   },
   admin: {
     notifications: allowAll(),
     staff: { view: true, add: true, edit: true, delete: false },
     admissions: allowAll(),
+    programs: { view: true, add: true, edit: true, delete: false },
     settings: { view: true, add: false, edit: true, delete: false },
   },
   staff: {
     notifications: viewOnly(),
     staff: viewOnly(),
     admissions: viewOnly(),
+    programs: viewOnly(),
     settings: { view: false, add: false, edit: false, delete: false },
   },
 };
@@ -100,10 +104,6 @@ export const settingsSeed: Settings = {
   ],
   permissions: permissionMatrix,
   catalog: {
-    programs: [
-      { id: 'prg-001', name: 'BIT', description: 'Bachelor of Information Technology (KU affiliated)' },
-      { id: 'prg-002', name: 'B.Tech Ed IT', description: 'Bachelor of Technology Education in IT' },
-    ],
     departments: [
       { id: 'dep-001', name: 'Information Technology' },
       { id: 'dep-002', name: 'Management' },

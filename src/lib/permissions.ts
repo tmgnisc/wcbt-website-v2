@@ -16,14 +16,21 @@ export const PERMISSIONS = [
   'admissions:edit',
   'admissions:delete',
   'admissions:test',
+  'programs:view',
+  'programs:add',
+  'programs:edit',
+  'programs:delete',
   'settings:view',
   'settings:edit',
 ] as const;
 
 export type Permission = (typeof PERMISSIONS)[number];
 
+/** Structural deletions and salary figures stay with the super admin. */
+const SUPER_ADMIN_ONLY: Permission[] = ['staff:delete', 'staff:viewSalary', 'programs:delete'];
+
 const ADMIN_PERMISSIONS: Permission[] = PERMISSIONS.filter(
-  (permission) => permission !== 'staff:delete' && permission !== 'staff:viewSalary',
+  (permission) => !SUPER_ADMIN_ONLY.includes(permission),
 );
 
 const STAFF_PERMISSIONS: Permission[] = [
@@ -31,6 +38,7 @@ const STAFF_PERMISSIONS: Permission[] = [
   'notifications:view',
   'staff:view',
   'admissions:view',
+  'programs:view',
 ];
 
 export const ROLE_PERMISSIONS: Record<Role, Permission[]> = {

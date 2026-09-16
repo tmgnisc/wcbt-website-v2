@@ -53,7 +53,10 @@ All three use the password `wcbt1234`:
 - **Admissions** — table view and a drag-and-drop kanban pipeline sharing one Zustand store, a
   five-tab application form with a status stepper, permission-gated test scores, "send notification"
   cross-module reuse, and convert-to-student.
-- **Settings** — general, users & roles (permission matrix), programs & departments, notification
+- **Programs** — the courses the campus offers, with intake capacity, fees, coordinator and status,
+  plus an add/edit side panel. Active programs feed the program select on admission applications,
+  and codes are unique because `Admission.program` joins on them.
+- **Settings** — general, users & roles (permission matrix), departments & lists, notification
   defaults, locked brand palette, security policy and an audit log.
 
 ## Layout of the source
@@ -62,7 +65,7 @@ All three use the password `wcbt1234`:
 src/
   api/          service layer (mock now, HTTP later)
   components/
-    admissions/ dashboard/ notifications/ settings/   module components
+    admissions/ dashboard/ notifications/ programs/ settings/   module components
     layout/     Sidebar, Topbar, PageHeader, Logo
     shared/     DataTable, Modal, SidePanel, ConfirmDialog, StatusBadge, Can, Toaster
     ui/         headless primitives

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -20,9 +20,9 @@ import { useToast } from '@/context/ToastContext';
 import { useAdmissionsStore } from '@/store/admissions';
 import { useNotificationsStore } from '@/store/notifications';
 import { ADMISSION_TAB_FIELDS, admissionSchema, type AdmissionFormValues } from '@/validation/admission';
+import { useProgramsStore, activeProgramCodes } from '@/store/programs';
 import {
   ADMISSION_STAGES_WITH_REJECTED,
-  PROGRAMS,
   TEST_STATUSES,
   type AdmissionStage,
   type ProgramCode,
@@ -60,12 +60,21 @@ export function AdmissionDetailPage() {
   const convertToStudent = useAdmissionsStore((state) => state.convertToStudent);
   const nextApplicationId = useAdmissionsStore((state) => state.nextApplicationId);
   const createNotification = useNotificationsStore((state) => state.create);
+  const programItems = useProgramsStore((state) => state.items);
+  const loadPrograms = useProgramsStore((state) => state.load);
 
   useEffect(() => {
     void load();
-  }, [load]);
+    void loadPrograms();
+  }, [load, loadPrograms]);
 
   const existing = isNew ? undefined : items.find((item) => item.id === id);
+
+  // Retired programs stay selectable on the applications that already use them.
+  const programs = useMemo(() => {
+    const codes = activeProgramCodes(programItems);
+    return existing && !codes.includes(existing.program) ? [...codes, existing.program] : codes;
+  }, [programItems, existing]);
 
   const form = useForm<AdmissionFormValues>({
     resolver: zodResolver(admissionSchema),
@@ -81,7 +90,7 @@ export function AdmissionDetailPage() {
       board: 'NEB',
       gpa: '',
       subjects: [],
-      program: 'BIT',
+      program: '',
       intake: 'Fall 2026',
       scholarshipInterest: false,
       testDate: '',
@@ -341,9 +350,15 @@ export function AdmissionDetailPage() {
 
             {tab === 'program' && (
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                <Field label="Program applied" htmlFor="program" required>
-                  <Select id="program" {...form.register('program')}>
-                    {PROGRAMS.map((option) => (
+                <Field
+                  label="Program applied"
+                  htmlFor="program"
+                  required
+                  error={form.formState.errors.program?.message}
+                >
+                  <Select id="program" invalid={Boolean(form.formState.errors.program)} {...form.register('program')}>
+                    <option value="">Select program</option>
+                    {programs.map((option) => (
                       <option key={option} value={option}>
                         {option}
                       </option>

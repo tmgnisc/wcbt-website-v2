@@ -28,9 +28,9 @@ import { useAuth } from '@/context/AuthContext';
 import { useToast } from '@/context/ToastContext';
 import { useAdmissionsStore } from '@/store/admissions';
 import { useNotificationsStore } from '@/store/notifications';
+import { useProgramsStore, activeProgramCodes } from '@/store/programs';
 import {
   ADMISSION_STAGES_WITH_REJECTED,
-  PROGRAMS,
   type Admission,
   type AdmissionStage,
 } from '@/types/admission';
@@ -51,6 +51,9 @@ export function AdmissionsPage() {
   const convertToStudent = useAdmissionsStore((state) => state.convertToStudent);
   const remove = useAdmissionsStore((state) => state.remove);
   const createNotification = useNotificationsStore((state) => state.create);
+  const programItems = useProgramsStore((state) => state.items);
+  const loadPrograms = useProgramsStore((state) => state.load);
+  const programs = useMemo(() => activeProgramCodes(programItems), [programItems]);
 
   const [view, setView] = useState<'table' | 'pipeline'>('table');
   const [program, setProgram] = useState('all');
@@ -64,7 +67,8 @@ export function AdmissionsPage() {
 
   useEffect(() => {
     void load();
-  }, [load]);
+    void loadPrograms();
+  }, [load, loadPrograms]);
 
   useEffect(() => {
     if (searchParams.get('new') === 'true') {
@@ -214,7 +218,7 @@ export function AdmissionsPage() {
                 className="w-full sm:w-44"
               >
                 <option value="all">All programs</option>
-                {PROGRAMS.map((option) => (
+                {programs.map((option) => (
                   <option key={option} value={option}>
                     {option}
                   </option>
@@ -350,7 +354,7 @@ export function AdmissionsPage() {
                 className="h-8 w-40 py-1 text-xs"
               >
                 <option value="all">All programs</option>
-                {PROGRAMS.map((option) => (
+                {programs.map((option) => (
                   <option key={option} value={option}>
                     {option}
                   </option>

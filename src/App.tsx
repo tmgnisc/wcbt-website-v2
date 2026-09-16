@@ -7,7 +7,6 @@ import { Toaster } from '@/components/shared/Toaster';
 import { DashboardLayout } from '@/layouts/DashboardLayout';
 import { ProtectedRoute } from '@/routes/ProtectedRoute';
 import { LoginPage } from '@/pages/LoginPage';
-import { PlaceholderPage } from '@/pages/PlaceholderPage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
 
 // Chart, drag-and-drop and form-heavy pages are split out of the initial bundle.
@@ -33,6 +32,9 @@ const AdmissionDetailPage = lazy(() =>
   import('@/pages/admissions/AdmissionDetailPage').then((module) => ({
     default: module.AdmissionDetailPage,
   })),
+);
+const ProgramsPage = lazy(() =>
+  import('@/pages/programs/ProgramsPage').then((module) => ({ default: module.ProgramsPage })),
 );
 const SettingsPage = lazy(() =>
   import('@/pages/settings/SettingsPage').then((module) => ({ default: module.SettingsPage })),
@@ -64,24 +66,7 @@ export default function App() {
                   <Route path="/staff/:id" element={<StaffDetailPage />} />
                   <Route path="/admissions" element={<AdmissionsPage />} />
                   <Route path="/admissions/:id" element={<AdmissionDetailPage />} />
-                  <Route
-                    path="/students"
-                    element={
-                      <PlaceholderPage
-                        title="Students"
-                        description="Enrolled student records are created when an application is converted from the Admissions module."
-                      />
-                    }
-                  />
-                  <Route
-                    path="/reports"
-                    element={
-                      <PlaceholderPage
-                        title="Reports"
-                        description="Admission funnels, staff headcount and exam reports will be published here."
-                      />
-                    }
-                  />
+                  <Route path="/programs" element={<ProgramsPage />} />
 
                   <Route element={<ProtectedRoute adminOnly />}>
                     <Route path="/staff/new" element={<StaffFormPage mode="create" />} />

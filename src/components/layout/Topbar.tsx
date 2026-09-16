@@ -21,8 +21,7 @@ const TITLES: { match: RegExp; title: string }[] = [
   { match: /^\/staff/, title: 'Staff' },
   { match: /^\/admissions\/[^/]+/, title: 'Application' },
   { match: /^\/admissions/, title: 'Admissions' },
-  { match: /^\/students/, title: 'Students' },
-  { match: /^\/reports/, title: 'Reports' },
+  { match: /^\/programs/, title: 'Programs' },
   { match: /^\/settings/, title: 'Settings' },
 ];
 

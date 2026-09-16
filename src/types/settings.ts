@@ -22,13 +22,13 @@ export interface AdminUser {
   lastLogin?: string;
 }
 
-export type PermissionModule = 'notifications' | 'staff' | 'admissions' | 'settings';
+export type PermissionModule = 'notifications' | 'staff' | 'admissions' | 'programs' | 'settings';
 export type PermissionAction = 'view' | 'add' | 'edit' | 'delete';
 
 export type PermissionMatrix = Record<Role, Record<PermissionModule, Record<PermissionAction, boolean>>>;
 
+/** Programs are managed in their own module; these lists only feed selects. */
 export interface CatalogSettings {
-  programs: LookupItem[];
   departments: LookupItem[];
   designations: LookupItem[];
   testTypes: LookupItem[];

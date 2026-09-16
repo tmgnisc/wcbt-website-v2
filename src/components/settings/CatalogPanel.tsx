@@ -12,7 +12,6 @@ import { createId } from '@/lib/utils';
 type CatalogKey = keyof CatalogSettings;
 
 const GROUPS: { key: CatalogKey; label: string; hint: string }[] = [
-  { key: 'programs', label: 'Programs', hint: 'Feeds the program select on applications' },
   { key: 'departments', label: 'Departments', hint: 'Feeds the department select on staff records' },
   { key: 'designations', label: 'Designations', hint: 'Job titles available to staff records' },
   { key: 'testTypes', label: 'Admission test types', hint: 'Used when scheduling entrance tests' },
@@ -38,8 +37,8 @@ export function CatalogPanel({ settings, onPatch, onSave, saving }: CatalogPanel
   return (
     <>
       <SettingsSection
-        title="Programs & departments"
-        description="These lists populate the selects used across Staff and Admissions."
+        title="Departments & lists"
+        description="These lists populate the selects used across Staff and Admissions. Programs have their own module."
         onSave={onSave}
         saving={saving}
       >

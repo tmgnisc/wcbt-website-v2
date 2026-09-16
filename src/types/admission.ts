@@ -11,7 +11,8 @@ export type AdmissionStage =
 
 export type TestStatus = 'Not Scheduled' | 'Scheduled' | 'Passed' | 'Failed';
 
-export type ProgramCode = 'BIT' | 'B.Tech Ed IT';
+/** Matches `Program.code`; the Programs module owns the list of valid values. */
+export type ProgramCode = string;
 
 /** Ordered stages of the pipeline; "Rejected" sits outside the happy path. */
 export const ADMISSION_STAGES: AdmissionStage[] = [
@@ -28,7 +29,6 @@ export const ADMISSION_STAGES_WITH_REJECTED: AdmissionStage[] = [
 ];
 
 export const TEST_STATUSES: TestStatus[] = ['Not Scheduled', 'Scheduled', 'Passed', 'Failed'];
-export const PROGRAMS: ProgramCode[] = ['BIT', 'B.Tech Ed IT'];
 
 export interface Admission {
   id: string;

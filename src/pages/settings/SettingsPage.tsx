@@ -29,7 +29,7 @@ import { downloadCsv, formatDateTime } from '@/lib/utils';
 const TABS = [
   { value: 'general', label: 'General', icon: <Building2 className="h-4 w-4" aria-hidden="true" /> },
   { value: 'users', label: 'Users & Roles', icon: <Users className="h-4 w-4" aria-hidden="true" /> },
-  { value: 'catalog', label: 'Programs & Departments', icon: <Building2 className="h-4 w-4" aria-hidden="true" /> },
+  { value: 'catalog', label: 'Departments & Lists', icon: <Building2 className="h-4 w-4" aria-hidden="true" /> },
   { value: 'notifications', label: 'Notifications', icon: <Bell className="h-4 w-4" aria-hidden="true" /> },
   { value: 'appearance', label: 'Appearance', icon: <Palette className="h-4 w-4" aria-hidden="true" /> },
   { value: 'security', label: 'Security', icon: <ShieldCheck className="h-4 w-4" aria-hidden="true" /> },

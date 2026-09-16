@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { GENDERS } from '@/types/staff';
-import { PROGRAMS, TEST_STATUSES } from '@/types/admission';
+import { TEST_STATUSES } from '@/types/admission';
 
 export const admissionSchema = z.object({
   // Personal
@@ -19,8 +19,8 @@ export const admissionSchema = z.object({
   gpa: z.string().trim().min(1, 'GPA or percentage is required'),
   subjects: z.array(z.string()).default([]),
 
-  // Program
-  program: z.enum(PROGRAMS as unknown as [string, ...string[]]),
+  // Program — validated against the Programs module rather than a fixed list.
+  program: z.string().min(1, 'Select a program'),
   intake: z.string().trim().min(2, 'Intake is required'),
   scholarshipInterest: z.boolean(),
 
