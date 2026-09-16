@@ -15,6 +15,7 @@ urlpatterns = [
     # API
     path("api/auth/", include("apps.authentication.api.urls")),
     path("api/auth/", include("apps.email_verification.api.urls")),
+    path("api/programs/", include("apps.programs.api.urls")),
     # API Documentation
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path(

@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     # Local
     "apps.authentication",
     "apps.email_verification",
+    "apps.programs",
 ]
 
 MIDDLEWARE = [
