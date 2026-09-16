@@ -63,7 +63,7 @@ src/
   api/          service layer (mock now, HTTP later)
   components/
     admissions/ dashboard/ notifications/ settings/   module components
-    layout/     Sidebar, Topbar, PageHeader, crest
+    layout/     Sidebar, Topbar, PageHeader, Logo
     shared/     DataTable, Modal, SidePanel, ConfirmDialog, StatusBadge, Can, Toaster
     ui/         headless primitives
   context/      AuthContext, ToastContext
@@ -76,6 +76,18 @@ src/
   types/        shared interfaces
   validation/   zod schemas
 ```
+
+## Brand artwork
+
+`public/logo.png` is the master lockup. The four transparent variants under `src/assets/brand`
+(crest/lockup × brand/reversed) are generated from it, together with `public/favicon.png`:
+
+```bash
+python3 scripts/build-brand-assets.py
+```
+
+Render them through `<Logo />`; use `tone="light"` on maroon surfaces, and prefer `variant="crest"`
+below roughly 60px tall, where the lockup's tagline stops being legible.
 
 ## Replacing the mock data
 
