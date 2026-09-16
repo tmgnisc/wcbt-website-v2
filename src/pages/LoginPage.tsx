@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { AlertTriangle, ArrowLeft, Eye, EyeOff, Lock, Mail, MailCheck, ShieldAlert } from 'lucide-react';
@@ -19,7 +19,6 @@ type PanelStep = 'login' | 'forgot' | 'sent';
 
 export function LoginPage() {
   const { isAuthenticated, login } = useAuth();
-  const navigate = useNavigate();
   const location = useLocation();
   const [step, setStep] = useState<PanelStep>('login');
   const [showPassword, setShowPassword] = useState(false);
@@ -46,7 +45,6 @@ export function LoginPage() {
     setError(null);
     try {
       await login(values);
-      navigate('/dashboard', { replace: true });
     } catch (caught) {
       setAttempts((current) => current + 1);
       setError((caught as Error).message);

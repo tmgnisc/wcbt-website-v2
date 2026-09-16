@@ -69,14 +69,16 @@ export function DashboardPage() {
 
     const staffEvents = staff
       .flatMap((member) =>
-        member.activity.slice(0, 1).map((entry) => ({
-          id: `stf-${entry.id}`,
-          icon: Users,
-          text: `${member.fullName} — ${entry.action}`,
-          meta: entry.actor,
-          timestamp: entry.timestamp,
-          to: `/staff/${member.id}`,
-        })),
+        (Array.isArray(member.activity) ? member.activity : [])
+          .slice(0, 1)
+          .map((entry) => ({
+            id: `stf-${entry.id}`,
+            icon: Users,
+            text: `${member.fullName} — ${entry.action}`,
+            meta: entry.actor,
+            timestamp: entry.timestamp,
+            to: `/staff/${member.id}`,
+          })),
       )
       .slice(0, 4);
 
@@ -88,6 +90,8 @@ export function DashboardPage() {
   const upcomingTests = admissions
     .filter((item) => item.testStatus === 'Scheduled')
     .slice(0, 4);
+
+  const trendData = useMemo(() => (Array.isArray(trend) ? trend : []), [trend]);
 
   return (
     <>
@@ -139,12 +143,12 @@ export function DashboardPage() {
               View all
             </Link>
           </header>
-          {trend.length === 0 ? (
+          {trendData.length === 0 ? (
             <Skeleton className="h-64 w-full" />
           ) : (
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={trend} barGap={4}>
+                <BarChart data={trendData} barGap={4}>
                   <XAxis
                     dataKey="month"
                     tickLine={false}

@@ -3,6 +3,19 @@ const BASE_URL = import.meta.env.VITE_API_URL ?? '/api';
 let accessToken: string | null = null;
 let refreshToken: string | null = null;
 
+function unwrap<T>(json: unknown): T {
+  if (json && typeof json === 'object') {
+    const obj = json as Record<string, unknown>;
+    if ('results' in obj && Array.isArray(obj.results)) {
+      return obj.results as T;
+    }
+    if ('data' in obj && typeof obj.data === 'object') {
+      return obj.data as T;
+    }
+  }
+  return json as T;
+}
+
 export function setTokens(access: string, refresh: string) {
   accessToken = access;
   refreshToken = refresh;
@@ -27,8 +40,9 @@ async function refreshAccessToken(): Promise<boolean> {
     });
     if (!res.ok) return false;
     const data = await res.json();
-    accessToken = data.access;
-    return true;
+    const unwrapped = unwrap<{ access?: string; token?: string }>(data);
+    accessToken = unwrapped.access ?? unwrapped.token ?? null;
+    return Boolean(accessToken);
   } catch {
     return false;
   }
@@ -63,7 +77,7 @@ export async function request<T>(
       }
       return retryResponse.status === 204
         ? (undefined as T)
-        : retryResponse.json();
+        : unwrap<T>(await retryResponse.json());
     }
   }
 
@@ -72,7 +86,24 @@ export async function request<T>(
     throw new Error(body.detail ?? 'Something went wrong. Please try again.');
   }
 
-  return response.status === 204 ? (undefined as T) : response.json();
+  return response.status === 204 ? (undefined as T) : unwrap<T>(await response.json());
+}
+
+export async function requestRaw(
+  path: string,
+  init: RequestInit = {},
+): Promise<unknown> {
+  const headers: Record<string, string> = {
+    'Content-Type': 'application/json',
+    ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),
+    ...(init.headers as Record<string, string>),
+  };
+  const response = await fetch(`${BASE_URL}${path}`, { ...init, headers });
+  if (!response.ok) {
+    const body = await response.json().catch(() => ({}));
+    throw new Error(body.detail ?? 'Something went wrong.');
+  }
+  return response.json();
 }
 
 export async function uploadFile(file: File): Promise<{

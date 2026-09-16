@@ -31,7 +31,12 @@ export const useAdmissionsStore = create<AdmissionsState>()((set, get) => ({
     set({ loading: true, error: null });
     try {
       const [items, trend] = await Promise.all([api.fetchAdmissions(), api.fetchAdmissionsTrend()]);
-      set({ items, trend, loading: false, loaded: true });
+      set({
+        items: Array.isArray(items) ? items : [],
+        trend: Array.isArray(trend) ? trend : [],
+        loading: false,
+        loaded: true,
+      });
     } catch (error) {
       set({ loading: false, error: (error as Error).message });
     }

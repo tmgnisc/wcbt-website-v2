@@ -44,6 +44,14 @@ function readStoredRefresh(): string | null {
   }
 }
 
+function clearAllAuth() {
+  clearTokens();
+  localStorage.removeItem(USER_KEY);
+  localStorage.removeItem(REFRESH_KEY);
+  sessionStorage.removeItem(USER_KEY);
+  sessionStorage.removeItem(REFRESH_KEY);
+}
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<AuthUser | null>(readStoredUser);
 
@@ -51,9 +59,26 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const storedRefresh = readStoredRefresh();
     if (!storedRefresh) return;
 
-    setTokens('', storedRefresh);
-    authApi
-      .verifySession()
+    const BASE_URL = import.meta.env.VITE_API_URL ?? '/api';
+    fetch(`${BASE_URL}/auth/refresh/`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ refresh: storedRefresh }),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error('Refresh failed');
+        return res.json();
+      })
+      .then((data) => {
+        setTokens(data.access, storedRefresh);
+        return fetch(`${BASE_URL}/auth/me/`, {
+          headers: { Authorization: `Bearer ${data.access}` },
+        });
+      })
+      .then((res) => {
+        if (!res.ok) throw new Error('Session verify failed');
+        return res.json();
+      })
       .then((freshUser) => {
         setUser(freshUser);
         const storage = localStorage.getItem(REFRESH_KEY)
@@ -62,34 +87,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         storage.setItem(USER_KEY, JSON.stringify(freshUser));
       })
       .catch(() => {
-        clearTokens();
-        localStorage.removeItem(USER_KEY);
-        localStorage.removeItem(REFRESH_KEY);
-        sessionStorage.removeItem(USER_KEY);
-        sessionStorage.removeItem(REFRESH_KEY);
+        clearAllAuth();
         setUser(null);
       });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const login = useCallback(async (credentials: Credentials) => {
-    const { user, access, refresh } = await authApi.login(credentials);
+    const { user, refresh } = await authApi.login(credentials);
 
     const store = credentials.remember ? localStorage : sessionStorage;
     store.setItem(USER_KEY, JSON.stringify(user));
     store.setItem(REFRESH_KEY, refresh);
 
-    setTokens(access, refresh);
     setUser(user);
     return user;
   }, []);
 
   const logout = useCallback(() => {
-    clearTokens();
-    localStorage.removeItem(USER_KEY);
-    localStorage.removeItem(REFRESH_KEY);
-    sessionStorage.removeItem(USER_KEY);
-    sessionStorage.removeItem(REFRESH_KEY);
+    clearAllAuth();
     setUser(null);
   }, []);
 

@@ -26,7 +26,12 @@ export const useStaffStore = create<StaffState>()((set, get) => ({
     if (get().loading || (get().loaded && !force)) return;
     set({ loading: true, error: null });
     try {
-      const items = await api.fetchStaff();
+      const raw = await api.fetchStaff();
+      const items = raw.map((m) => ({
+        ...m,
+        activity: Array.isArray(m.activity) ? m.activity : [],
+        documents: Array.isArray(m.documents) ? m.documents : [],
+      }));
       set({ items, loading: false, loaded: true });
     } catch (error) {
       set({ loading: false, error: (error as Error).message });

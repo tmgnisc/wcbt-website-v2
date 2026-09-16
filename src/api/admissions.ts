@@ -1,5 +1,5 @@
 import type { Admission } from '@/types/admission';
-import { request } from './client';
+import { request, requestRaw } from './client';
 
 type AdmissionTrend = { month: string; applications: number; enrolled: number }[];
 
@@ -7,8 +7,23 @@ export function fetchAdmissions(): Promise<Admission[]> {
   return request<Admission[]>('/admissions/');
 }
 
-export function fetchAdmissionsTrend(): Promise<AdmissionTrend> {
-  return request<AdmissionTrend>('/admissions/trend/');
+export async function fetchAdmissionsTrend(): Promise<AdmissionTrend> {
+  const json = await requestRaw('/admissions/trend/');
+  const data = json && typeof json === 'object' && 'data' in json
+    ? (json as Record<string, unknown>).data
+    : json;
+  if (Array.isArray(data)) return data;
+  if (data && typeof data === 'object' && 'daily' in data) {
+    const daily = (data as Record<string, unknown>).daily;
+    if (Array.isArray(daily)) {
+      return (daily as Array<Record<string, unknown>>).map((d) => ({
+        month: String(d.date ?? ''),
+        applications: Number(d.count ?? 0),
+        enrolled: Number(d.enrolled ?? 0),
+      }));
+    }
+  }
+  return [];
 }
 
 export function createAdmission(admission: Admission): Promise<Admission> {
