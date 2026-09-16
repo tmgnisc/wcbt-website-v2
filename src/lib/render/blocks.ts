@@ -1,6 +1,6 @@
 /** Renders scraped content blocks (content/*.json) with the design template's component markup. */
-import { IMAGES } from '@/config/images';
-import { CONTACT, PLACEHOLDER, PLACEHOLDER_WIDE } from '@/config/site';
+import { FALLBACK, imageFor } from '@/config/images';
+import { CONTACT } from '@/config/site';
 import type { PageDef } from '@/config/navigation';
 import type { Block, FormSpec, Item, Link, Quote } from '@/types/content';
 
@@ -51,12 +51,12 @@ export function resolveHref(href: string | null | undefined, text: string | null
   return '#';
 }
 
-/** A real photo when one is configured for this alt text (src/config/images.ts), otherwise a placeholder. */
-export function img(alt: string, cls = 'u-w-full img', wide = false): string {
-  const photo = IMAGES[alt];
-  const src = photo?.src ?? (wide ? PLACEHOLDER_WIDE : PLACEHOLDER);
-  const style = photo?.position ? ` style="object-position: ${photo.position};"` : '';
-  return `<img alt="${e(alt)}" class="${cls}" loading="lazy" src="${src}"${style}/>`;
+/** The photo configured for this alt text (src/config/images.ts). */
+export function img(alt: string, cls = 'u-w-full img'): string {
+  const photo = imageFor(alt);
+  const style = photo.position ? ` style="object-position: ${photo.position};"` : '';
+  const fallback = photo.src === FALLBACK ? '' : ` onerror="this.onerror=null;this.src='${FALLBACK}'"`;
+  return `<img alt="${e(alt)}" class="${cls}" loading="lazy" src="${photo.src}"${style}${fallback}/>`;
 }
 
 function paragraphs(paras: string[], largeFirst = false): string {
@@ -270,17 +270,32 @@ function contactDetails(): string {
   );
 }
 
-/** Closing call to action: the template's "get in touch" image band. */
+const icon = (name: string) => `<svg class="icon" focusable="false" aria-hidden="true"><use xlink:href="${SPRITE}#feather--${name}"></use></svg>`;
+
+function contactRow(name: string, label: string, value: string): string {
+  return `<li class="wcbt-cta__contact"><span class="wcbt-cta__icon">${icon(name)}</span><span><span class="wcbt-cta__label">${label}</span>${value}</span></li>`;
+}
+
+/** Closing call to action: copy and buttons on a brand panel, with admissions contact details beside it. */
 function ctaBand(b: Block, pages: Pages): string {
+  const actions = b.links
+    .map((link, i) => {
+      const cls = i === 0 ? 'btn btn-light' : 'btn btn-outline-light';
+      return `<a class="${cls}" href="${e(resolveHref(link.href, link.text, pages))}">${e(link.text)}${i === 0 ? ARROW : ''}</a>`;
+    })
+    .join('');
+  const phones = CONTACT.phones.map((p) => `<a href="tel:${p}">${p}</a>`).join(', ');
   return (
-    `<div class="landing-page-section landing-page-section--get-in-touch u-breakout u-py-4 md:u-py-10 lg:u-py-16 ` +
-    `landing-page-section--image u-bg-cover u-bg-bottom u-text-white has-dark-bg" ` +
-    `style="background-image: url('${PLACEHOLDER_WIDE}');"><div class="container u-o-5 u-relative u-z-1">` +
-    `<div class="row u-flex-col u-justify-between lg:u-flex-row u-items-center"><div class="u-o-5 col-lg-6">` +
-    `${eyebrow(b.eyebrow, true)}<h2 class="h2 u-mb-4">${e(b.heading)}</h2>${paragraphs(b.paras)}` +
-    `${buttons(b.links, pages, true)}</div>` +
-    `<div class="u-o-5 u-mt-4 lg:u-mt-0 col-lg-4">${contactDetails()}</div></div></div>` +
-    `<div class="landing-page-section__corner u-absolute u-pin-t u-pin-l landing-page-section__corner--left u-text-white"></div></div>`
+    `<div class="wcbt-cta u-breakout"><div class="container u-o-5"><div class="wcbt-cta__panel">` +
+    `<div class="wcbt-cta__copy">${b.eyebrow ? `<p class="wcbt-cta__eyebrow">${e(b.eyebrow)}</p>` : ''}` +
+    `<h2 class="h2 wcbt-cta__heading">${e(b.heading)}</h2>` +
+    b.paras.map((p) => `<p class="wcbt-cta__text">${e(p)}</p>`).join('') +
+    (actions ? `<div class="wcbt-cta__actions">${actions}</div>` : '') +
+    `</div><ul class="wcbt-cta__card u-list-reset">` +
+    contactRow('phone', 'Call admissions', phones) +
+    contactRow('mail', 'Email us', `<a href="mailto:${CONTACT.email}">${CONTACT.email}</a>`) +
+    contactRow('map-pin', 'Visit campus', e(CONTACT.address)) +
+    `</ul></div></div></div>`
   );
 }
 
@@ -290,7 +305,7 @@ function split(b: Block, pages: Pages, reverse = false, imageAlt: string | null 
   const dark = b.tone === 'dark';
   const groups = b.groups.map((g) => renderGroup(g, pages, dark)).join('');
   const alt = imageAlt || b.heading;
-  const ratio = IMAGES[alt]?.portrait ? 'embed-responsive-1by1' : 'embed-responsive-16by9';
+  const ratio = imageFor(alt).portrait ? 'embed-responsive-1by1' : 'embed-responsive-16by9';
   return section(
     `<div class="row u-flex-col u-justify-between lg:u-flex-row${order} u-items-center">` +
       `<div class="u-o-5 col-lg-5"><div class="u-relative u-z-1 u-shadow-media u-bg-grey-50 embed-responsive ` +

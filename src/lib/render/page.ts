@@ -13,6 +13,7 @@ import { buildBreadcrumb, buildFooter, buildMobileNav, buildPrimaryNav, buildSub
 import { $, ancestors, children, find, findAll, findParent, fragment, isAttached, parse, remove, serialize } from './dom';
 import { fillHero } from './hero';
 import { renderHomeBody } from './home';
+import { fillTemplateImages } from './images';
 import { isLorem, sweep } from './lorem';
 
 export interface ScriptTag {
@@ -100,6 +101,7 @@ export function renderPageHtml(path: string): string {
   const body = template === '01-homepage' ? renderHomeBody(main, bodyBlocks, PAGES) : renderBody(bodyBlocks, PAGES);
   replaceBody(main, hero, body);
   fillChromeText(soup);
+  fillTemplateImages(soup, path);
   // adjusts template-only course sections that the content body replaces
   for (const script of findAll(soup, 'script[src*="course-overview-adjust"]')) remove(script);
 
