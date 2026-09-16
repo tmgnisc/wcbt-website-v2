@@ -69,6 +69,13 @@ college_backend/
 │   │   │   └── urls.py
 │   │   ├── models.py
 │   │   └── migrations/
+│   ├── notifications/         # Notifications system
+│   │   ├── api/
+│   │   │   ├── serializers.py
+│   │   │   ├── views.py
+│   │   │   └── urls.py
+│   │   ├── models.py
+│   │   └── migrations/
 │   └── common/                # Shared utilities
 │       ├── responses.py
 │       ├── exceptions.py
@@ -80,7 +87,8 @@ college_backend/
 │   ├── test_otp.py
 │   ├── test_programs.py
 │   ├── test_staff.py
-│   └── test_admissions.py
+│   ├── test_admissions.py
+│   └── test_notifications.py
 ├── .env
 ├── .env.example
 ├── requirements.txt
@@ -163,6 +171,17 @@ college_backend/
 - Activity logging for all changes
 - Admission stages: Applied → Document Verification → Test/Interview → Result → Enrolled/Rejected
 
+### Phase 9: Notifications App
+
+- GET/POST `/api/notifications/` — List, create (Admin + SuperAdmin)
+- GET/PATCH/DELETE `/api/notifications/{id}/` — Detail, update, archive (Admin + SuperAdmin)
+- PATCH `/api/notifications/{id}/publish/` — Publish draft notification
+- PATCH `/api/notifications/{id}/read/` — Mark as read (any authenticated user)
+- POST `/api/notifications/bulk-action/` — Bulk publish/archive/delete
+- Categories: General, Academic, Admission, Urgent
+- Priority levels: Normal, High, Urgent
+- Status workflow: Draft → Published → Archived
+
 ---
 
 ## API Conventions
@@ -211,13 +230,13 @@ college_backend/
 | Programs (CRUD + validation) | 15 |
 | Staff (CRUD + permissions + toggle + activity) | 18 |
 | Admissions (CRUD + bulk + trend + convert) | 26 |
-| **Total** | **93** |
+| Notifications (CRUD + publish + bulk + mark read) | 19 |
+| **Total** | **112** |
 
 ---
 
 ## Pending Phases
 
-- [ ] Notifications app (CRUD + publish + bulk ops)
 - [ ] Settings app (single document resource)
 - [ ] File upload endpoint
 - [ ] Dashboard summary endpoint
