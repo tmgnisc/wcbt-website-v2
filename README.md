@@ -96,3 +96,7 @@ below roughly 60px tall, where the lockup's tagline stops being legible.
 Every store calls into `src/api/*.ts`, which currently resolves seeded arrays through
 `request()` in `src/api/client.ts` after a short delay. Point those functions at `fetch` and the
 components, stores and types stay unchanged.
+
+[`API.md`](API.md) specifies the backend this expects: endpoints, payloads, enum values,
+permissions and a Django/DRF model sketch, plus the handful of frontend changes that a real API
+forces (uploads, server-generated ids, JWT session checks).
