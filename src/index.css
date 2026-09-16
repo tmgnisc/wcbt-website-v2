@@ -1,4 +1,52 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --color-wcbt-maroon: #8b1a2b;
+  --color-wcbt-maroon-dark: #6e1420;
+  --color-wcbt-maroon-light: #b23a4c;
+  --color-wcbt-cream: #f5f0ee;
+  --color-wcbt-surface: #ffffff;
+  --color-wcbt-ink: #1e1e1e;
+  --color-wcbt-muted: #6b7280;
+  --color-wcbt-success: #2f855a;
+  --color-wcbt-warning: #b7791f;
+  --color-wcbt-danger: #c53030;
+
+  --radius-xl: 12px;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
 @layer base {
-  body { @apply bg-cream text-slate-900; }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-wcbt-cream text-wcbt-ink font-sans antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-wcbt-maroon ring-offset-1;
+  }
+}
+
+@layer components {
+  .wcbt-card {
+    @apply bg-wcbt-surface rounded-xl shadow-sm border border-black/5;
+  }
+
+  .wcbt-label {
+    @apply text-xs font-medium tracking-wide uppercase text-wcbt-muted;
+  }
+}
+
+/* Circuit-node motif echoing the crest, used behind the login panel. */
+.wcbt-circuit {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.35) 1px, transparent 0),
+    linear-gradient(0deg, transparent 47%, rgba(255, 255, 255, 0.08) 48%, transparent 49%);
+  background-size:
+    28px 28px,
+    28px 28px;
 }

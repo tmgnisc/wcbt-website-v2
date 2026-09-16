@@ -1,0 +1,38 @@
+---
+description: WCBT Admin Portal conventions
+alwaysApply: true
+---
+
+You are building the WCBT Admin Portal.
+Stack: React 19 + Vite + TypeScript + React Router + Tailwind CSS v4 + Lucide icons.
+This is a client-side React SPA — no Next.js, no server components, no app router.
+
+Brand colours are declared as Tailwind v4 theme tokens in `src/index.css` (`--color-wcbt-*`).
+Always use the `wcbt-*` colour utilities (`bg-wcbt-maroon`, `text-wcbt-muted`, `bg-wcbt-maroon-dark`,
+…) instead of raw hex values or default Tailwind colours like `red-800`. Chart colours come from
+`src/lib/theme.ts`, which mirrors the same tokens.
+
+UI primitives are hand-rolled and headless (no Radix, no shadcn/ui): `src/components/ui`
+(Button, Field/Input/Select/Textarea/Checkbox/Switch/Segmented, Tabs, Dropdown, Overlay, Badge,
+Avatar, Skeleton, FileDrop, TagInput, RichTextEditor). Reuse them rather than writing new markup.
+
+Every list view (Notifications, Staff, Admissions, Settings tables) must reuse the shared
+`<DataTable />`; do not duplicate table markup per module.
+Every destructive action must go through `<ConfirmDialog />`, and every create/update/delete must
+raise a toast via `useToast()`.
+Role gating goes through `<Can permission="…" />`, which reads `AuthContext`; permissions live in
+`src/lib/permissions.ts`.
+
+State: React Context for auth and toasts; Zustand stores in `src/store` for module data
+(notifications, admissions, staff, settings). Do not introduce Redux.
+Mock data lives in `src/data/*.ts`, typed by `src/types/*.ts`, and is always reached through the
+thin service layer in `src/api/*.ts` so it can be swapped for real HTTP calls without touching
+component props.
+Zod schemas live in `src/validation/*.ts` and pair with react-hook-form.
+
+Routing lives in `src/App.tsx` using `<Routes>`/`<Route>`, with `<ProtectedRoute />` wrapping
+everything under `<DashboardLayout />` and `<ProtectedRoute adminOnly />` for admin-only routes.
+Page components are lazy-loaded; keep new heavy pages lazy too.
+
+Accessibility is not optional: every interactive element is keyboard reachable, uses
+`focus-visible:ring-2 ring-wcbt-maroon`, and never places grey text on maroon.

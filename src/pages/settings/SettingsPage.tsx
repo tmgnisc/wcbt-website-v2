@@ -1,132 +1,425 @@
-import { useState } from 'react'
-import { getAll, save } from '../../data/store'
+import { useEffect, useState } from 'react';
+import {
+  Bell,
+  Building2,
+  Database,
+  Download,
+  Palette,
+  ShieldCheck,
+  Users,
+} from 'lucide-react';
+import { PageHeader } from '@/components/layout/PageHeader';
+import { SettingsSection } from '@/components/settings/SettingsSection';
+import { UsersRolesPanel } from '@/components/settings/UsersRolesPanel';
+import { CatalogPanel } from '@/components/settings/CatalogPanel';
+import { DataTable, type Column } from '@/components/shared/DataTable';
+import { WcbtCrest } from '@/components/layout/WcbtCrest';
+import { Button } from '@/components/ui/Button';
+import { Checkbox, Field, Input, Select, Switch } from '@/components/ui/Field';
+import { ChipSelect } from '@/components/ui/TagInput';
+import { Tabs } from '@/components/ui/Tabs';
+import { Skeleton } from '@/components/ui/Skeleton';
+import { useToast } from '@/context/ToastContext';
+import { useSettingsStore } from '@/store/settings';
+import { NOTIFICATION_AUDIENCES, type NotificationAudience } from '@/types/notification';
+import type { AuditLogEntry } from '@/types/settings';
+import { WCBT_COLORS } from '@/lib/theme';
+import { downloadCsv, formatDateTime } from '@/lib/utils';
 
-export default function SettingsPage() {
-  const [tab, setTab] = useState('general')
-  const [settings, setSettings] = useState(() => {
-    try { return JSON.parse(localStorage.getItem('wcbt-settings')) || {} } catch { return {} }
-  })
-  const update = (patch) => { const next={...settings,...patch}; setSettings(next); localStorage.setItem('wcbt-settings', JSON.stringify(next)) }
+const TABS = [
+  { value: 'general', label: 'General', icon: <Building2 className="h-4 w-4" aria-hidden="true" /> },
+  { value: 'users', label: 'Users & Roles', icon: <Users className="h-4 w-4" aria-hidden="true" /> },
+  { value: 'catalog', label: 'Programs & Departments', icon: <Building2 className="h-4 w-4" aria-hidden="true" /> },
+  { value: 'notifications', label: 'Notifications', icon: <Bell className="h-4 w-4" aria-hidden="true" /> },
+  { value: 'appearance', label: 'Appearance', icon: <Palette className="h-4 w-4" aria-hidden="true" /> },
+  { value: 'security', label: 'Security', icon: <ShieldCheck className="h-4 w-4" aria-hidden="true" /> },
+  { value: 'data', label: 'Data & Backup', icon: <Database className="h-4 w-4" aria-hidden="true" /> },
+];
 
-  const TABS = [
-    { id:'general', label:'General', icon:'ph-building' },
-    { id:'programs', label:'Programs & Depts', icon:'ph-books' },
-    { id:'users', label:'Users & Roles', icon:'ph-users' },
-    { id:'notifications', label:'Notification Settings', icon:'ph-bell' },
-    { id:'security', label:'Security', icon:'ph-shield' },
-  ]
+const SWATCHES: { name: string; value: string; token: string }[] = [
+  { name: 'Maroon', value: WCBT_COLORS.maroon, token: 'wcbt-maroon' },
+  { name: 'Maroon dark', value: WCBT_COLORS.maroonDark, token: 'wcbt-maroon-dark' },
+  { name: 'Maroon light', value: WCBT_COLORS.maroonLight, token: 'wcbt-maroon-light' },
+  { name: 'Cream', value: WCBT_COLORS.cream, token: 'wcbt-cream' },
+  { name: 'Ink', value: WCBT_COLORS.ink, token: 'wcbt-ink' },
+  { name: 'Success', value: WCBT_COLORS.success, token: 'wcbt-success' },
+  { name: 'Warning', value: WCBT_COLORS.warning, token: 'wcbt-warning' },
+  { name: 'Danger', value: WCBT_COLORS.danger, token: 'wcbt-danger' },
+];
 
-  return (
-    <div>
-      <div className="mb-4" style={{ borderBottom:'2px solid #F0EBEC', paddingBottom:'1rem' }}>
-        <h1 className="fw-bold mb-0" style={{ color:'#8B1A2B', fontSize:22, textTransform:'uppercase', letterSpacing:'-.02em' }}>Settings</h1>
-        <p className="mb-0" style={{ color:'#6B7280', fontSize:13 }}>Manage college configuration</p>
-      </div>
+export function SettingsPage() {
+  const { toast } = useToast();
+  const [tab, setTab] = useState('general');
 
-      <div className="d-flex gap-2 mb-4 flex-wrap">
-        {TABS.map(t => (
-          <button key={t.id} onClick={()=>setTab(t.id)}
-                  className={`btn btn-sm fw-semibold d-flex align-items-center gap-1 ${tab===t.id?'text-white':''}`}
-                  style={{ background: tab===t.id?'#8B1A2B':'#F5F5F5', color: tab===t.id?'#fff':'#1E1E1E', borderRadius:8, fontSize:12.5, border:'1px solid #E5E0E1' }}>
-            <i className={`ph ${t.icon}`} /> {t.label}
-          </button>
-        ))}
-      </div>
+  const settings = useSettingsStore((state) => state.settings);
+  const loading = useSettingsStore((state) => state.loading);
+  const saving = useSettingsStore((state) => state.saving);
+  const load = useSettingsStore((state) => state.load);
+  const patch = useSettingsStore((state) => state.patch);
+  const save = useSettingsStore((state) => state.save);
 
-      <div className="card p-4" style={{ maxWidth:700 }}>
-        {tab==='general' && <General settings={settings} update={update} />}
-        {tab==='programs' && <Programs />}
-        {tab==='users' && <Users />}
-        {tab==='notifications' && <NotificationSettings settings={settings} update={update} />}
-        {tab==='security' && <Security settings={settings} update={update} />}
-      </div>
-    </div>
-  )
-}
+  useEffect(() => {
+    void load();
+  }, [load]);
 
-function General({ settings, update }) {
-  const [form, setForm] = useState({
-    collegeName: settings.collegeName || 'WhiteHouse College of Business & Technology',
-    campus: settings.campus || 'Birtamod Campus',
-    tagline: settings.tagline || 'Learn. Innovate. Lead.',
-    address: settings.address || 'Birtamod, Jhapa, Nepal',
-    email: settings.email || 'info@wcbt.edu.np',
-    phone: settings.phone || '+977-23-540001',
-    session: settings.session || '2025/26',
-  })
-  const saveForm = () => update(form)
-  return (
-    <>
-      <h6 className="fw-bold mb-3" style={{ color:'#8B1A2B' }}>General Settings</h6>
-      {[ ['College Name','collegeName'],['Campus Name','campus'],['Tagline','tagline'],['Address','address'],['Contact Email','email','email'],['Phone','phone'],['Academic Session','session']].map(([label,key,type]) => (
-        <div className="mb-3" key={key}>
-          <label className="form-label">{label}</label>
-          <input type={type||'text'} className="form-control" value={form[key]||''} onChange={e=>setForm({...form,[key]:e.target.value})} />
+  const handleSave = async () => {
+    await save();
+    toast({ title: 'Settings saved' });
+  };
+
+  const auditColumns: Column<AuditLogEntry>[] = [
+    { key: 'user', header: 'User', sortable: true, accessor: (row) => row.user },
+    { key: 'action', header: 'Action', accessor: (row) => row.action },
+    { key: 'module', header: 'Module', sortable: true, accessor: (row) => row.module },
+    {
+      key: 'timestamp',
+      header: 'Timestamp',
+      sortable: true,
+      accessor: (row) => row.timestamp,
+      render: (row) => <span className="text-xs text-wcbt-muted">{formatDateTime(row.timestamp)}</span>,
+    },
+    {
+      key: 'ip',
+      header: 'IP',
+      accessor: (row) => row.ip,
+      render: (row) => <span className="font-mono text-xs text-wcbt-muted">{row.ip}</span>,
+    },
+  ];
+
+  if (loading || !settings) {
+    return (
+      <>
+        <PageHeader title="Settings" breadcrumb={[{ label: 'Home', to: '/dashboard' }, { label: 'Settings' }]} />
+        <div className="wcbt-card space-y-4 p-6">
+          <Skeleton className="h-8 w-48" />
+          <Skeleton className="h-64 w-full" />
         </div>
-      ))}
-      <button onClick={saveForm} className="btn text-white fw-semibold" style={{ background:'#8B1A2B', borderRadius:8, fontSize:13 }}>Save Settings</button>
-    </>
-  )
-}
+      </>
+    );
+  }
 
-function Programs() {
-  const programs = [
-    { id:'p1', name:'Bachelor of Information Technology (BIT)', code:'BIT', duration:'4 Years' },
-    { id:'p2', name:'B.Tech Ed IT', code:'BTECH-IT', duration:'4 Years' },
-  ]
-  const depts = ['BIT','B.Tech Ed IT','Administration','Library','Accounts']
+  const { general, notifications, security, auditLog } = settings;
+
   return (
     <>
-      <h6 className="fw-bold mb-3" style={{ color:'#8B1A2B' }}>Programs & Departments</h6>
-      <p className="fw-semibold mb-1" style={{ fontSize:13 }}>Programs</p>
-      <table className="table table-sm mb-3" style={{ fontSize:12 }}><thead><tr><th>Code</th><th>Name</th><th>Duration</th></tr></thead>
-        <tbody>{programs.map(p=> <tr key={p.id}><td className="fw-bold">{p.code}</td><td>{p.name}</td><td>{p.duration}</td></tr>)}</tbody>
-      </table>
-      <p className="fw-semibold mb-1" style={{ fontSize:13 }}>Departments</p>
-      <div className="d-flex flex-wrap gap-2 mb-3">
-        {depts.map(d => <span key={d} className="badge" style={{ background:'#8B1A2B', color:'#fff', fontSize:11, padding:'5px 10px' }}>{d}</span>)}
+      <PageHeader
+        title="Settings"
+        description="Campus profile, access control and portal configuration."
+        breadcrumb={[{ label: 'Home', to: '/dashboard' }, { label: 'Settings' }]}
+      />
+
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-[220px_1fr]">
+        <aside className="wcbt-card p-2">
+          <Tabs items={TABS} value={tab} onChange={setTab} orientation="vertical" ariaLabel="Settings sections" />
+        </aside>
+
+        <div>
+          {tab === 'general' && (
+            <SettingsSection
+              title="General"
+              description="Identity shown across the portal and public site."
+              onSave={handleSave}
+              saving={saving}
+            >
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <Field label="College name" htmlFor="collegeName" className="md:col-span-2">
+                  <Input
+                    id="collegeName"
+                    value={general.collegeName}
+                    onChange={(event) => patch('general', { ...general, collegeName: event.target.value })}
+                  />
+                </Field>
+                <Field label="Tagline" htmlFor="tagline">
+                  <Input
+                    id="tagline"
+                    value={general.tagline}
+                    onChange={(event) => patch('general', { ...general, tagline: event.target.value })}
+                  />
+                </Field>
+                <Field label="Campus" htmlFor="campusName">
+                  <Input
+                    id="campusName"
+                    value={general.campusName}
+                    onChange={(event) => patch('general', { ...general, campusName: event.target.value })}
+                  />
+                </Field>
+                <Field label="Address" htmlFor="address" className="md:col-span-2">
+                  <Input
+                    id="address"
+                    value={general.address}
+                    onChange={(event) => patch('general', { ...general, address: event.target.value })}
+                  />
+                </Field>
+                <Field label="Phone" htmlFor="phone">
+                  <Input
+                    id="phone"
+                    value={general.phone}
+                    onChange={(event) => patch('general', { ...general, phone: event.target.value })}
+                  />
+                </Field>
+                <Field label="Email" htmlFor="contactEmail">
+                  <Input
+                    id="contactEmail"
+                    type="email"
+                    value={general.email}
+                    onChange={(event) => patch('general', { ...general, email: event.target.value })}
+                  />
+                </Field>
+                <Field label="Website" htmlFor="website">
+                  <Input
+                    id="website"
+                    value={general.website}
+                    onChange={(event) => patch('general', { ...general, website: event.target.value })}
+                  />
+                </Field>
+                <Field label="Academic session" htmlFor="academicSession">
+                  <Select
+                    id="academicSession"
+                    value={general.academicSession}
+                    onChange={(event) => patch('general', { ...general, academicSession: event.target.value })}
+                  >
+                    {['2025 / 2026', '2026 / 2027', '2027 / 2028'].map((session) => (
+                      <option key={session} value={session}>
+                        {session}
+                      </option>
+                    ))}
+                  </Select>
+                </Field>
+              </div>
+
+              <div className="mt-6">
+                <p className="wcbt-label mb-2">Logo preview</p>
+                <div className="flex flex-wrap gap-3">
+                  <div className="flex h-24 w-40 items-center justify-center rounded-xl bg-wcbt-cream">
+                    <WcbtCrest className="h-12 w-12 text-wcbt-maroon" />
+                  </div>
+                  <div className="flex h-24 w-40 items-center justify-center rounded-xl bg-wcbt-maroon">
+                    <WcbtCrest className="h-12 w-12 text-white" />
+                  </div>
+                </div>
+              </div>
+            </SettingsSection>
+          )}
+
+          {tab === 'users' && (
+            <UsersRolesPanel settings={settings} onPatch={patch} onSave={handleSave} saving={saving} />
+          )}
+
+          {tab === 'catalog' && (
+            <CatalogPanel settings={settings} onPatch={patch} onSave={handleSave} saving={saving} />
+          )}
+
+          {tab === 'notifications' && (
+            <SettingsSection
+              title="Notification settings"
+              description="Defaults applied when a new notice is created."
+              onSave={handleSave}
+              saving={saving}
+            >
+              <div className="space-y-5">
+                <Field label="Default audience">
+                  <ChipSelect
+                    options={NOTIFICATION_AUDIENCES}
+                    value={notifications.defaultAudience as NotificationAudience[]}
+                    onChange={(value) => patch('notifications', { ...notifications, defaultAudience: value })}
+                    ariaLabel="Default audience"
+                  />
+                </Field>
+
+                <div className="space-y-3 rounded-xl border border-black/5 p-4">
+                  <Switch
+                    id="emailAlerts"
+                    checked={notifications.emailAlerts}
+                    onChange={(value) => patch('notifications', { ...notifications, emailAlerts: value })}
+                    label="Email auto-alerts"
+                    description="Email the audience whenever a notice is published."
+                  />
+                  <Switch
+                    id="smsAlerts"
+                    checked={notifications.smsAlerts}
+                    onChange={(value) => patch('notifications', { ...notifications, smsAlerts: value })}
+                    label="SMS auto-alerts"
+                    description="Send an SMS for Urgent priority notices only."
+                  />
+                </div>
+
+                <Field label="Digest frequency" htmlFor="digest">
+                  <Select
+                    id="digest"
+                    value={notifications.digestFrequency}
+                    onChange={(event) =>
+                      patch('notifications', {
+                        ...notifications,
+                        digestFrequency: event.target.value as typeof notifications.digestFrequency,
+                      })
+                    }
+                    className="sm:w-48"
+                  >
+                    {['Instant', 'Daily', 'Weekly'].map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </Select>
+                </Field>
+              </div>
+            </SettingsSection>
+          )}
+
+          {tab === 'appearance' && (
+            <SettingsSection
+              title="Appearance"
+              description="The WCBT palette is fixed by brand guidelines and cannot be edited here."
+            >
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                {SWATCHES.map((swatch) => (
+                  <div key={swatch.token} className="rounded-xl border border-black/5 p-3">
+                    <div
+                      className="h-12 w-full rounded-lg border border-black/5"
+                      style={{ backgroundColor: swatch.value }}
+                    />
+                    <p className="mt-2 text-sm font-medium text-wcbt-ink">{swatch.name}</p>
+                    <p className="font-mono text-[11px] text-wcbt-muted">{swatch.value}</p>
+                    <p className="font-mono text-[11px] text-wcbt-muted">{swatch.token}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <div className="overflow-hidden rounded-xl border border-black/5">
+                  <div className="flex h-10 items-center gap-2 bg-wcbt-maroon px-3 text-white">
+                    <WcbtCrest className="h-5 w-5" />
+                    <span className="text-sm font-semibold">WCBT Admin</span>
+                  </div>
+                  <p className="p-3 text-xs text-wcbt-muted">Sidebar logo placement</p>
+                </div>
+                <div className="overflow-hidden rounded-xl border border-black/5">
+                  <div className="flex h-10 items-center justify-center bg-wcbt-cream">
+                    <WcbtCrest className="h-5 w-5 text-wcbt-maroon" />
+                  </div>
+                  <p className="p-3 text-xs text-wcbt-muted">Login panel logo placement</p>
+                </div>
+              </div>
+            </SettingsSection>
+          )}
+
+          {tab === 'security' && (
+            <SettingsSection
+              title="Security"
+              description="Password policy and session rules for portal accounts."
+              onSave={handleSave}
+              saving={saving}
+            >
+              <div className="space-y-5">
+                <Field label="Minimum password length" htmlFor="minLength">
+                  <Input
+                    id="minLength"
+                    type="number"
+                    min={6}
+                    max={32}
+                    value={security.minPasswordLength}
+                    onChange={(event) =>
+                      patch('security', { ...security, minPasswordLength: Number(event.target.value) })
+                    }
+                    className="sm:w-32"
+                  />
+                </Field>
+
+                <fieldset className="space-y-2 rounded-xl border border-black/5 p-4">
+                  <legend className="wcbt-label px-1">Complexity requirements</legend>
+                  <Checkbox
+                    id="requireUppercase"
+                    label="Require an uppercase letter"
+                    checked={security.requireUppercase}
+                    onChange={(event) =>
+                      patch('security', { ...security, requireUppercase: event.target.checked })
+                    }
+                  />
+                  <Checkbox
+                    id="requireNumber"
+                    label="Require a number"
+                    checked={security.requireNumber}
+                    onChange={(event) => patch('security', { ...security, requireNumber: event.target.checked })}
+                  />
+                  <Checkbox
+                    id="requireSymbol"
+                    label="Require a symbol"
+                    checked={security.requireSymbol}
+                    onChange={(event) => patch('security', { ...security, requireSymbol: event.target.checked })}
+                  />
+                </fieldset>
+
+                <Field label="Session timeout" htmlFor="sessionTimeout">
+                  <Select
+                    id="sessionTimeout"
+                    value={String(security.sessionTimeout)}
+                    onChange={(event) =>
+                      patch('security', {
+                        ...security,
+                        sessionTimeout: Number(event.target.value) as 15 | 30 | 60,
+                      })
+                    }
+                    className="sm:w-48"
+                  >
+                    {[15, 30, 60].map((minutes) => (
+                      <option key={minutes} value={minutes}>
+                        {minutes} minutes
+                      </option>
+                    ))}
+                  </Select>
+                </Field>
+
+                <div className="rounded-xl border border-black/5 p-4">
+                  <Switch
+                    id="twoFactor"
+                    checked={security.twoFactorEnabled}
+                    onChange={(value) => patch('security', { ...security, twoFactorEnabled: value })}
+                    label="Two-factor authentication"
+                    description="Require a one-time code for Admin and Super Admin sign-ins."
+                  />
+                </div>
+              </div>
+            </SettingsSection>
+          )}
+
+          {tab === 'data' && (
+            <SettingsSection title="Data & backup" description="Export records and review the audit trail.">
+              <Button
+                variant="outline"
+                onClick={() => {
+                  downloadCsv(
+                    `wcbt-audit-log-${new Date().toISOString().slice(0, 10)}.csv`,
+                    auditLog.map((entry) => ({
+                      User: entry.user,
+                      Action: entry.action,
+                      Module: entry.module,
+                      Timestamp: entry.timestamp,
+                      IP: entry.ip,
+                    })),
+                  );
+                  toast({ title: 'Export started' });
+                }}
+              >
+                <Download className="h-4 w-4" aria-hidden="true" /> Export all data
+              </Button>
+
+              <div className="mt-5">
+                <p className="wcbt-label mb-2">Activity / audit log</p>
+                <DataTable
+                  columns={auditColumns}
+                  data={auditLog}
+                  rowKey={(row) => row.id}
+                  searchable
+                  searchPlaceholder="Search the audit log…"
+                  pageSize={8}
+                  caption="Audit log"
+                  empty={{ title: 'No activity recorded' }}
+                />
+              </div>
+            </SettingsSection>
+          )}
+        </div>
       </div>
     </>
-  )
-}
-
-function Users() {
-  const users = [
-    { id:'u1', name:'Admin User', email:'admin@wcbt.edu.np', role:'Super Admin', status:'Active' },
-    { id:'u2', name:'Staff Member', email:'staff@wcbt.edu.np', role:'Staff', status:'Active' },
-  ]
-  return (
-    <>
-      <h6 className="fw-bold mb-3" style={{ color:'#8B1A2B' }}>Users & Role Management</h6>
-      <table className="table table-sm" style={{ fontSize:12 }}><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th></tr></thead>
-        <tbody>{users.map(u=> <tr key={u.id}><td className="fw-semibold">{u.name}</td><td>{u.email}</td><td><span className="badge bg-secondary">{u.role}</span></td><td><span className="badge bg-success">{u.status}</span></td></tr>)}</tbody>
-      </table>
-      <p className="text-secondary mt-2" style={{ fontSize:12 }}>Role-based permissions: View, Add, Edit, Delete per module.</p>
-    </>
-  )
-}
-
-function NotificationSettings({ settings, update }) {
-  const [form, setForm] = useState({ emailAlerts: settings.emailAlerts ?? true, smsAlerts: settings.smsAlerts ?? false, defaultExpiry: settings.defaultExpiry || 30 })
-  const saveForm = () => update(form)
-  return (
-    <>
-      <h6 className="fw-bold mb-3" style={{ color:'#8B1A2B' }}>Notification Settings</h6>
-      <div className="form-check form-switch mb-2"><input className="form-check-input" type="checkbox" checked={form.emailAlerts} onChange={e=>setForm({...form,emailAlerts:e.target.checked})} /><label className="form-check-label" style={{ fontSize:13 }}>Enable Email Alerts</label></div>
-      <div className="form-check form-switch mb-2"><input className="form-check-input" type="checkbox" checked={form.smsAlerts} onChange={e=>setForm({...form,smsAlerts:e.target.checked})} /><label className="form-check-label" style={{ fontSize:13 }}>Enable SMS Alerts</label></div>
-      <div className="mb-3"><label className="form-label" style={{ fontSize:12.5 }}>Default Expiry Days</label><input type="number" className="form-control" style={{ maxWidth:120 }} value={form.defaultExpiry} onChange={e=>setForm({...form,defaultExpiry:+e.target.value})} /></div>
-      <button onClick={saveForm} className="btn text-white fw-semibold" style={{ background:'#8B1A2B', borderRadius:8, fontSize:13 }}>Save</button>
-    </>
-  )
-}
-
-function Security({ settings, update }) {
-  return (
-    <>
-      <h6 className="fw-bold mb-3" style={{ color:'#8B1A2B' }}>Security</h6>
-      <p className="mb-2" style={{ fontSize:13 }}><strong>Password Policy:</strong> Minimum 8 characters, at least one special character.</p>
-      <p className="mb-2" style={{ fontSize:13 }}><strong>Session Timeout:</strong> 30 minutes</p>
-      <div className="form-check form-switch mb-2"><input className="form-check-input" type="checkbox" disabled /><label className="form-check-label text-secondary" style={{ fontSize:13 }}>Two-Factor Authentication (coming soon)</label></div>
-    </>
-  )
+  );
 }

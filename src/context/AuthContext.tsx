@@ -1,33 +1,70 @@
-import { useState, useEffect, createContext, useContext, useCallback } from 'react'
+import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react';
+import * as authApi from '@/api/auth';
+import { hasPermission, isAdminRole, type Permission } from '@/lib/permissions';
+import type { AuthUser, Credentials, Role } from '@/types/auth';
 
-const AuthContext = createContext(null)
-export const useAuth = () => useContext(AuthContext)
+const STORAGE_KEY = 'wcbt.auth.user';
 
-const DEMO_USERS = [
-  { id:'u1', email:'admin@wcbt.edu.np', password:'admin123', name:'Admin User', role:'super-admin', initials:'AU' },
-  { id:'u2', email:'staff@wcbt.edu.np', password:'staff123', name:'Staff Member', role:'staff', initials:'SM' },
-]
+interface AuthContextValue {
+  user: AuthUser | null;
+  role: Role | undefined;
+  isAuthenticated: boolean;
+  isAdmin: boolean;
+  login: (credentials: Credentials) => Promise<AuthUser>;
+  logout: () => void;
+  can: (permission: Permission) => boolean;
+}
 
-export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(() => {
-    try { const s = localStorage.getItem('wcbt-session'); return s ? JSON.parse(s) : null } catch { return null }
-  })
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [attempts, setAttempts] = useState(0)
+const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
-  const login = useCallback(async (email, password) => {
-    setError(''); setLoading(true)
-    await new Promise(r => setTimeout(r, 800))
-    if (attempts >= 3) { setError('Account locked. Try again later.'); setLoading(false); return false }
-    const found = DEMO_USERS.find(u => u.email === email && u.password === password)
-    if (!found) { setAttempts(a => a + 1); setError('Invalid email or password'); setLoading(false); return false }
-    const session = { id: found.id, email: found.email, name: found.name, role: found.role, initials: found.initials }
-    localStorage.setItem('wcbt-session', JSON.stringify(session))
-    setUser(session); setLoading(false); setAttempts(0); return true
-  }, [attempts])
+function readStoredUser(): AuthUser | null {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY) ?? sessionStorage.getItem(STORAGE_KEY);
+    return raw ? (JSON.parse(raw) as AuthUser) : null;
+  } catch {
+    return null;
+  }
+}
 
-  const logout = () => { localStorage.removeItem('wcbt-session'); setUser(null) }
+export function AuthProvider({ children }: { children: ReactNode }) {
+  // Read the persisted session during initialisation so protected routes never flash the
+  // login redirect on a hard refresh.
+  const [user, setUser] = useState<AuthUser | null>(readStoredUser);
 
-  return <AuthContext.Provider value={{ user, login, logout, error, loading, attempts }}>{children}</AuthContext.Provider>
+  const login = useCallback(async (credentials: Credentials) => {
+    const authenticated = await authApi.login(credentials);
+    const store = credentials.remember ? localStorage : sessionStorage;
+    store.setItem(STORAGE_KEY, JSON.stringify(authenticated));
+    setUser(authenticated);
+    return authenticated;
+  }, []);
+
+  const logout = useCallback(() => {
+    localStorage.removeItem(STORAGE_KEY);
+    sessionStorage.removeItem(STORAGE_KEY);
+    setUser(null);
+  }, []);
+
+  const value = useMemo<AuthContextValue>(
+    () => ({
+      user,
+      role: user?.role,
+      isAuthenticated: Boolean(user),
+      isAdmin: isAdminRole(user?.role),
+      login,
+      logout,
+      can: (permission: Permission) => hasPermission(user?.role, permission),
+    }),
+    [user, login, logout],
+  );
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+}
+
+export function useAuth(): AuthContextValue {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error('useAuth must be used within an <AuthProvider />');
+  }
+  return context;
 }

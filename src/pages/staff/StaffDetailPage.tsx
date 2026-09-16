@@ -1,133 +1,249 @@
-import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
-import { getById, save } from '../../data/store'
+import { useEffect, useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Download, FileText, Pencil, UserCheck, UserX } from 'lucide-react';
+import { PageHeader } from '@/components/layout/PageHeader';
+import { ConfirmDialog } from '@/components/shared/ConfirmDialog';
+import { StatusBadge } from '@/components/shared/StatusBadge';
+import { Can } from '@/components/shared/Can';
+import { EmptyState } from '@/components/shared/EmptyState';
+import { Avatar } from '@/components/ui/Avatar';
+import { Button } from '@/components/ui/Button';
+import { Tabs } from '@/components/ui/Tabs';
+import { Skeleton } from '@/components/ui/Skeleton';
+import { useAuth } from '@/context/AuthContext';
+import { useToast } from '@/context/ToastContext';
+import { useStaffStore } from '@/store/staff';
+import { ROLE_LABELS } from '@/types/auth';
+import { formatCurrency, formatDate, formatDateTime, formatFileSize, formatRelativeTime } from '@/lib/utils';
 
-export default function StaffDetailPage() {
-  const { id } = useParams()
-  const navigate = useNavigate()
-  const [item, setItem] = useState(null)
-  useEffect(() => { const f = getById('staff', id); if(f) setItem(f) }, [id])
-  if (!item) return <div className="p-4 text-center text-muted">Not found</div>
+const TABS = [
+  { value: 'overview', label: 'Overview' },
+  { value: 'documents', label: 'Documents' },
+  { value: 'activity', label: 'Activity Log' },
+];
+
+function DetailRow({ label, value }: { label: string; value: React.ReactNode }) {
+  return (
+    <div>
+      <dt className="wcbt-label">{label}</dt>
+      <dd className="mt-0.5 text-sm text-wcbt-ink">{value}</dd>
+    </div>
+  );
+}
+
+export function StaffDetailPage() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const { user } = useAuth();
+  const [tab, setTab] = useState('overview');
+  const [statusOpen, setStatusOpen] = useState(false);
+
+  const items = useStaffStore((state) => state.items);
+  const loaded = useStaffStore((state) => state.loaded);
+  const load = useStaffStore((state) => state.load);
+  const setStatus = useStaffStore((state) => state.setStatus);
+
+  useEffect(() => {
+    void load();
+  }, [load]);
+
+  const member = items.find((item) => item.id === id);
+  const manager = items.find((item) => item.id === member?.reportingManagerId);
+
+  if (!loaded) {
+    return (
+      <div className="wcbt-card space-y-4 p-6">
+        <Skeleton className="h-20 w-full" />
+        <Skeleton className="h-40 w-full" />
+      </div>
+    );
+  }
+
+  if (!member) {
+    return (
+      <div className="wcbt-card">
+        <EmptyState
+          title="Staff member not found"
+          message="This record may have been deleted."
+          action={
+            <Link to="/staff">
+              <Button>Back to staff list</Button>
+            </Link>
+          }
+        />
+      </div>
+    );
+  }
 
   return (
-    <div className="min-vh-100 p-4 bg-page" style={{ backgroundColor: '#F8F9FA', fontFamily: "'Inter', sans-serif" }}>
-      <div className="max-w-4xl mx-auto">
-        {/* Top Navigation & Header */}
-        <div className="d-flex align-items-center justify-content-between mb-4">
-          <button
-            onClick={() => navigate('/staff')}
-            className="btn btn-link text-decoration-none p-0 text-secondary"
-            style={{ fontSize: 14, display: 'flex', alignItems: 'center', gap: 4 }}
-          >
-            <i className="ph ph-arrow-left"></i> Back to Staff List
-          </button>
-          <div className="d-flex gap-2">
-            <button className="btn btn-sm btn-outline-secondary px-3">Export PDF</button>
-            <button className="btn btn-sm" style={{ backgroundColor: '#8B1A2B', color: '#fff', border: 'none' }}>Edit Profile</button>
-          </div>
-        </div>
+    <>
+      <PageHeader
+        title={member.fullName}
+        breadcrumb={[
+          { label: 'Home', to: '/dashboard' },
+          { label: 'Staff', to: '/staff' },
+          { label: member.fullName },
+        ]}
+      />
 
-        {/* Profile Hero Section */}
-        <div className="card border-0 shadow-sm mb-4 overflow-hidden" style={{ borderRadius: '20px' }}>
-          <div style={{ background: 'linear-gradient(135deg, #8B1A2B 0%, #5A101D 100%)', height: '120px' }}></div>
-          <div className="card-body px-4 pb-4" style={{ marginTop: '-60px' }}>
-            <div className="d-flex align-items-end justify-content-between">
-              <div className="d-flex align-items-end gap-4">
-                <div
-                  className="bg-white shadow-sm d-flex align-items-center justify-content-center"
-                  style={{ width: '110px', height: '110px', borderRadius: '24px', border: '6px solid #fff', fontSize: '40px', fontWeight: 'bold', color: '#8B1A2B' }}
-                >
-                  {item.name.charAt(0)}
-                </div>
-                <div className="mb-2">
-                  <h1 className="fw-bold mb-1" style={{ fontSize: '28px', color: '#1A1A1A', letterSpacing: '-0.02em' }}>
-                    {item.name}
-                  </h1>
-                  <div className="d-flex align-items-center gap-2">
-                    <span className="text-secondary font-medium" style={{ fontSize: 15 }}>{item.designation}</span>
-                    <span className="text-muted" style={{ fontSize: 14 }}>•</span>
-                    <span className="badge rounded-pill px-3 py-1" style={{
-                      backgroundColor: item.status === 'Active' ? '#DCFCE7' : '#F3F4F6',
-                      color: item.status === 'Active' ? '#166534' : '#4B5563',
-                      fontSize: '12px', fontWeight: '600'
-                    }}>
-                      {item.status}
-                    </span>
-                  </div>
-                </div>
-              </div>
+      <section className="wcbt-card flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex items-center gap-4">
+          <Avatar name={member.fullName} src={member.photoUrl} size="lg" />
+          <div>
+            <h2 className="text-lg font-semibold tracking-tight text-wcbt-ink">{member.fullName}</h2>
+            <p className="text-sm text-wcbt-muted">
+              {member.designation} · {member.department}
+            </p>
+            <div className="mt-1.5 flex items-center gap-2">
+              <StatusBadge status={member.status} />
+              <span className="font-mono text-xs text-wcbt-muted">{member.staffId}</span>
             </div>
           </div>
         </div>
+        <div className="flex flex-wrap items-center gap-2">
+          <Can permission="staff:edit">
+            <Button variant="outline" onClick={() => navigate(`/staff/${member.id}/edit`)}>
+              <Pencil className="h-4 w-4" aria-hidden="true" /> Edit
+            </Button>
+          </Can>
+          <Can permission="staff:edit">
+            <Button variant="subtle" onClick={() => setStatusOpen(true)}>
+              {member.status === 'Active' ? (
+                <>
+                  <UserX className="h-4 w-4" aria-hidden="true" /> Deactivate
+                </>
+              ) : (
+                <>
+                  <UserCheck className="h-4 w-4" aria-hidden="true" /> Activate
+                </>
+              )}
+            </Button>
+          </Can>
+        </div>
+      </section>
 
-        <div className="row g-4">
-          {/* Main Information */}
-          <div className="col-lg-8">
-            <div className="card border-0 shadow-sm p-4" style={{ borderRadius: '20px' }}>
-              <h5 className="fw-bold mb-4" style={{ color: '#1A1A1A', fontSize: '18px' }}>Professional Details</h5>
+      <div className="mt-4 wcbt-card">
+        <Tabs items={TABS} value={tab} onChange={setTab} ariaLabel="Staff profile sections" className="px-4" />
 
-              <div className="row g-4">
-                <div className="col-md-6">
-                  <label className="text-muted small fw-medium text-uppercase mb-1 d-block" style={{ fontSize: 11, letterSpacing: '0.05em' }}>Department</label>
-                  <div className="fw-semibold text-dark" style={{ fontSize: 15 }}>{item.department}</div>
-                </div>
-                <div className="col-md-6">
-                  <label className="text-muted small fw-medium text-uppercase mb-1 d-block" style={{ fontSize: 11, letterSpacing: '0.05em' }}>Staff ID</label>
-                  <div className="fw-semibold text-dark" style={{ fontSize: 15 }}>{item.staffId}</div>
-                </div>
-                <div className="col-md-6">
-                  <label className="text-muted small fw-medium text-uppercase mb-1 d-block" style={{ fontSize: 11, letterSpacing: '0.05em' }}>Email Address</label>
-                  <div className="fw-semibold text-dark" style={{ fontSize: 15 }}>{item.email}</div>
-                </div>
-                <div className="col-md-6">
-                  <label className="text-muted small fw-medium text-uppercase mb-1 d-block" style={{ fontSize: 11, letterSpacing: '0.05em' }}>Phone Number</label>
-                  <div className="fw-semibold text-dark" style={{ fontSize: 15 }}>{item.phone}</div>
-                </div>
-                <div className="col-md-6">
-                  <label className="text-muted small fw-medium text-uppercase mb-1 d-block" style={{ fontSize: 11, letterSpacing: '0.05em' }}>Joining Date</label>
-                  <div className="fw-semibold text-dark" style={{ fontSize: 15 }}>{item.joiningDate}</div>
-                </div>
-                <div className="col-md-6">
-                  <label className="text-muted small fw-medium text-uppercase mb-1 d-block" style={{ fontSize: 11, letterSpacing: '0.05em' }}>Employment Type</label>
-                  <div className="fw-semibold text-dark" style={{ fontSize: 15 }}>{item.employmentType || '—'}</div>
-                </div>
-              </div>
+        <div className="p-5">
+          {tab === 'overview' && (
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              <section>
+                <h3 className="wcbt-label mb-3">Contact</h3>
+                <dl className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <DetailRow label="Email" value={member.email} />
+                  <DetailRow label="Phone" value={member.phone} />
+                  <DetailRow label="Address" value={member.address} />
+                  <DetailRow label="Date of birth" value={formatDate(member.dateOfBirth)} />
+                  <DetailRow label="Gender" value={member.gender} />
+                  <DetailRow label="Citizenship / ID" value={member.citizenshipNo} />
+                </dl>
+              </section>
+
+              <section>
+                <h3 className="wcbt-label mb-3">Employment</h3>
+                <dl className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <DetailRow label="Department" value={member.department} />
+                  <DetailRow label="Designation" value={member.designation} />
+                  <DetailRow label="Employment type" value={member.employmentType} />
+                  <DetailRow label="Joined" value={formatDate(member.joiningDate)} />
+                  <DetailRow label="Reporting manager" value={manager?.fullName ?? '—'} />
+                  <DetailRow
+                    label="Salary"
+                    value={
+                      <Can permission="staff:viewSalary" fallback={<span className="font-mono">••••••</span>}>
+                        {formatCurrency(member.salary)}
+                      </Can>
+                    }
+                  />
+                  <DetailRow label="Portal role" value={ROLE_LABELS[member.role]} />
+                  <DetailRow
+                    label="Login"
+                    value={member.loginEnabled ? 'Enabled' : 'Disabled'}
+                  />
+                </dl>
+              </section>
             </div>
-          </div>
+          )}
 
-          {/* Sidebar Information */}
-          <div className="col-lg-4">
-            <div className="card border-0 shadow-sm p-4" style={{ borderRadius: '20px' }}>
-              <h5 className="fw-bold mb-4" style={{ color: '#1A1A1A', fontSize: '18px' }}>Personal Details</h5>
+          {tab === 'documents' &&
+            (member.documents.length === 0 ? (
+              <EmptyState
+                icon={<FileText className="h-6 w-6" aria-hidden="true" />}
+                title="No documents uploaded"
+                message="CV, citizenship and certificates added on the edit form appear here."
+                action={
+                  <Can permission="staff:edit">
+                    <Button variant="outline" onClick={() => navigate(`/staff/${member.id}/edit`)}>
+                      Upload documents
+                    </Button>
+                  </Can>
+                }
+              />
+            ) : (
+              <ul className="divide-y divide-black/5 rounded-xl border border-black/5">
+                {member.documents.map((file) => (
+                  <li key={file.id} className="flex items-center gap-3 px-4 py-3">
+                    <FileText className="h-4 w-4 text-wcbt-maroon" aria-hidden="true" />
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-sm text-wcbt-ink">{file.name}</p>
+                      <p className="text-xs text-wcbt-muted">
+                        {formatFileSize(file.size)} · uploaded {formatDate(file.uploadedAt)}
+                      </p>
+                    </div>
+                    <a
+                      href={file.url ?? '#'}
+                      download={file.name}
+                      aria-label={`Download ${file.name}`}
+                      className="rounded-lg p-1.5 text-wcbt-muted hover:bg-wcbt-cream hover:text-wcbt-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-wcbt-maroon"
+                    >
+                      <Download className="h-4 w-4" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ))}
 
-              <div className="d-flex flex-column gap-4">
-                <div>
-                  <label className="text-muted small fw-medium text-uppercase mb-1 d-block" style={{ fontSize: 11, letterSpacing: '0.05em' }}>Reporting To</label>
-                  <div className="fw-semibold text-dark" style={{ fontSize: 15 }}>{item.reportingManager || '—'}</div>
-                </div>
-                <div>
-                  <label className="text-muted small fw-medium text-uppercase mb-1 d-block" style={{ fontSize: 11, letterSpacing: '0.05em' }}>Salary</label>
-                  <div className="fw-bold text-dark" style={{ fontSize: 16, color: '#8B1A2B' }}>
-                    {item.salary ? `NPR ${item.salary.toLocaleString()}` : '—'}
-                  </div>
-                </div>
-                <div>
-                  <label className="text-muted small fw-medium text-uppercase mb-1 d-block" style={{ fontSize: 11, letterSpacing: '0.05em' }}>Gender / DOB</label>
-                  <div className="fw-semibold text-dark" style={{ fontSize: 15 }}>{item.gender || '—'}, {item.dob || '—'}</div>
-                </div>
-                <div>
-                  <label className="text-muted small fw-medium text-uppercase mb-1 d-block" style={{ fontSize: 11, letterSpacing: '0.05em' }}>Blood Group</label>
-                  <div className="fw-semibold text-dark" style={{ fontSize: 15 }}>{item.bloodGroup || '—'}</div>
-                </div>
-                <div>
-                  <label className="text-muted small fw-medium text-uppercase mb-1 d-block" style={{ fontSize: 11, letterSpacing: '0.05em' }}>Address</label>
-                  <div className="text-dark" style={{ fontSize: 14, lineHeight: '1.4' }}>{item.address || '—'}</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {tab === 'activity' &&
+            (member.activity.length === 0 ? (
+              <EmptyState title="No activity yet" message="Profile changes will be recorded here." />
+            ) : (
+              <ol className="space-y-4">
+                {member.activity.map((entry) => (
+                  <li key={entry.id} className="flex gap-3">
+                    <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-wcbt-maroon" aria-hidden="true" />
+                    <div>
+                      <p className="text-sm text-wcbt-ink">{entry.action}</p>
+                      {entry.detail && <p className="text-xs text-wcbt-muted">{entry.detail}</p>}
+                      <p className="text-xs text-wcbt-muted">
+                        {entry.actor} · {formatDateTime(entry.timestamp)} ({formatRelativeTime(entry.timestamp)})
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            ))}
         </div>
       </div>
-    </div>
-  )
+
+      <ConfirmDialog
+        open={statusOpen}
+        onClose={() => setStatusOpen(false)}
+        tone="primary"
+        confirmLabel={member.status === 'Active' ? 'Deactivate' : 'Activate'}
+        title={member.status === 'Active' ? 'Deactivate staff member?' : 'Activate staff member?'}
+        message={
+          member.status === 'Active'
+            ? `${member.fullName} will lose portal access. Their record and history are preserved.`
+            : `${member.fullName} will regain portal access.`
+        }
+        onConfirm={async () => {
+          const next = member.status === 'Active' ? 'Inactive' : 'Active';
+          await setStatus(member.id, next, user?.name ?? 'Admin');
+          toast({ title: `${member.fullName} is now ${next}` });
+        }}
+      />
+    </>
+  );
 }
