@@ -1,6 +1,19 @@
-# cPanel Deployment Guide
+# Deployment Guide
 
-## Target: https://apiwcbt.nirvixtech.com/
+## Deployments
+
+| Subdomain | URL | Method |
+|-----------|-----|--------|
+| apiwcbt | https://apiwcbt.nirvixtech.com/ | Manual cPanel upload |
+| whitehouse | https://api.whitehouseeducation.edu.np/ | **CI/CD via GitHub Actions** |
+
+> For the whitehouse subdomain, see **[CI-CD.md](CI-CD.md)** for full setup instructions.
+
+---
+
+## Manual Deployment (apiwcbt)
+
+### Target: https://apiwcbt.nirvixtech.com/
 
 ---
 
