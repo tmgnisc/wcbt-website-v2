@@ -57,25 +57,25 @@ jobs:
           protocol: ftp
           port: 21
           exclude: |
-            .git/
-            .github/
-            .venv/
-            venv/
-            __pycache__/
-            *.pyc
-            .pytest_cache/
-            .ruff_cache/
-            tests/
+            **/.git/**
+            **/.github/**
+            **/.venv/**
+            **/venv/**
+            **/__pycache__/**
+            **/*.pyc
+            **/.pytest_cache/**
+            **/.ruff_cache/**
+            **/tests/**
             pytest.ini
             pyproject.toml
             .env
             .env.production
             .env.example
             .env.production.example
-            media/
+            **/media/**
             .coverage
-            htmlcov/
+            **/htmlcov/**
             .DS_Store
             Thumbs.db
-            *.log
+            **/*.log
             db.sqlite3
