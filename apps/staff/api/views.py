@@ -13,6 +13,7 @@ from rest_framework.response import Response
 
 from apps.authentication.api.permissions import IsAdmin, IsSuperAdmin, IsStaffUser
 from apps.common.responses import error_response, success_response
+from apps.email_verification.services import send_password_reset_otp, reset_password
 
 User = get_user_model()
 
@@ -202,3 +203,56 @@ class StaffToggleStatusView(generics.GenericAPIView):
             data={"loginEnabled": staff.login_enabled},
             message=f"Staff {'activated' if staff.login_enabled else 'deactivated'}",
         )
+
+
+class StaffPasswordResetView(generics.GenericAPIView):
+    """Send a password reset email to a staff member."""
+
+    permission_classes = [IsAuthenticated, IsAdmin]
+    queryset = StaffMember.objects.select_related("user").all()
+
+    def post(self, request, *args, **kwargs):
+        staff = self.get_object()
+        try:
+            send_password_reset_otp(staff.user.email)
+        except Exception as e:
+            logger.error("Failed to send password reset email: %s", e)
+            return error_response(
+                message="Failed to send reset email. Please try again.",
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )
+
+        StaffActivity.objects.create(
+            staff=staff,
+            action="Password reset requested",
+            actor=request.user.full_name,
+        )
+
+        return success_response(message="Password reset link sent to email")
+
+
+class StaffSetPasswordView(generics.GenericAPIView):
+    """Admin directly sets a new password for a staff member (no email needed)."""
+
+    permission_classes = [IsAuthenticated, IsAdmin]
+    queryset = StaffMember.objects.select_related("user").all()
+
+    def post(self, request, *args, **kwargs):
+        staff = self.get_object()
+        new_password = request.data.get("newPassword", "")
+        if not new_password or len(new_password) < 8:
+            return error_response(
+                message="Password must be at least 8 characters",
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        staff.user.set_password(new_password)
+        staff.user.save(update_fields=["password"])
+
+        StaffActivity.objects.create(
+            staff=staff,
+            action="Password reset by admin",
+            actor=request.user.full_name,
+        )
+
+        return success_response(message="Password updated successfully")

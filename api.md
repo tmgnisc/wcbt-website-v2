@@ -15,7 +15,7 @@
 4. [Programs](#4-programs)
 5. [Admissions](#5-admissions)
 6. [Notifications](#6-notifications)
-7. [College Settings](#7-college-settings)
+7. [College Settings](#7-college-settings) (includes Users, Permissions, Catalog)
 8. [Files](#8-files)
 9. [Dashboard](#9-dashboard)
 
@@ -543,6 +543,56 @@ PATCH /api/staff/<uuid>/toggle-status/
 ```
 
 Toggles `loginEnabled` and the user's `is_active` flag.
+
+---
+
+### 3.7 Reset Staff Password (Email)
+
+```
+POST /api/staff/<uuid>/reset-password/
+```
+
+**Auth:** Admin or SuperAdmin
+
+Sends a password reset OTP email to the staff member's email address.
+
+**Response (200):**
+
+```json
+{
+  "success": true,
+  "message": "Password reset link sent to email"
+}
+```
+
+---
+
+### 3.8 Set Staff Password (Direct)
+
+```
+POST /api/staff/<uuid>/set-password/
+```
+
+**Auth:** Admin or SuperAdmin
+
+Admin directly sets a new password for a staff member (no email sent).
+
+**Request Body:**
+
+```json
+{
+  "newPassword": "NewSecurePass123"
+}
+```
+
+**Response (200):**
+
+```json
+{
+  "success": true,
+  "message": "Password updated successfully"
+}
+```
 
 ---
 
@@ -1101,6 +1151,30 @@ GET /api/settings/
     "enableEmailNotifications": true,
     "enableSmsNotifications": false,
     "defaultPassword": "ChangeMe@123",
+    "catalog": {
+      "departments": [
+        { "id": "uuid", "name": "Computer Science" },
+        { "id": "uuid", "name": "Business" }
+      ],
+      "designations": [
+        { "id": "uuid", "name": "Lecturer" },
+        { "id": "uuid", "name": "Senior Lecturer" }
+      ],
+      "testTypes": [
+        { "id": "uuid", "name": "Written Test" },
+        { "id": "uuid", "name": "Interview" }
+      ]
+    },
+    "permissions": {
+      "admin": {
+        "staff": { "view": true, "add": true, "edit": true, "delete": false },
+        "admissions": { "view": true, "add": true, "edit": true, "delete": false }
+      },
+      "staff": {
+        "staff": { "view": true, "add": false, "edit": false, "delete": false },
+        "admissions": { "view": true, "add": false, "edit": false, "delete": false }
+      }
+    },
     "createdAt": "2024-01-01T00:00:00Z",
     "updatedAt": "2024-01-01T00:00:00Z"
   }
@@ -1122,11 +1196,165 @@ PATCH /api/settings/
 {
   "collegeName": "WCBT College of Technology",
   "phone": "+9876543210",
-  "enableEmailNotifications": true
+  "enableEmailNotifications": true,
+  "catalog": {
+    "departments": [
+      { "id": "uuid", "name": "Computer Science" }
+    ],
+    "designations": [
+      { "id": "uuid", "name": "Lecturer" }
+    ],
+    "testTypes": [
+      { "id": "uuid", "name": "Written Test" }
+    ]
+  }
 }
 ```
 
 **Response (200):** Updated college info object
+
+---
+
+### 7.3 Get Permissions
+
+```
+GET /api/settings/permissions/
+```
+
+**Response (200):**
+
+```json
+{
+  "success": true,
+  "data": {
+    "admin": {
+      "staff": { "view": true, "add": true, "edit": true, "delete": false },
+      "admissions": { "view": true, "add": true, "edit": true, "delete": false },
+      "programs": { "view": true, "add": true, "edit": true, "delete": false },
+      "notifications": { "view": true, "add": true, "edit": true, "delete": false },
+      "settings": { "view": false, "add": false, "edit": false, "delete": false },
+      "files": { "view": true, "add": true, "edit": false, "delete": false },
+      "dashboard": { "view": true }
+    },
+    "staff": {
+      "staff": { "view": true, "add": false, "edit": false, "delete": false },
+      "admissions": { "view": true, "add": false, "edit": false, "delete": false },
+      "programs": { "view": true, "add": false, "edit": false, "delete": false },
+      "notifications": { "view": true, "add": false, "edit": false, "delete": false },
+      "settings": { "view": false, "add": false, "edit": false, "delete": false },
+      "files": { "view": false, "add": false, "edit": false, "delete": false },
+      "dashboard": { "view": false }
+    }
+  }
+}
+```
+
+---
+
+### 7.4 Update Permissions
+
+```
+PATCH /api/settings/permissions/
+```
+
+**Request Body:**
+
+```json
+{
+  "permissions": {
+    "admin": {
+      "staff": { "view": true, "add": true, "edit": true, "delete": true }
+    }
+  }
+}
+```
+
+**Response (200):** Updated permissions object
+
+---
+
+### 7.5 List Users
+
+```
+GET /api/settings/users/
+```
+
+**Response (200):**
+
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "id": "uuid",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "role": "admin",
+      "status": "Active",
+      "createdAt": "2024-01-01T00:00:00Z"
+    }
+  ]
+}
+```
+
+---
+
+### 7.6 Create User
+
+```
+POST /api/settings/users/
+```
+
+**Request Body:**
+
+```json
+{
+  "email": "newuser@example.com",
+  "firstName": "New",
+  "lastName": "User",
+  "role": "admin",
+  "password": "SecurePass123"
+}
+```
+
+**`role` values:** `"admin"`, `"staff"`
+
+**Optional:** `password` (default: `"ChangeMe@123"`)
+
+**Response (201):**
+
+```json
+{
+  "success": true,
+  "message": "User created successfully",
+  "data": {
+    "id": "uuid",
+    "name": "New User",
+    "email": "newuser@example.com",
+    "role": "admin",
+    "status": "Active"
+  }
+}
+```
+
+---
+
+### 7.7 Deactivate User
+
+```
+DELETE /api/settings/users/<uuid>/
+```
+
+**Response (200):**
+
+```json
+{
+  "success": true,
+  "message": "User deactivated successfully"
+}
+```
+
+**Error (400):** `"Cannot deactivate a super admin"`
 
 ---
 

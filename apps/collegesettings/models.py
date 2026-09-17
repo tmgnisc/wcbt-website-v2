@@ -25,6 +25,8 @@ class CollegeInfo(models.Model):
     enable_email_notifications = models.BooleanField(default=True)
     enable_sms_notifications = models.BooleanField(default=False)
     default_password = models.CharField(max_length=128, default="ChangeMe@123")
+    catalog = models.JSONField(default=dict, blank=True)
+    permissions = models.JSONField(default=dict, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

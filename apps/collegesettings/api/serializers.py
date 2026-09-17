@@ -28,6 +28,8 @@ class CollegeInfoSerializer(serializers.ModelSerializer):
             "enable_email_notifications",
             "enable_sms_notifications",
             "default_password",
+            "catalog",
+            "permissions",
             "created_at",
             "updated_at",
         ]
