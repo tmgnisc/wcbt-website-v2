@@ -48,7 +48,7 @@ jobs:
           DJANGO_SETTINGS_MODULE: config.settings.production
 
       - name: Upload via FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
