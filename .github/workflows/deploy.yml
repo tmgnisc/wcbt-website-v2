@@ -37,9 +37,9 @@ jobs:
           DB_PASSWORD=${{ secrets.PROD_DB_PASSWORD }}
           DB_HOST=${{ secrets.PROD_DB_HOST }}
           DB_PORT=3306
-          CORS_ALLOWED_ORIGINS=https://api.whitehouseeducation.edu.np
+          CORS_ALLOWED_ORIGINS=${{ secrets.CORS_ALLOWED_ORIGINS }}
           RESEND_API_KEY=${{ secrets.PROD_RESEND_API_KEY }}
-          RESEND_FROM_EMAIL=noreply@whitehouseeducation.edu.np
+          RESEND_FROM_EMAIL=${{ secrets.PROD_RESEND_FROM_EMAIL }}
           EOF
 
       - name: Collect static files

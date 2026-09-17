@@ -65,21 +65,32 @@ Push to `api` branch → GitHub Actions → FTP upload → Site updated
    - Application startup file: `passenger_wsgi.py`
    - Application entry point: `application`
 4. Click **Create**
-5. **Install dependencies** in the terminal:
+
+---
+
+### Step 4: First Deployment (Manual)
+
+> GitHub Actions can't run migrations because the database is on `127.0.0.1` of the cPanel server. So the **first deploy is manual**.
+
+1. Go to **cPanel → File Manager**
+2. Navigate to `public_html/api.whitehouse/`
+3. **Upload all project files** (excluding `.venv/`, `__pycache__/`, `.git/`, `tests/`)
+4. Go back to **cPanel → Setup Python App**
+5. Open the terminal for your app (or use **cPanel → Terminal** if available)
+6. Run:
    ```bash
    cd ~/api.whitehouse
    source venv/bin/activate
    pip install -r requirements_production.txt
-   ```
-6. **Run migrations:**
-   ```bash
    python manage.py migrate
    python manage.py collectstatic --noinput
    ```
 
+> **After this first deploy, all future updates are automatic** — just push to the `api` branch.
+
 ---
 
-### Step 4: Create FTP Account
+### Step 5: Create FTP Account
 
 1. Go to **cPanel → FTP Accounts**
 2. Fill in:
@@ -94,7 +105,7 @@ Push to `api` branch → GitHub Actions → FTP upload → Site updated
 
 ---
 
-### Step 5: Create .env.production File on Server
+### Step 6: Create .env.production File on Server
 
 1. Go to **cPanel → File Manager**
 2. Navigate to `public_html/api.whitehouse/`
@@ -134,28 +145,13 @@ RESEND_FROM_EMAIL=noreply@whitehouseeducation.edu.np
 | `FTP_USERNAME` | `github-deploy@whitehouseeducation.edu.np` (or just `github-deploy`) |
 | `FTP_PASSWORD` | The FTP password you created |
 | `PROD_SECRET_KEY` | A random secret key (run `python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"` locally) |
-| `PROD_DB_NAME` | `nirvixco_whitehouse` |
-| `PROD_DB_USER` | `nirvixco_whuser` |
+| `PROD_DB_NAME` | Your MySQL database name (e.g. `nirvixco_whitehouse`) |
+| `PROD_DB_USER` | Your MySQL username (e.g. `nirvixco_whuser`) |
 | `PROD_DB_PASSWORD` | The MySQL password you set |
 | `PROD_DB_HOST` | `127.0.0.1` |
 | `PROD_RESEND_API_KEY` | Your Resend API key |
-| `CORS_ORIGINS` | `https://whitehouseeducation.edu.np,https://www.whitehouseeducation.edu.np` |
-
----
-
-### Step 2: Create the `api` Branch
-
-```bash
-# Clone the repo (if not already)
-git clone <your-repo-url>
-cd WCBT_hackathon
-
-# Create and switch to api branch
-git checkout -b api
-
-# Push the branch
-git push -u origin api
-```
+| `PROD_RESEND_FROM_EMAIL` | `noreply@whitehouseeducation.edu.np` |
+| `CORS_ALLOWED_ORIGINS` | `https://api.whitehouseeducation.edu.np` |
 
 ---
 
@@ -168,10 +164,17 @@ When you push to the `api` branch:
 1. **Checkout code** — downloads the latest code
 2. **Setup Python 3.10** — installs Python
 3. **Install dependencies** — runs `pip install -r requirements_production.txt`
-4. **Collect static files** — runs `python manage.py collectstatic --noinput`
-5. **Upload via FTP** — sends all files to cPanel server
-   - Excludes: `.git/`, `.venv/`, `__pycache__/`, `tests/`, `.env`, `media/`, etc.
-6. **Done!** — site is live at `api.whitehouseeducation.edu.np`
+4. **Create .env.production** — injects secrets from GitHub
+5. **Collect static files** — runs `python manage.py collectstatic --noinput`
+6. **Upload via FTP** — sends all files to cPanel server
+7. **Done!** — site is live at `api.whitehouseeducation.edu.np`
+
+> **Note:** Migrations are NOT run by GitHub Actions. If you add new models/migrations, you need to run them manually via cPanel terminal:
+> ```bash
+> cd ~/api.whitehouse
+> source venv/bin/activate
+> python manage.py migrate
+> ```
 
 ### What Gets Deployed
 
@@ -238,11 +241,12 @@ After setting up everything:
 - [ ] cPanel subdomain created
 - [ ] MySQL database + user created
 - [ ] Python App configured (entry point: `application`)
+- [ ] **First deploy: upload code via File Manager**
+- [ ] **First deploy: run `pip install`, `migrate`, `collectstatic` via terminal**
 - [ ] FTP account created
 - [ ] `.env.production` file created on server
 - [ ] GitHub secrets added
 - [ ] `api` branch created and pushed
-- [ ] First push to `api` branch triggers deployment
 - [ ] Test: `GET https://api.whitehouseeducation.edu.np/api/auth/login/`
 
 ---
@@ -271,6 +275,15 @@ After setting up everything:
 - Verify entry point is `application` in cPanel Python App settings
 - Check `passenger_wsgi.py` exists in the application root
 - Verify Python version is 3.10
+
+### New Migration Not Applied
+- GitHub Actions doesn't run migrations
+- Run manually via cPanel terminal:
+  ```bash
+  cd ~/api.whitehouse
+  source venv/bin/activate
+  python manage.py migrate
+  ```
 
 ---
 
