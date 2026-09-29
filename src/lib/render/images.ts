@@ -7,6 +7,15 @@ import { SITE_NAME } from '@/config/site';
 import { find, findAll, findParent, remove } from './dom';
 
 export function fillTemplateImages(soup: Document, path: string): void {
+  // The template header ships two copies of the logo — one for the white bar, one for the transparent hero bar —
+  // and swaps them with Alpine `:class` bindings that only hide one of them at xl and only while the header is
+  // transparent. There is one logo file here, so keep the first copy, drop the duplicate, and stop hiding it.
+  for (const [i, logo] of findAll(soup, 'img.site-logo').entries()) {
+    const box = findParent(logo, 'div') ?? logo;
+    if (i === 0) delete box.attribs[':class'];
+    else remove(box);
+  }
+
   for (const logo of findAll(soup, 'img.site-logo, img.footer-logo, img[alt="Logo"]')) {
     logo.attribs.src = LOGO;
     logo.attribs.alt = SITE_NAME;
