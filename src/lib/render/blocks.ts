@@ -54,9 +54,10 @@ export function resolveHref(href: string | null | undefined, text: string | null
 /** The photo configured for this alt text (src/config/images.ts). */
 export function img(alt: string, cls = 'u-w-full img'): string {
   const photo = imageFor(alt);
+  const klass = photo.contain ? cls.replace(/u-object-cover/g, 'u-object-contain') : cls;
   const style = photo.position ? ` style="object-position: ${photo.position};"` : '';
   const fallback = photo.src === FALLBACK ? '' : ` onerror="this.onerror=null;this.src='${FALLBACK}'"`;
-  return `<img alt="${e(alt)}" class="${cls}" loading="lazy" src="${photo.src}"${style}${fallback}/>`;
+  return `<img alt="${e(alt)}" class="${klass}" loading="lazy" src="${photo.src}"${style}${fallback}/>`;
 }
 
 function paragraphs(paras: string[], largeFirst = false): string {
