@@ -58,6 +58,26 @@ export const IMAGES: Record<string, ImageSource> = {
   'BIT — Bachelor in Information Technology': { src: PHOTOS.bitProgram },
   'B.Tech Ed IT — Technology in Education': { src: PHOTOS.btechEdIt },
 
+  // /programs/ cards: facilities + career outcomes, matched by card name
+  'AI & Innovation Lab': { src: PHOTOS.aiInnovationLab },
+  'Smart Classrooms': { src: PHOTOS.smartClassrooms },
+  'Software Developer': { src: PHOTOS.bitProgram },
+  'IT Support & Systems Admin': { src: PHOTOS.techBootcamp },
+  'Ed-Tech Specialist': { src: PHOTOS.edTech },
+  'ICT Teacher / Trainer': { src: PHOTOS.btechEdIt },
+  'Data & AI Analyst': { src: PHOTOS.researchEcosystem },
+  'Startup Founder': { src: PHOTOS.entrepreneurshipHub },
+
+  // /about/ page cards
+  'Empowering Eastern Nepal through technology education': { src: PHOTOS.connectedCommunity },
+  'A regional hub for innovation and lifelong learning': { src: PHOTOS.researchEcosystem },
+  'Industry Partners': { src: PHOTOS.guestLecture },
+  'Smart Facilities': { src: PHOTOS.smartClassrooms },
+
+  // /academics/admissions/ cards ("Who should apply?" already maps to PHOTOS.eligibility)
+  'Entrance Exam': { src: PHOTOS.academicInquiry },
+  'Interview Round': { src: PHOTOS.admission },
+
   // homepage "Your next academic step" cards
   'Admission Process': { src: PHOTOS.admission },
   'Scholarship Schemes': { src: PHOTOS.scholarship },
